@@ -1,53 +1,59 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import BankSection from '../components/BankSection.astro';
+import type { BanksData } from '../types/bank';
 import banksData from '../datasets/banksData.json';
 
-const { banks } = banksData;
+const { banks } = banksData as BanksData;
 ---
 
-<main>
 <Layout title="Banks in India">
-	<header>
-	<h1 class="italic">Banks in India</h1>
-	</header>
-	<section>
-		<ul>
-		   <li>[Install] <code>pnpm i -D banks-in-india</code></li>
-		   <li>[Download] <a href="https://methodblack.gumroad.com/l/banks-in-india" target="_blank">Figma icon library, $5</a></li>
-		</ul>
-	</section>
-	{banks.map((section) => (
-	  <BankSection 
-		title={section.title} 
-		category={section.category} 
-		content={section.content} 
-	  />
-	))}
+	<main id="main-content">
+		<header>
+			<h1 class="italic">Banks in India</h1>
+		</header>
+		
+		<section aria-label="Quick Actions">
+			<ul>
+			   <li>[Install] <code>pnpm i -D banks-in-india</code></li>
+			   <li>[Download] <a href="https://methodblack.gumroad.com/l/banks-in-india" target="_blank" rel="noopener noreferrer">Figma icon library, $5</a></li>
+			</ul>
+		</section>
+		
+		{banks.map((section) => (
+		  <BankSection 
+			title={section.title} 
+			category={section.category} 
+			content={section.content} 
+		  />
+		))}
+		
+		<nav aria-label="External Resources">
+			<p>[Misc]</p>
+			<ul>
+				<li><a href="https://www.rbi.org.in/scripts/banklinks.aspx" target="_blank" rel="noopener noreferrer">RBI Listing</a><span>↗</span></li>
+				<li><a href="https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx" target="_blank" rel="noopener noreferrer">NEFT IFSCs</a><span>↗</span></li>
+				<li><a href="https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx" target="_blank" rel="noopener noreferrer">RTGS IFSCs</a><span>↗</span></li>
+				<li><a href="https://www.npci.org.in/what-we-do/nach/live-members/live-banks" target="_blank" rel="noopener noreferrer">Banks Live on NACH</a><span>↗</span></li>
+				<li><a href="https://www.npci.org.in/what-we-do/imps/live-members" target="_blank" rel="noopener noreferrer">Banks Live on IMPS</a><span>↗</span></li>
+				<li><a href="https://www.npci.org.in/what-we-do/autopay/list-of-banks-and-apps-live-on-autopay" target="_blank" rel="noopener noreferrer">Banks Live on AutoPay</a><span>↗</span></li>
+				<li><a href="https://www.npci.org.in/what-we-do/rupay/live-members" target="_blank" rel="noopener noreferrer">RuPay Live Members</a><span>↗</span></li>
+				<li><a href="https://www.npci.org.in/PDF/npci/ifsc-and-micr-codes/Merged-banks-IFSC-and-MICR.xlsx" target="_blank" rel="noopener noreferrer">Merged banks Codes</a><span>↗</span></li>
+				<li><a href="https://www.npci.org.in/what-we-do/nach/live-members/blocked-banks" target="_blank" rel="noopener noreferrer">Blocked Banks on NACH</a><span>↗</span></li>
+			</ul>
+		</nav>
+		
+		<footer>
+			<p>[By] <a href="https://planetabhi.com/" target="_blank" rel="noopener noreferrer">@planetabhi</a> (^０^)ノ</p>
+			<figure class="badge-link">
+				<a href="https://www.jsdelivr.com/package/npm/banks-in-india" target="_blank" rel="noopener noreferrer">
+					<img src="https://data.jsdelivr.com/v1/package/npm/banks-in-india/badge" alt="jsDelivr downloads badge" loading="lazy" />
+				</a>
+			</figure>
+		</footer>
+	</main>
 </Layout>
-<section>
-	<p>[Misc]</p>
-	<ul>
-		<li><a href="https://www.rbi.org.in/scripts/banklinks.aspx" target="_blank">RBI Listing</a><span>↗</span></li>
-		<li><a href="https://rbidocs.rbi.org.in/rdocs/content/docs/68774.xlsx" target="_blank">NEFT IFSCs</a><span>↗</span></li>
-		<li><a href="https://rbidocs.rbi.org.in/rdocs/RTGS/DOCs/RTGEB0815.xlsx" target="_blank">RTGS IFSCs</a><span>↗</span></li>
-		<li><a href="https://www.npci.org.in/what-we-do/nach/live-members/live-banks" target="_blank">Banks Live on NACH</a><span>↗</span></li>
-		<li><a href="https://www.npci.org.in/what-we-do/imps/live-members" target="_blank">Banks Live on IMPS</a><span>↗</span></li>
-		<li><a href="https://www.npci.org.in/what-we-do/autopay/list-of-banks-and-apps-live-on-autopay" target="_blank">Banks Live on AutoPay</a><span>↗</span></li>
-		<li><a href="https://www.npci.org.in/what-we-do/rupay/live-members" target="_blank">RuPay Live Members</a><span>↗</span></li>
-		<li><a href="https://www.npci.org.in/PDF/npci/ifsc-and-micr-codes/Merged-banks-IFSC-and-MICR.xlsx" target="_blank">Merged banks Codes</a><span>↗</span></li>
-		<li><a href="https://www.npci.org.in/what-we-do/nach/live-members/blocked-banks" target="_blank">Blocked Banks on NACH</a><span>↗</span></li>
-	</ul>
-</section>
-<section>
-<p>[By]<a href="https://planetabhi.com/" target="_blank">@planetabhi</a>(^０^)ノ</p>
-</section>
-<footer>
-    <figure style="cursor: pointer;" onclick="window.open('https://www.jsdelivr.com/package/npm/banks-in-india', '_blank')">
-        <div style="background-image: url('https://data.jsdelivr.com/v1/package/npm/banks-in-india/badge'); height: 20px; background-size: contain; background-repeat: no-repeat;"></div>
-    </figure>
-</footer>
-</main>
+
 <style>
 ol, ul {
   list-style: none;
@@ -55,3 +61,4 @@ ol, ul {
   padding: 0;
 }
 </style>
+

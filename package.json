@@ -1,6 +1,6 @@
 {
   "name": "banks-in-india",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "Websites & icons for all active Indian banks.",
   "type": "module",
   "scripts": {
@@ -31,10 +31,8 @@
   "dependencies": {
     "@astrojs/check": "^0.9.6",
     "@astrojs/netlify": "^6.6.4",
-    "astro": "^5.16.14",
+    "@new-ui/foundations": "^0.3.4",
+    "astro": "^5.16.15",
     "typescript": "^5.9.3"
-  },
-  "devDependencies": {
-    "@new-ui/foundations": "^0.3.4"
   }
 }

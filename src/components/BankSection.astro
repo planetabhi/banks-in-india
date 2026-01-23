@@ -1,10 +1,11 @@
 ---
 import DataTable from './DataTable.astro';
+import type { Bank } from '../types/bank';
 
 export interface Props {
   title: string;
   category: string;
-  content: any[];
+  content: Bank[];
 }
 
 const { title, content } = Astro.props;

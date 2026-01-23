@@ -5,6 +5,7 @@
   src: url("/fonts/Mono-Regular.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   src: url("/fonts/Mono-Italic.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
+  font-display: swap;
 }
 
 :root {
@@ -95,4 +97,82 @@ footer {
     font-size: var(--mobile-body-sm);
     line-height: var(--mobile-body-sm);
   }
+}
+
+/* Table Styles */
+table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+td,
+th {
+  text-align: start;
+  display: inline-block;
+  margin-right: 8px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 24rem;
+}
+
+@media (max-width: 639px) {
+  td,
+  th {
+    max-width: 14rem;
+  }
+}
+
+th {
+  background-color: var(--background);
+}
+
+tr:nth-child(even) {
+  background-color: var(--background);
+}
+
+img {
+  width: 1.5rem;
+  max-width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1 / 1;
+}
+
+img:not([src]) {
+  background-color: var(--background-selected);
+  visibility: visible;
+}
+
+/* Badge Link Styles */
+.badge-link {
+  margin: 0;
+}
+
+.badge-link a {
+  display: inline-block;
+}
+
+.badge-link img {
+  height: 20px;
+  width: auto;
+  aspect-ratio: auto;
+}
+
+/* Skip Link for Accessibility */
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--accent);
+  color: white;
+  padding: 8px 16px;
+  text-decoration: none;
+  z-index: 100;
+  border-radius: 0 0 4px 0;
+}
+
+.skip-link:focus {
+  top: 0;
 }
