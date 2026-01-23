@@ -12,60 +12,74 @@ const { title } = Astro.props;
 <html lang="en" data-new-ui-theme="light">
 	<head>
 		<meta charset="UTF-8" />
-		<meta name="description" content="Astro description" />
 		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
+		
+		<!-- Primary Meta Tags -->
 		<title>{title}</title>
+		<meta name="title" content={title} />
+		<meta name="description" content="Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites. Includes public sector, private sector, small finance, payment banks, regional rural banks, and foreign banks." />
+		<meta name="keywords" content="indian banks, ifsc codes, bank directory, banking india, rbi banks, private banks, public sector banks, payment banks, small finance banks, regional rural banks, foreign banks, neft, rtgs, npci" />
+		<meta name="robots" content="index, follow" />
+		<meta name="generator" content={Astro.generator} />
+		<link rel="canonical" href="https://banksin.in/" />
+		
+		<!-- Open Graph / Facebook -->
+		<meta property="og:type" content="website" />
+		<meta property="og:url" content="https://banksin.in/" />
+		<meta property="og:title" content="Banks in India - Complete Directory with IFSC Codes" />
+		<meta property="og:description" content="Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites. Includes 150+ banks across all categories." />
+		<meta property="og:image" content="https://banksin.in/og-image.png" />
+		
+		<!-- Twitter -->
+		<meta property="twitter:card" content="summary_large_image" />
+		<meta property="twitter:url" content="https://banksin.in/" />
+		<meta property="twitter:title" content="Banks in India - Complete Directory with IFSC Codes" />
+		<meta property="twitter:description" content="Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites." />
+		<meta property="twitter:image" content="https://banksin.in/og-image.png" />
+		<meta name="twitter:creator" content="@planetabhi" />
+		
+		<!-- Favicons -->
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+		<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+		<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+		
+		<!-- Theme Color -->
+		<meta name="theme-color" content="#ff69b4" />
+		
+		<!-- Performance: Font Preloading -->
+		<link rel="preload" href="/fonts/Mono-Regular.woff2" as="font" type="font/woff2" crossorigin />
+		<link rel="preload" href="/fonts/Mono-Italic.woff2" as="font" type="font/woff2" crossorigin />
+		
+		<!-- Performance: DNS Prefetch -->
+		<link rel="dns-prefetch" href="https://cdn.jsdelivr.net" />
+		<link rel="dns-prefetch" href="https://data.jsdelivr.com" />
+		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
+		
+		<!-- Structured Data -->
+		<script type="application/ld+json" is:inline>
+		{
+		  "@context": "https://schema.org",
+		  "@type": "WebSite",
+		  "name": "Banks in India",
+		  "url": "https://banksin.in/",
+		  "description": "Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites.",
+		  "author": {
+		    "@type": "Person",
+		    "name": "Abhimanyu Rana",
+		    "url": "https://planetabhi.com/"
+		  },
+		  "publisher": {
+		    "@type": "Organization",
+		    "name": "Banks in India",
+		    "url": "https://banksin.in/"
+		  }
+		}
+		</script>
 	</head>
 	<body>
+		<a href="#main-content" class="skip-link">Skip to main content</a>
 		<slot />
 	</body>
 </html>
-<style is:global>
-table {
-  border-collapse: collapse;
-  width: 100%;
-  table-layout: fixed;
-}
 
-td,
-th {
-  text-align: start;
-  display: inline-block;
-  margin-right: 8px;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  max-width: 24rem;
-}
-
-@media (max-width: 639px) {
-  td,
-  th {
-    max-width: 14rem;
-  }
-}
-
-th {
-  background-color: var(--background);
-}
-
-tr:nth-child(even) {
-  background-color: var(--background);
-}
-
-img {
-  width: 1.5rem;
-  max-width: 100%;
-  height: auto;
-  object-fit: cover;
-  aspect-ratio: 1 / 1;
-}
-
-img:not([src]) {
-  background-color: var(--background-selected);
-  visibility: visible;
-}
-
-</style>

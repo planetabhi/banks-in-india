@@ -1,26 +1,32 @@
 ---
+import type { Bank } from '../types/bank';
+
 interface Props {
-	data: any[];
+	data: Bank[];
 }
 
 const { data } = Astro.props;
-const headers = ['ifsc', 'icon', 'name'];
 
 ---
 
 <table>
+  <thead>
+    <tr>
+      <th scope="col">IFSC</th>
+      <th scope="col">&nbsp;&nbsp;</th>
+      <th scope="col">Bank Name</th>
+    </tr>
+  </thead>
   <tbody>
     {data.map((row) => (
       <tr>
-        {headers.map((header) => (
-          <td>
-            {header === 'icon' 
-              ? <img src={row[header]} alt={`${row.name} icon`} />
-              : header === 'name'
-                ? <a href={row.website} target="_blank" rel="noopener noreferrer">{row[header]}</a>
-                : row[header]}
-          </td>
-        ))}
+        <td>{row.ifsc}</td>
+        <td>
+          <img src={row.icon} alt={`${row.name} bank logo`} loading="lazy" width="24" height="24" />
+        </td>
+        <td>
+          <a href={row.website} target="_blank" rel="noopener noreferrer">{row.name}</a>
+        </td>
       </tr>
     ))}
   </tbody>
@@ -28,3 +34,4 @@ const headers = ['ifsc', 'icon', 'name'];
 
 <style>
 </style>
+
