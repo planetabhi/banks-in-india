@@ -13,7 +13,7 @@ const { data } = Astro.props;
   <thead>
     <tr>
       <th scope="col">IFSC</th>
-      <th scope="col">&nbsp;&nbsp;</th>
+      <th scope="col"><span class="sr-only">Bank Logo</span></th>
       <th scope="col">Bank Name</th>
     </tr>
   </thead>
@@ -25,7 +25,7 @@ const { data } = Astro.props;
           <img src={row.icon} alt={`${row.name} bank logo`} loading="lazy" width="24" height="24" />
         </td>
         <td>
-          <a href={row.website} target="_blank" rel="noopener noreferrer">{row.name}</a>
+          <a href={row.website} target="_blank" rel="noopener noreferrer" title={row.name}>{row.name}</a>
         </td>
       </tr>
     ))}
