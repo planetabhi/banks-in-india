@@ -1,0 +1,38 @@
+[
+  {
+    "name": "State Bank of India",
+    "total": "22,500+",
+    "atms": "65,000+",
+    "type": "Public"
+  },
+  {
+    "name": "Punjab National Bank",
+    "total": "10,900+",
+    "atms": "13,000+",
+    "type": "Public"
+  },
+  {
+    "name": "Bank of Baroda",
+    "total": "8,200+",
+    "atms": "11,500+",
+    "type": "Public"
+  },
+  {
+    "name": "HDFC Bank",
+    "total": "8,000+",
+    "atms": "19,000+",
+    "type": "Private"
+  },
+  {
+    "name": "ICICI Bank",
+    "total": "6,000+",
+    "atms": "16,500+",
+    "type": "Private"
+  },
+  {
+    "name": "Axis Bank",
+    "total": "5,000+",
+    "atms": "15,000+",
+    "type": "Private"
+  }
+]

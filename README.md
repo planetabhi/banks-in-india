@@ -1,0 +1,1 @@
+# Banks in India 🏦\nAn open directory of all verified Indian banking institutions, mapping active IFSCs, SWIFT routing networks, BSR directories, and NPCI Live Payment Rails (UPI, AePS, FASTag).\n\n## Usage\n```bash\nnpm install banks-in-india\n```

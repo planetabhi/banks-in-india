@@ -1,0 +1,12 @@
+[
+  {
+    "oldBank": "Syndicate Bank",
+    "newBank": "Canara Bank",
+    "replaceIfsc": "SYNB -> CNRB"
+  },
+  {
+    "oldBank": "Allahabad Bank",
+    "newBank": "Indian Bank",
+    "replaceIfsc": "ALLA -> IDIB"
+  }
+]

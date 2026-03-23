@@ -1,0 +1,17 @@
+[
+  {
+    "name": "State Bank of India",
+    "status": "Live",
+    "since": "2016"
+  },
+  {
+    "name": "Punjab National Bank",
+    "status": "Live",
+    "since": "2016"
+  },
+  {
+    "name": "HDFC Bank",
+    "status": "Live",
+    "since": "2016"
+  }
+]

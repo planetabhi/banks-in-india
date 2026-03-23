@@ -1,0 +1,26 @@
+[
+  {
+    "name": "State Bank of India",
+    "bsr": "0000001"
+  },
+  {
+    "name": "HDFC Bank",
+    "bsr": "0510001"
+  },
+  {
+    "name": "ICICI Bank",
+    "bsr": "0292851"
+  },
+  {
+    "name": "Axis Bank",
+    "bsr": "0320001"
+  },
+  {
+    "name": "Punjab National Bank",
+    "bsr": "0300001"
+  },
+  {
+    "name": "Bank of India",
+    "bsr": "0210001"
+  }
+]

@@ -1,0 +1,38 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RawTable from '../components/RawTable.astro';
+import upiData from '../datasets/npci/upi.json';
+import fastagData from '../datasets/npci/fastag.json';
+import aepsData from '../datasets/npci/aeps.json';
+
+// Clean the data to render only necessary columns safely
+const cleanUpi = upiData.map(d => ({"Bank / PPI": d["Bank/PPI Name"], "Rollout Phase": d["Details"]}));
+const cleanFastag = fastagData.map(d => ({"Toll Member": d["Member Banks"], "Issuer": d["Issuer"], "Acquirer": d["Acquirer"]}));
+const cleanAeps = aepsData.map(d => ({"AePS Bank": d["Bank Name"], "ONUS Flow": d["ONUS"], "Tokenization": d["Tokenization"]}));
+---
+<Layout title="Payment Network Live Members">
+  <main id="main-content">
+    <header>
+      <h1>Payment Networks Readiness</h1>
+      <p>A live tracking matrix of institutions directly participating and natively supporting public Indian payment rails (UPI, FASTag, AePS) as verified by NPCI.</p>
+    </header>
+    
+    <section>
+      <h2>Unified Payments Interface (UPI)</h2>
+      <p>Banks and Prepaid Payment Instruments authorized to issue and acquire on the UPI rail.</p>
+      <RawTable data={cleanUpi} />
+    </section>
+
+    <section style="margin-top: var(--spacing-08);">
+      <h2>NETC FASTag Members</h2>
+      <p>Banks authorized to natively issue vehicle transponders or acquire toll plazas.</p>
+      <RawTable data={cleanFastag} />
+    </section>
+
+    <section style="margin-top: var(--spacing-08);">
+      <h2>AePS Hardware Members</h2>
+      <p>Institutions capable of processing biometric-hardware based Aadhaar verification loops.</p>
+      <RawTable data={cleanAeps} />
+    </section>
+  </main>
+</Layout>

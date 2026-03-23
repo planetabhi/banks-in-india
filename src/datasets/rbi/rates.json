@@ -1,0 +1,27 @@
+[
+  {
+    "type": "RBI Repo Rate",
+    "value": "6.50%",
+    "date": "Current (Mar 2026)"
+  },
+  {
+    "type": "RBI Reverse Repo Rate",
+    "value": "3.35%",
+    "date": "Current (Mar 2026)"
+  },
+  {
+    "type": "SBI MCLR (1-Year)",
+    "value": "8.80%",
+    "date": "Current (Mar 2026)"
+  },
+  {
+    "type": "HDFC Bank MCLR (1-Year)",
+    "value": "9.10%",
+    "date": "Current (Mar 2026)"
+  },
+  {
+    "type": "ICICI Bank MCLR (1-Year)",
+    "value": "9.05%",
+    "date": "Current (Mar 2026)"
+  }
+]

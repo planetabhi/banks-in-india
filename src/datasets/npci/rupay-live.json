@@ -1,0 +1,10 @@
+[
+  {
+    "name": "State Bank of India",
+    "cardType": "Debit/Credit/Prepaid"
+  },
+  {
+    "name": "Bank of Baroda",
+    "cardType": "Debit/Credit"
+  }
+]

@@ -9,10 +9,11 @@ export interface Props {
 }
 
 const { title, content } = Astro.props;
+const sectionId = `section-${title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
 ---
 
-<section>
-  <h2>{title}</h2>
+<section aria-labelledby={sectionId}>
+  <h2 id={sectionId}>{title}</h2>
   {content.length > 0 ? (
     <DataTable data={content} />
   ) : (

@@ -45,8 +45,67 @@ body {
   font-variant-numeric: oldstyle-nums proportional-nums;
 }
 
+.layout-wrapper {
+  display: flex;
+  flex-direction: row;
+  min-height: 100vh;
+}
+
+.sidebar {
+  width: 14rem;
+  flex-shrink: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 1.42vw;
+  box-sizing: border-box;
+  border-right: 1px dotted var(--border-inked);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spacing-04);
+}
+
+.sidebar ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0 1rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content-wrapper {
+  flex-grow: 1;
+  max-width: 100%;
+}
+
 main { 
   margin: 1.42vw;
+}
+
+@media (max-width: 768px) {
+  .layout-wrapper {
+    flex-direction: column;
+  }
+  
+  .sidebar {
+    width: 100%;
+    height: auto;
+    position: static;
+    border-right: none;
+    border-bottom: 1px dotted var(--border-inked);
+  }
+  
+  .sidebar ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 1rem;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
 }
 
 a, a * {
@@ -85,10 +144,6 @@ h2 {
 
 section {
   border-bottom: 1px dotted var(--border-inked);
-  padding: var(--spacing-04) 0;
-}
-
-footer {
   padding: var(--spacing-04) 0;
 }
 
@@ -143,6 +198,12 @@ img {
 img:not([src]) {
   background-color: var(--background-selected);
   visibility: visible;
+}
+
+footer {
+  gap: .5rem;
+  display: flex;
+  flex-direction: column;
 }
 
 /* Badge Link Styles */

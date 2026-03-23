@@ -1,0 +1,242 @@
+[
+  {
+    "Sr. No.": "1",
+    "Member Banks": "Airtel Payments Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "2",
+    "Member Banks": "AU Small Finance Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "3",
+    "Member Banks": "Axis Bank Ltd",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "4",
+    "Member Banks": "Bandhan Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "5",
+    "Member Banks": "Bank of Baroda",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "6",
+    "Member Banks": "Bank of Maharashtra",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "7",
+    "Member Banks": "Canara Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "8",
+    "Member Banks": "Central Bank of India",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "9",
+    "Member Banks": "City Union Bank Ltd",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "10",
+    "Member Banks": "Cosmos Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "11",
+    "Member Banks": "Dombivli Nagari Sahakari Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "12",
+    "Member Banks": "Eroute technologies Pvt Ltd.",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "13",
+    "Member Banks": "Equitas Small Finance Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "14",
+    "Member Banks": "Federal Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "15",
+    "Member Banks": "FINO Payments Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "16",
+    "Member Banks": "HDFC Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "17",
+    "Member Banks": "ICICI Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "18",
+    "Member Banks": "IDBI Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "19",
+    "Member Banks": "IDFC First Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "20",
+    "Member Banks": "Indian Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "21",
+    "Member Banks": "Indian Overseas Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "22",
+    "Member Banks": "IndusInd Bank Ltd.",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "23",
+    "Member Banks": "Jammu and Kashmir Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "24",
+    "Member Banks": "Jio Payments Bank",
+    "Issuer": "No",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "25",
+    "Member Banks": "Karnataka Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "26",
+    "Member Banks": "Karur Vysya Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "27",
+    "Member Banks": "Kotak Mahindra Bank",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "28",
+    "Member Banks": "Nagpur Nagarik Sahakari Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "29",
+    "Member Banks": "Punjab National Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "30",
+    "Member Banks": "Saraswat Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "31",
+    "Member Banks": "South Indian Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "32",
+    "Member Banks": "State Bank of India",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "33",
+    "Member Banks": "The Jalgaon People Co-op Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "34",
+    "Member Banks": "Thrissur District Cooperative Bank (Kerala Bank)",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "35",
+    "Member Banks": "UCO Bank",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "36",
+    "Member Banks": "Union Bank of India",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "37",
+    "Member Banks": "Yes Bank Ltd",
+    "Issuer": "Yes",
+    "Acquirer": "Yes"
+  },
+  {
+    "Sr. No.": "38",
+    "Member Banks": "LivQuik/QuikWallet",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "39",
+    "Member Banks": "Bajaj Finance Limited",
+    "Issuer": "Yes",
+    "Acquirer": "No"
+  },
+  {
+    "Sr. No.": "40",
+    "Member Banks": "*PAYTM Payments Bank",
+    "Issuer": "**Yes",
+    "Acquirer": "No"
+  }
+]
