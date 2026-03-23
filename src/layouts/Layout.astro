@@ -79,7 +79,35 @@ const { title } = Astro.props;
 	</head>
 	<body>
 		<a href="#main-content" class="skip-link">Skip to main content</a>
-		<slot />
+		<div class="layout-wrapper">
+			<aside class="sidebar" id="main-nav">
+				<nav aria-label="Main Navigation">
+					<ul>
+						<li><a href="/">Banks in India</a></li>
+						<li><a href="/ifsc-search">IFSC Search</a></li>
+						<li><a href="/misc/neft-ifscs">NEFT Branches</a></li>
+						<li><a href="/misc/rtgs-ifscs">RTGS Branches</a></li>
+						<li><a href="/misc/merged-banks">Merged Banks</a></li>
+						<li><a href="/misc/blocked-nach">Blocked Banks</a></li>
+						<li><a href="/swift-codes">SWIFT Directory</a></li>
+						<li><a href="/payment-networks">Payment Networks</a></li>
+						<li><a href="/bsr-codes">BSR Codes</a></li>
+					</ul>
+				</nav>
+				
+				<footer>
+					<p>[By] <a href="https://x.com/planetabhi" target="_blank" rel="noopener noreferrer">@planetabhi</a></p>
+					<figure class="badge-link">
+						<a href="https://www.jsdelivr.com/package/npm/banks-in-india" target="_blank" rel="noopener noreferrer">
+							<img src="https://data.jsdelivr.com/v1/package/npm/banks-in-india/badge" alt="jsDelivr downloads badge" loading="lazy" />
+						</a>
+					</figure>
+				</footer>
+			</aside>
+			<div class="content-wrapper">
+				<slot />
+			</div>
+		</div>
 	</body>
 </html>
 

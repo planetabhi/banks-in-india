@@ -1,0 +1,100 @@
+[
+  {
+    "oldName": "Allahabad Bank",
+    "newName": "Indian Bank",
+    "date": "April 2020",
+    "oldIfscPrefix": "ALLA",
+    "newIfscPrefix": "IDIB"
+  },
+  {
+    "oldName": "Syndicate Bank",
+    "newName": "Canara Bank",
+    "date": "April 2020",
+    "oldIfscPrefix": "SYNB",
+    "newIfscPrefix": "CNRB"
+  },
+  {
+    "oldName": "Oriental Bank of Commerce",
+    "newName": "Punjab National Bank",
+    "date": "April 2020",
+    "oldIfscPrefix": "ORBC",
+    "newIfscPrefix": "PUNB"
+  },
+  {
+    "oldName": "United Bank of India",
+    "newName": "Punjab National Bank",
+    "date": "April 2020",
+    "oldIfscPrefix": "UTBI",
+    "newIfscPrefix": "PUNB"
+  },
+  {
+    "oldName": "Andhra Bank",
+    "newName": "Union Bank of India",
+    "date": "April 2020",
+    "oldIfscPrefix": "ANDB",
+    "newIfscPrefix": "UBIN"
+  },
+  {
+    "oldName": "Corporation Bank",
+    "newName": "Union Bank of India",
+    "date": "April 2020",
+    "oldIfscPrefix": "CORP",
+    "newIfscPrefix": "UBIN"
+  },
+  {
+    "oldName": "Dena Bank",
+    "newName": "Bank of Baroda",
+    "date": "April 2019",
+    "oldIfscPrefix": "BKDN",
+    "newIfscPrefix": "BARB"
+  },
+  {
+    "oldName": "Vijaya Bank",
+    "newName": "Bank of Baroda",
+    "date": "April 2019",
+    "oldIfscPrefix": "VIJB",
+    "newIfscPrefix": "BARB"
+  },
+  {
+    "oldName": "State Bank of Bikaner and Jaipur",
+    "newName": "State Bank of India",
+    "date": "April 2017",
+    "oldIfscPrefix": "SBBJ",
+    "newIfscPrefix": "SBIN"
+  },
+  {
+    "oldName": "State Bank of Hyderabad",
+    "newName": "State Bank of India",
+    "date": "April 2017",
+    "oldIfscPrefix": "SBHY",
+    "newIfscPrefix": "SBIN"
+  },
+  {
+    "oldName": "State Bank of Mysore",
+    "newName": "State Bank of India",
+    "date": "April 2017",
+    "oldIfscPrefix": "SBMY",
+    "newIfscPrefix": "SBIN"
+  },
+  {
+    "oldName": "State Bank of Patiala",
+    "newName": "State Bank of India",
+    "date": "April 2017",
+    "oldIfscPrefix": "STBP",
+    "newIfscPrefix": "SBIN"
+  },
+  {
+    "oldName": "State Bank of Travancore",
+    "newName": "State Bank of India",
+    "date": "April 2017",
+    "oldIfscPrefix": "SBTR",
+    "newIfscPrefix": "SBIN"
+  },
+  {
+    "oldName": "Bharatiya Mahila Bank",
+    "newName": "State Bank of India",
+    "date": "April 2017",
+    "oldIfscPrefix": "BMBL",
+    "newIfscPrefix": "SBIN"
+  }
+]

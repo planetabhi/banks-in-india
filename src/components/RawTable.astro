@@ -1,0 +1,27 @@
+---
+interface Props<T extends Record<string, string | number>> {
+	data: T[];
+}
+
+const { data } = Astro.props;
+const headers = data.length > 0 ? Object.keys(data[0]) : [];
+---
+
+<table>
+  <thead>
+    <tr>
+      {headers.map(header => (
+        <th scope="col">{header}</th>
+      ))}
+    </tr>
+  </thead>
+  <tbody>
+    {data.map((row: {[key: string]: any}) => (
+      <tr>
+        {headers.map(header => (
+          <td>{row[header]}</td>
+        ))}
+      </tr>
+    ))}
+  </tbody>
+</table>

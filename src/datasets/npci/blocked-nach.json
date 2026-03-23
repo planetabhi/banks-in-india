@@ -1,0 +1,12 @@
+[
+  {
+    "name": "Paytm Payments Bank",
+    "reason": "Regulatory Directive",
+    "blockedFrom": "Mar 2024"
+  },
+  {
+    "name": "National Co-operative Bank",
+    "reason": "License Cancelled",
+    "blockedFrom": "May 2024"
+  }
+]

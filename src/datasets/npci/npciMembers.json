@@ -1,0 +1,1298 @@
+[
+  {
+    "name": "Axis Bank Ltd.",
+    "ifsc": "UTIB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_axisbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Bandhan Bank Ltd.",
+    "ifsc": "BDBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_bandhanbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "CSB Bank Limited",
+    "ifsc": "CSBK",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_csb.png",
+    "imps": false,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "City Union Bank Ltd.",
+    "ifsc": "CIUB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_cityunionbank.png",
+    "imps": false,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "DCB Bank Ltd.",
+    "ifsc": "DCBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_dcbbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Dhanlaxmi Bank Ltd.",
+    "ifsc": "DLXB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_dhanbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Federal Bank Ltd.",
+    "ifsc": "FDRL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_federalbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "HDFC Bank Ltd.",
+    "ifsc": "HDFC",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_hdfcbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "ICICI Bank Ltd.",
+    "ifsc": "ICIC",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_icicibank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "IndusInd Bank Ltd.",
+    "ifsc": "INDB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_indusind.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "IDFC FIRST Bank Limited",
+    "ifsc": "IDFB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_idfcbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Jammu & Kashmir Bank Ltd.",
+    "ifsc": "JAKA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_jkbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Karnataka Bank Ltd.",
+    "ifsc": "KARB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_karnatakabank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Karur Vysya Bank Ltd.",
+    "ifsc": "KVBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_kvb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Kotak Mahindra Bank Ltd.",
+    "ifsc": "KKBK",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_kotak.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Nainital Bank Ltd.",
+    "ifsc": "NTBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_nainitalbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "RBL Bank Ltd.",
+    "ifsc": "RATN",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_rblbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "South Indian Bank Ltd.",
+    "ifsc": "SIBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_southindianbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Tamilnad Mercantile Bank Ltd.",
+    "ifsc": "TMBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_tmb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "YES Bank Ltd.",
+    "ifsc": "YESB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_yesbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "IDBI Bank Limited",
+    "ifsc": "IBKL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/private_sector_banks/bi_idbi.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Coastal Local Area Bank Ltd.",
+    "ifsc": "COAS",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/local_area_banks/bi_coastalareabank.png",
+    "imps": false,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Krishna Bhima Samruddhi LAB Ltd.",
+    "ifsc": "KBSX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/local_area_banks/bi_kbsbankindia.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Au Small Finance Bank Ltd.",
+    "ifsc": "AUBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_aubank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Capital Small Finance Bank Ltd.",
+    "ifsc": "CLBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_capitalbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Fincare Small Finance Bank Ltd.",
+    "ifsc": "FSFB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_fincarebank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Equitas Small Finance Bank Ltd.",
+    "ifsc": "ESFB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_equitasbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "ESAF Small Finance Bank Ltd.",
+    "ifsc": "ESMF",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_esafbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Suryoday Small Finance Bank Ltd.",
+    "ifsc": "SURY",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_suryodaybank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Ujjivan Small Finance Bank Ltd.",
+    "ifsc": "UJVN",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_ujjivansfb.png",
+    "imps": false,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Utkarsh Small Finance Bank Ltd.",
+    "ifsc": "UTKS",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_utkarsh.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "North East Small Finance Bank Ltd.",
+    "ifsc": "NESF",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_nesfb.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Jana Small Finance Bank Ltd.",
+    "ifsc": "JSFB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_janabank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Shivalik Small Finance Bank Ltd.",
+    "ifsc": "SMCB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_shivalikbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Unity Small Finance Bank Ltd.",
+    "ifsc": "UNBA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_theunitybank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Airtel Payments Bank Ltd.",
+    "ifsc": "AIRP",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_airtel.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "India Post Payments Bank Ltd.",
+    "ifsc": "IPOS",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_ippbonline.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "FINO Payments Bank Ltd.",
+    "ifsc": "FINO",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_finobank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Paytm Payments Bank Ltd.",
+    "ifsc": "PYTM",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_paytmbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Jio Payments Bank Ltd.",
+    "ifsc": "JIOP",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_jiopaymentsbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "NSDL Payments Bank Limited",
+    "ifsc": "NSPB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_nsdlbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Bank of Baroda",
+    "ifsc": "BARB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_bankofbaroda.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Bank of India",
+    "ifsc": "BKID",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_bankofindia.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Bank of Maharashtra",
+    "ifsc": "MAHB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_bankofmaharashtra.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Canara Bank",
+    "ifsc": "CNRB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_canarabank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Central Bank of India",
+    "ifsc": "CBIN",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_centralbankofindia.png",
+    "imps": false,
+    "nach": true,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "Indian Bank",
+    "ifsc": "IDIB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_indianbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Indian Overseas Bank",
+    "ifsc": "IOBA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_iob.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Punjab & Sind Bank",
+    "ifsc": "PSIB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_punjabandsindbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Punjab National Bank",
+    "ifsc": "PUNB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_pnbindia.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "State Bank of India",
+    "ifsc": "SBIN",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_sbi.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "UCO Bank",
+    "ifsc": "UCBA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_ucobank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "Union Bank of India",
+    "ifsc": "UBIN",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/public_sector_banks/bi_unionbankonline.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "National Bank for Agriculture and Rural Development",
+    "ifsc": "NBRD",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/financial_institutions/bi_nabard.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Export-Import Bank of India",
+    "ifsc": "EIBI",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/financial_institutions/bi_eximbankindia.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "National Housing Bank",
+    "ifsc": "HDFC",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/financial_institutions/bi_nabard.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Small Industries Development Bank of India",
+    "ifsc": "SIDB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/financial_institutions/bi_sidbi.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Assam Gramin Vikash Bank",
+    "ifsc": "AGVX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_agvbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Andhra Pradesh Grameena Vikas Bank",
+    "ifsc": "APGV",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_apgvbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Andhra Pragathi Grameena Bank",
+    "ifsc": "APGB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_apgb.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Arunachal Pradesh Rural Bank",
+    "ifsc": "APRX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_apruralbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Aryavart Bank",
+    "ifsc": "ARYX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_aryavart-rrb.png",
+    "imps": false,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Bangiya Gramin Vikash Bank",
+    "ifsc": "BGVX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_bgvb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Baroda Gujarat Gramin Bank",
+    "ifsc": "BGGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_bggb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Baroda Rajasthan Kshetriya Gramin Bank",
+    "ifsc": "BRGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_brkgb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Baroda UP Bank",
+    "ifsc": "BUGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_barodaupbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Chaitanya Godavari GB",
+    "ifsc": "CGGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_cggb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Chhattisgarh Rajya Gramin Bank",
+    "ifsc": "CRGB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_cgbank.png",
+    "imps": false,
+    "nach": false,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "Dakshin Bihar Gramin Bank",
+    "ifsc": "MBGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_dbgb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Ellaquai Dehati Bank",
+    "ifsc": "EDBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_edb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Himachal Pradesh Gramin Bank",
+    "ifsc": "HMBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_hpgb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "J&K Grameen Bank",
+    "ifsc": "XJKG",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_jkgb.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Jharkhand Rajya Gramin Bank",
+    "ifsc": "VGBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_jrgb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Karnataka Gramin Bank",
+    "ifsc": "PKGB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_karnatakagraminbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "Karnataka Vikas Gramin Bank",
+    "ifsc": "KVGB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_kvgbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Kerala Gramin Bank",
+    "ifsc": "KLGB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_keralagbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Madhya Pradesh Gramin Bank",
+    "ifsc": "CMPX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mpgb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Madhyanchal Gramin Bank",
+    "ifsc": "MADX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mgbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "Maharashtra Gramin Bank",
+    "ifsc": "MAHG",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mahagramin.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Manipur Rural Bank",
+    "ifsc": "MRBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_manipurruralbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Meghalaya Rural Bank",
+    "ifsc": "MERX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_meghalayaruralbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "Mizoram Rural Bank",
+    "ifsc": "MZRX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mizoramruralbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Nagaland Rural Bank",
+    "ifsc": "NAGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_nagalandruralbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Odisha Gramya Bank",
+    "ifsc": "ODGB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_odishabank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Paschim Banga Gramin Bank",
+    "ifsc": "PASX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_pbgbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Prathama U.P. Gramin Bank",
+    "ifsc": "SUBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_prathamaupbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Puduvai Bharathiar Grama Bank",
+    "ifsc": "PBGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_puduvaibharathiargramabank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "Punjab Gramin Bank",
+    "ifsc": "PUGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_pgb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Rajasthan Marudhara Gramin Bank",
+    "ifsc": "RMGB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_rmgb.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Saptagiri Grameena Bank",
+    "ifsc": "SPBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_saptagirigrameenabank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Sarva Haryana Gramin Bank",
+    "ifsc": "HGBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_shgb.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "Saurashtra Gramin Bank",
+    "ifsc": "SGBA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_sgbrrb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Tamil Nadu Grama Bank",
+    "ifsc": "IDIB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_tamilnadugramabank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "Telangana Grameena Bank",
+    "ifsc": "DGBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_tgbhyd.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Tripura Gramin Bank",
+    "ifsc": "TGBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_tripuragraminbank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Uttar Bihar Gramin Bank",
+    "ifsc": "UBGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_ubgb.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Utkal Grameen Bank",
+    "ifsc": "UGBX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_utkalgrameenbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Uttarbanga Kshetriya Gramin Bank",
+    "ifsc": "UKGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_ubkgb.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Vidharbha Konkan Gramin Bank",
+    "ifsc": "BKID",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_vkgb.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Uttarakhand Gramin Bank",
+    "ifsc": "UTGX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_uttarakhandgraminbank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "AB Bank Ltd.",
+    "ifsc": "ABBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_abbl.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "American Express Banking Corporation",
+    "ifsc": "XXXX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_americanexpress.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Australia and New Zealand Banking Group Ltd.",
+    "ifsc": "ANZB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_anz.png",
+    "imps": false,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Barclays Bank Plc.",
+    "ifsc": "BARC",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_barclays.png",
+    "imps": false,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Bank of America",
+    "ifsc": "BOFA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_bofa-india.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Bank of Bahrain & Kuwait B.S.C.",
+    "ifsc": "BBKM",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_bbkindia.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Bank of Ceylon",
+    "ifsc": "BCEY",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_bankofceylon.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Bank of China",
+    "ifsc": "BCHN",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_bankofchina.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Bank of Nova Scotia",
+    "ifsc": "NOSC",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_scotiabank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "BNP Paribas",
+    "ifsc": "BNPA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_bnpparibas.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Citibank N.A.",
+    "ifsc": "CITI",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_citibank.png",
+    "imps": false,
+    "nach": false,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "Cooperatieve Rabobank U.A./ Coöperatieve Centrale Raiffeisen-Boerenleenbank B.A.",
+    "ifsc": "RABO",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_rabobank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Credit Agricole Corporate & Investment Bank",
+    "ifsc": "CRLY",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_ca-cib.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Credit Suisse AG",
+    "ifsc": "CRES",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_credit-suisse.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "CTBC Bank Co., Ltd.",
+    "ifsc": "CTCB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_chinatrustindia.png",
+    "imps": false,
+    "nach": false,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "DBS Bank India Limited",
+    "ifsc": "DBSS",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_dbs.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Deutsche Bank A.G.",
+    "ifsc": "DEUT",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_deutschebank.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Doha Bank Q.P.S.C",
+    "ifsc": "DOHB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_dohabank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Emirates NBD Bank PJSC",
+    "ifsc": "EBIL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_emiratesnbd.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "First Abu Dhabi Bank PJSC",
+    "ifsc": "NBAD",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_bankfab.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "FirstRand Bank Limited",
+    "ifsc": "FIRN",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_firstrand.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Hong Kong and Shanghai Banking Corporation Limited",
+    "ifsc": "HSBC",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_hsbc.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "Industrial & Commercial Bank of China Ltd.",
+    "ifsc": "ICBK",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_icbcindia.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Industrial Bank of Korea",
+    "ifsc": "IBKO",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_globalibk.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "J.P. Morgan Chase Bank N.A.",
+    "ifsc": "CHAS",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_jpmorgan.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "JSC VTB Bank",
+    "ifsc": "IBKL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_vtbindia.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "KEB Hana Bank",
+    "ifsc": "KOEX",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_1qbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Kookmin Bank",
+    "ifsc": "KBKB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_kbfg.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": false
+  },
+  {
+    "name": "Krung Thai Bank Public Co. Ltd.",
+    "ifsc": "KRTH",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_krungthai.png",
+    "imps": false,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Mashreq bank PSC",
+    "ifsc": "MSHQ",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_mashreqbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Mizuho Bank Ltd.",
+    "ifsc": "MHCB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_mizuhobank.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "MUFG Bank, Ltd.",
+    "ifsc": "BOTM",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_mufg.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "NatWest Markets Plc",
+    "ifsc": "ABNA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_natwestmarkets.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "PT Bank Maybank Indonesia TBK",
+    "ifsc": "IBBK",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_maybank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": false,
+    "rupay": true
+  },
+  {
+    "name": "Qatar National Bank (Q.P.S.C.)",
+    "ifsc": "QNBA",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_qnb.png",
+    "imps": true,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Sberbank",
+    "ifsc": "SABR",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_sberbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "SBM Bank (India) Limited",
+    "ifsc": "STCB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_sbmbank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "Shinhan Bank",
+    "ifsc": "SHBK",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_shinhanglobal.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Societe Generale India",
+    "ifsc": "SOGE",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_societegenerale.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Sonali Bank Ltd.",
+    "ifsc": "SBLD",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_sonalibank.png",
+    "imps": true,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Standard Chartered Bank",
+    "ifsc": "SCBL",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_sc.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Sumitomo Mitsui Banking Corporation",
+    "ifsc": "SMBC",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_smbc.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": false
+  },
+  {
+    "name": "United Overseas Bank Limited",
+    "ifsc": "UOVB",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_uobgroup.png",
+    "imps": false,
+    "nach": true,
+    "autopay": true,
+    "rupay": true
+  },
+  {
+    "name": "Woori Bank",
+    "ifsc": "HVBK",
+    "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/foreign_banks/bi_wooribank.png",
+    "imps": false,
+    "nach": false,
+    "autopay": true,
+    "rupay": true
+  }
+]

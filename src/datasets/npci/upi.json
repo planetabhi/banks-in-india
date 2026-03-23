@@ -1,0 +1,3472 @@
+[
+  {
+    "Sr. No.": "1",
+    "Bank/PPI Name": "Abhinandan Urban Co-op Bank Amravati",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "2",
+    "Bank/PPI Name": "Abhyudaya Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "3",
+    "Bank/PPI Name": "ACE Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "4",
+    "Bank/PPI Name": "ADARNIYA P D PATILSAHEB SAHAKARI BANK LTD KARAD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "5",
+    "Bank/PPI Name": "ADARSH Co-opERATIVE BANK RAJASTHAN",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "6",
+    "Bank/PPI Name": "Ahmedabad District Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "7",
+    "Bank/PPI Name": "Ahmednagar Merchants Co-Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "8",
+    "Bank/PPI Name": "AHMEDNAGAR SHAHAR SAHAKARI BANK MARYADIT",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "9",
+    "Bank/PPI Name": "AIRTEL PAYMENTS BANK LIMITED",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "10",
+    "Bank/PPI Name": "Akhand Anand Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "11",
+    "Bank/PPI Name": "ALAVI CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "12",
+    "Bank/PPI Name": "Aman Sahakari Bank Ltd, ICHALKARANJI",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "13",
+    "Bank/PPI Name": "Amazon",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "14",
+    "Bank/PPI Name": "Ambajogai Peoples Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "15",
+    "Bank/PPI Name": "Ambarnath Jai Hind Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "16",
+    "Bank/PPI Name": "Amreli Jilla Madhyastha Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "17",
+    "Bank/PPI Name": "AMRELI NAGARIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "18",
+    "Bank/PPI Name": "APNA Sahakari Bank ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "19",
+    "Bank/PPI Name": "Appasaheb Birnale Sahakari Bank Ltd Dudhgaon",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "20",
+    "Bank/PPI Name": "Appnit Technologies Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "21",
+    "Bank/PPI Name": "ARIHANT URBAN Co-opERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "22",
+    "Bank/PPI Name": "ARUNACHAL PRADESH RURAL BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "23",
+    "Bank/PPI Name": "Arvind Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "24",
+    "Bank/PPI Name": "ASSAM GRAMIN VIKASH BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "25",
+    "Bank/PPI Name": "Associate Co.op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "26",
+    "Bank/PPI Name": "AU SMALL FINANCE BANK",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "27",
+    "Bank/PPI Name": "Axis Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "28",
+    "Bank/PPI Name": "Bajaj Finance Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "29",
+    "Bank/PPI Name": "BALASINOR NAGARIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "30",
+    "Bank/PPI Name": "Balotra Urban Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "31",
+    "Bank/PPI Name": "Bandhan Bank limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "32",
+    "Bank/PPI Name": "Bank Of America N.A.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "33",
+    "Bank/PPI Name": "Bank of Baroda",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "34",
+    "Bank/PPI Name": "Bank Of India",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "35",
+    "Bank/PPI Name": "Bank of Maharashtra",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "36",
+    "Bank/PPI Name": "Baran Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "37",
+    "Bank/PPI Name": "(Baroda Gujarat Gramin Bank) Gujrat Gramin Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "38",
+    "Bank/PPI Name": "( Baroda Uttar Pradesh Gramin Bank) Uttar Pradesh Gramin Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "39",
+    "Bank/PPI Name": "Bassein Catholic Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "40",
+    "Bank/PPI Name": "Betul Nagrik Sahakari Bank Mydt",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "41",
+    "Bank/PPI Name": "Bhadradri Co-Operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "42",
+    "Bank/PPI Name": "Bhagini Nivedita Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "43",
+    "Bank/PPI Name": "BHAVNA RISHI CO OPERATIVE URBAN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "44",
+    "Bank/PPI Name": "Bhavnagar District Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "45",
+    "Bank/PPI Name": "BHILWARA URBAN Co-opERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "46",
+    "Bank/PPI Name": "Bombay Mercantile CO Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "47",
+    "Bank/PPI Name": "BRAHMADEODADA MANE SAHAKARI BANK LTD SOLAPUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "48",
+    "Bank/PPI Name": "Canara Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "49",
+    "Bank/PPI Name": "Capital Small Finance Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "50",
+    "Bank/PPI Name": "Central Bank of India",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "51",
+    "Bank/PPI Name": "(CHAITANYA GODAVARI GRAMEENA BANK) Andhra Pradesh Grameena Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "52",
+    "Bank/PPI Name": "Chartered Sahakari Bank Niyamitha",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "53",
+    "Bank/PPI Name": "CHHATTISGARH RAJYA GRAMIN BANK",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "54",
+    "Bank/PPI Name": "Chhattisgarh Rajya Sahakari Bank Mydt",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "55",
+    "Bank/PPI Name": "CHITTORGARH URBAN CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "56",
+    "Bank/PPI Name": "CITIBANK CORPORATE",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "57",
+    "Bank/PPI Name": "Citizen Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "58",
+    "Bank/PPI Name": "Citizen Credit Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "59",
+    "Bank/PPI Name": "Citizens Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "60",
+    "Bank/PPI Name": "City Union Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "61",
+    "Bank/PPI Name": "COASTAL AREA LOCAL BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "62",
+    "Bank/PPI Name": "CSB Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "63",
+    "Bank/PPI Name": "Cuddalore District Central Co-op Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "64",
+    "Bank/PPI Name": "Daivadnya Sahakara Bank Niyamit",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "65",
+    "Bank/PPI Name": "(Dakshin Bihar Gramin Bank) Bihar Gramin Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "66",
+    "Bank/PPI Name": "Dapoli Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "67",
+    "Bank/PPI Name": "Darussalam Co-Operative Urban Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "68",
+    "Bank/PPI Name": "Dattatraya Maharaj Kalambe Jaoli Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "69",
+    "Bank/PPI Name": "Dausa Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "70",
+    "Bank/PPI Name": "DBS Bank India Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "71",
+    "Bank/PPI Name": "DCB Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "72",
+    "Bank/PPI Name": "Deendayal Nagri Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "73",
+    "Bank/PPI Name": "Deogiri Nagari Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "74",
+    "Bank/PPI Name": "DEUTSCHE BANK",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "75",
+    "Bank/PPI Name": "Dhanalakshmi Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "76",
+    "Bank/PPI Name": "Dhanera Mercantile Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "77",
+    "Bank/PPI Name": "Dharmapuri District Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "78",
+    "Bank/PPI Name": "DHULE VIKAS SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "79",
+    "Bank/PPI Name": "DINDIGUL DISTRICT CENTRAL CO-OPERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "80",
+    "Bank/PPI Name": "Dombivli Nagarik Sahakari Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "81",
+    "Bank/PPI Name": "EQUITAS SMALL FINANCE BANK",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "82",
+    "Bank/PPI Name": "Eroute Technologies Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "83",
+    "Bank/PPI Name": "ESAF SMALL FINANCE BANK LTD",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "84",
+    "Bank/PPI Name": "Federal Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "85",
+    "Bank/PPI Name": "Fingrowth Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "86",
+    "Bank/PPI Name": "FINO PAYMENTS BANK",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "87",
+    "Bank/PPI Name": "G P Parsik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "88",
+    "Bank/PPI Name": "Godavari Urban Co-Operative Bank Ltd. Nashik",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "89",
+    "Bank/PPI Name": "Guardian Souharda Sahakari Bank Niyamita",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "90",
+    "Bank/PPI Name": "GUJARAT AMBUJA CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "91",
+    "Bank/PPI Name": "HAVELI SAHAKARI BANK MARYADIT MOSHI",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "92",
+    "Bank/PPI Name": "HDFC Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "93",
+    "Bank/PPI Name": "HIMACHAL PRADESH GRAMIN BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "94",
+    "Bank/PPI Name": "Himatnagar Nagarik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "95",
+    "Bank/PPI Name": "HSBC Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "96",
+    "Bank/PPI Name": "Hutatma Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "97",
+    "Bank/PPI Name": "ICICI Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "98",
+    "Bank/PPI Name": "IDBI Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "99",
+    "Bank/PPI Name": "IDFC First Bank Ltd",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "100",
+    "Bank/PPI Name": "INDIA POST PAYMENTS BANK LIMITED",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "101",
+    "Bank/PPI Name": "Indian Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "102",
+    "Bank/PPI Name": "Indian Overseas Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "103",
+    "Bank/PPI Name": "INDORE CLOTH MARKET CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "104",
+    "Bank/PPI Name": "Indore Paraspar Sahakari bank Ltd. Indore",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "105",
+    "Bank/PPI Name": "Indore Premier Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "106",
+    "Bank/PPI Name": "Indraprastha Sehkari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "107",
+    "Bank/PPI Name": "Indrayani Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "108",
+    "Bank/PPI Name": "Indusind Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "109",
+    "Bank/PPI Name": "Irinjalakuda Town Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "110",
+    "Bank/PPI Name": "JALGAON JANATA SAHAKARI BANK LTD JALGAON",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "111",
+    "Bank/PPI Name": "Jalna Merchants Co.Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "112",
+    "Bank/PPI Name": "Jalore Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "113",
+    "Bank/PPI Name": "Jamia Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "114",
+    "Bank/PPI Name": "(JAMMU AND KASHMIR GRAMEEN BANK ) Jammu and Kashmir Gramin Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "115",
+    "Bank/PPI Name": "JANA SMALL FINANCE BANK LTD",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "116",
+    "Bank/PPI Name": "Janakalyan Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "117",
+    "Bank/PPI Name": "Janaseva Sahakari Bank ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "118",
+    "Bank/PPI Name": "Janata Sahakari Bank, Pune",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "119",
+    "Bank/PPI Name": "JANATA SAHAKARI BANK LTD AJARA",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "120",
+    "Bank/PPI Name": "JANATHA SEVA CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "121",
+    "Bank/PPI Name": "Jharkhand Rajya Gramin Bank (Erstwhile Vananchal Gramin Bank)",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "122",
+    "Bank/PPI Name": "JIJAMATA MAHILA SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "123",
+    "Bank/PPI Name": "Jila Sahakari Kendriya Bank Maryadit Raipur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "124",
+    "Bank/PPI Name": "Jila Sahakari Kendriya Bank Mydt Durg",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "125",
+    "Bank/PPI Name": "Jila Sahkari Kendriya Bank Maryadit Khargone",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "126",
+    "Bank/PPI Name": "JIO PAYMENTS BANK LTD",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "127",
+    "Bank/PPI Name": "Jivan Commercial Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "128",
+    "Bank/PPI Name": "JODHPUR NAGRIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "129",
+    "Bank/PPI Name": "Jogindra Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "130",
+    "Bank/PPI Name": "Kallappanna Awade Ichalkaranji Janata Sahakari Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "131",
+    "Bank/PPI Name": "Kalyan Janata Sahakari Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "132",
+    "Bank/PPI Name": "Kanaka Mahalakshmi Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "133",
+    "Bank/PPI Name": "KANCHEEPURAM CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "134",
+    "Bank/PPI Name": "Kankaria Maninagar Nagarik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "135",
+    "Bank/PPI Name": "KANYAKUMARI DISTRICT CENTRAL CO-OPERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "136",
+    "Bank/PPI Name": "Karnataka Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "137",
+    "Bank/PPI Name": "(Karnataka Gramin Bank) Karnataka Grameena Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "138",
+    "Bank/PPI Name": "Karnataka Mahila Sahakara Bank Niyamitha",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "139",
+    "Bank/PPI Name": "Karur Vysya Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "140",
+    "Bank/PPI Name": "KASHMIR MERCANTILE CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "141",
+    "Bank/PPI Name": "KERALA GRAMIN BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "142",
+    "Bank/PPI Name": "Kokan Mercantile Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "143",
+    "Bank/PPI Name": "Kolhapur Dist. Central Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "144",
+    "Bank/PPI Name": "Kolhapur Mahila Sahakari Bank Ltd. Kolhapur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "145",
+    "Bank/PPI Name": "Kotak Mahindra Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "146",
+    "Bank/PPI Name": "Kottayam Co-operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "147",
+    "Bank/PPI Name": "Koyana Sahakari Bank Ltd Karad",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "148",
+    "Bank/PPI Name": "Krishna Bhima Samruddhi Local Area Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "149",
+    "Bank/PPI Name": "Krishna Mercantile Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "150",
+    "Bank/PPI Name": "LAXMI URBANCo-op BANK LTD LATUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "151",
+    "Bank/PPI Name": "LIC Employees Co-operative Bank Ltd, Udupi",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "152",
+    "Bank/PPI Name": "Liluah Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "153",
+    "Bank/PPI Name": "LIVQUIK Technology India PVT LTD",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "154",
+    "Bank/PPI Name": "Lokmangal Co op Bank Ltd Solapur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "155",
+    "Bank/PPI Name": "Lonavala Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "156",
+    "Bank/PPI Name": "M S Co-Operative Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "157",
+    "Bank/PPI Name": "MADHYA PRADESH RAJYA SAHAKARI BANK MARYADIT",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "158",
+    "Bank/PPI Name": "MADURAI DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "159",
+    "Bank/PPI Name": "GS Mahanagar Co op Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "160",
+    "Bank/PPI Name": "Mahanagar Nagrik Sahakari Bank Maryadit",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "161",
+    "Bank/PPI Name": "Maharashtra Gramin Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "162",
+    "Bank/PPI Name": "MAHARASHTRA NAGARI SAHAKARI BANK MARYADIT LATUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "163",
+    "Bank/PPI Name": "MAHATMA FULE URBAN Co-op BANK LTD AMRAVATI",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "164",
+    "Bank/PPI Name": "MAHAVEER CO-OPERATIVE URBAN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "165",
+    "Bank/PPI Name": "Mahesh Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "166",
+    "Bank/PPI Name": "Mahesh Urban Co-Operative Bank Ltd Parbhani",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "167",
+    "Bank/PPI Name": "MAHILA NAGRIK SAHAKARI BANK MARYADIT MAHASAMUND",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "168",
+    "Bank/PPI Name": "Malviya Urban Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "169",
+    "Bank/PPI Name": "MANIPUR RURAL BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "170",
+    "Bank/PPI Name": "Mann Deshi Mahila Sahakari Bank. Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "171",
+    "Bank/PPI Name": "Mansing Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "172",
+    "Bank/PPI Name": "Manvi Pattana Souharda Sahakari Bank Ni.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "173",
+    "Bank/PPI Name": "Maratha Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "174",
+    "Bank/PPI Name": "MEGHALAYA RURAL BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "175",
+    "Bank/PPI Name": "Mehsana Urban Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "176",
+    "Bank/PPI Name": "MIZORAM RURAL BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "177",
+    "Bank/PPI Name": "Model Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "178",
+    "Bank/PPI Name": "MOTI URBAN CO-OPERATIVE BANK LTD TALODA",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "179",
+    "Bank/PPI Name": "Muzaffarnagar District Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "180",
+    "Bank/PPI Name": "Nagarik Sahakari Bank Maryadit",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "181",
+    "Bank/PPI Name": "Nagrik Sahakari Maryadit Gwalior",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "182",
+    "Bank/PPI Name": "NANDANI SAHAKARI BANK LTD NANDANI",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "183",
+    "Bank/PPI Name": "NAVANAGARA URBAN CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "184",
+    "Bank/PPI Name": "Navi Mumbai Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "185",
+    "Bank/PPI Name": "NAVSARJAN INDUSTRIAL CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "186",
+    "Bank/PPI Name": "NILGIRIS DISTRICT CENTRAL CO-OPERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "187",
+    "Bank/PPI Name": "NKGSB Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "188",
+    "Bank/PPI Name": "NORTHERN RAILWAY PRIMARY CO-OPERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "189",
+    "Bank/PPI Name": "NSDL Payments Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "190",
+    "Bank/PPI Name": "Nutan Nagarik Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "191",
+    "Bank/PPI Name": "ONE MOBIKWIK SYSTEMS LIMITED",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "192",
+    "Bank/PPI Name": "Pali Urban Co-Operative Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "193",
+    "Bank/PPI Name": "Palus Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "194",
+    "Bank/PPI Name": "Patan Nagarik Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "195",
+    "Bank/PPI Name": "Pavana Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "196",
+    "Bank/PPI Name": "PAYPOINT INDIA NETWORK PRIVATE LIMITED",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "197",
+    "Bank/PPI Name": "PAYTM PAYMENTS BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "198",
+    "Bank/PPI Name": "Peoples Co-operative Bank Ltd Dholka",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "199",
+    "Bank/PPI Name": "Peoples Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "200",
+    "Bank/PPI Name": "PINE LABS PRIVATE LIMITED",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "201",
+    "Bank/PPI Name": "Poornawdi Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "202",
+    "Bank/PPI Name": "PRERANA CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "203",
+    "Bank/PPI Name": "Prime Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "204",
+    "Bank/PPI Name": "Priyadarshani Nagari Sahakari Bank Maryadit",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "205",
+    "Bank/PPI Name": "PUDUKOTTAI DISTRICT CENTRAL CO-OPERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "206",
+    "Bank/PPI Name": "Puduvai Bharathiar Grama Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "207",
+    "Bank/PPI Name": "Pune Cantonment Sahakari bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "208",
+    "Bank/PPI Name": "Pune District Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "209",
+    "Bank/PPI Name": "Pune Peoples Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "210",
+    "Bank/PPI Name": "Pune Urban Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "211",
+    "Bank/PPI Name": "Punjab and Sind Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "212",
+    "Bank/PPI Name": "PUNJAB GRAMIN BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "213",
+    "Bank/PPI Name": "Punjab national Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "214",
+    "Bank/PPI Name": "PUSAD URBAN CO-OP BANK LTD.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "215",
+    "Bank/PPI Name": "Rajadhani Co Op Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "216",
+    "Bank/PPI Name": "Rajapur Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "217",
+    "Bank/PPI Name": "Rajarambapu Sahakari Bank Ltd Peth",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "218",
+    "Bank/PPI Name": "Rajarshi Shahu Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "219",
+    "Bank/PPI Name": "(Rajasthan Marudhara Gramin Bank) Rajasthan Gramin Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "220",
+    "Bank/PPI Name": "Raje Vikramsinh Ghatage Co-operative Bank Ltd.Kagal",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "221",
+    "Bank/PPI Name": "RAJGURUNAGAR SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "222",
+    "Bank/PPI Name": "RAJKOT NAGARIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "223",
+    "Bank/PPI Name": "Rajkot Peoples Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "224",
+    "Bank/PPI Name": "RAJLAXMI URBAN CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "225",
+    "Bank/PPI Name": "RAMANATHAPURAM DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "226",
+    "Bank/PPI Name": "RAMPUR ZILA SAHKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "227",
+    "Bank/PPI Name": "Rani Channamma mahila Sahakari Bank Niyamit",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "228",
+    "Bank/PPI Name": "RBL Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "229",
+    "Bank/PPI Name": "RESERVE BANK EMPLOYEES Co-opERATIVE BANK LIMITED",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "230",
+    "Bank/PPI Name": "S S L S A Kurundwad Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "231",
+    "Bank/PPI Name": "Sadalga Urban Souharda Sahakari Bank Niyamit",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "232",
+    "Bank/PPI Name": "Sadhana Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "233",
+    "Bank/PPI Name": "SADHANA SAHAKARI BANK LTD YES BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "234",
+    "Bank/PPI Name": "SAIBABA NAGARI SAHAKARI BANK MARYADIT SAILU",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "235",
+    "Bank/PPI Name": "SALEM DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "236",
+    "Bank/PPI Name": "Samarth Sahakari Bank Ltd. Solapur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "237",
+    "Bank/PPI Name": "Samarth Sahakari Bank Maryadit Jalna",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "238",
+    "Bank/PPI Name": "SAMATA CO OPERATIVE DEVELOPMENT BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "239",
+    "Bank/PPI Name": "Samata Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "240",
+    "Bank/PPI Name": "Sampada Sahakari Bank Ltd Pune",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "241",
+    "Bank/PPI Name": "SAMRUDDHI Co-opERATIVE BANK LTD NAGPUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "242",
+    "Bank/PPI Name": "Sandur Pattana Souharda Sahakari Bank Ni",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "243",
+    "Bank/PPI Name": "Sant Sopankaka Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "244",
+    "Bank/PPI Name": "SARAKARI NAUKARARA SAHAKARI BANK NIYAMAT VIJAYAPUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "245",
+    "Bank/PPI Name": "Saraspur Nagarik Co-Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "246",
+    "Bank/PPI Name": "Saraswat Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "247",
+    "Bank/PPI Name": "Sardar Vallabhbhai Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "248",
+    "Bank/PPI Name": "SARVA HARYANA GRAMIN BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "249",
+    "Bank/PPI Name": "Sarvodaya Commercial Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "250",
+    "Bank/PPI Name": "SBM Bank India Ltd.",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "251",
+    "Bank/PPI Name": "SBPP CO-OPERATIVE BANK LIMITED",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "252",
+    "Bank/PPI Name": "SHARAD SAHAKARI BANK LTD, Manchar",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "253",
+    "Bank/PPI Name": "Shivalik Small Finance Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "254",
+    "Bank/PPI Name": "Shramik Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "255",
+    "Bank/PPI Name": "Shree Basaveshwar Urban Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "256",
+    "Bank/PPI Name": "Shree Dharati Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "257",
+    "Bank/PPI Name": "SHREE KADI NAGARIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "258",
+    "Bank/PPI Name": "SHREE MAHAVIR SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "259",
+    "Bank/PPI Name": "Shree Mahesh Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "260",
+    "Bank/PPI Name": "SHREE MAHUVA NAGRIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "261",
+    "Bank/PPI Name": "Shri Panchganga Nagari Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "262",
+    "Bank/PPI Name": "Shree Vardhman Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "263",
+    "Bank/PPI Name": "SHREE WARANA SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "264",
+    "Bank/PPI Name": "SHRI ADINATH CO OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "265",
+    "Bank/PPI Name": "Shri Anand Nagari Sahakari Bank Limited, Chandrapur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "266",
+    "Bank/PPI Name": "Shri Arihant Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "267",
+    "Bank/PPI Name": "Shri Basaveshwar Sahakari Bank Nyt.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "268",
+    "Bank/PPI Name": "Shri Bharat Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "269",
+    "Bank/PPI Name": "SHRI CHATRAPATI SHIVAJI MAHARAJ SAHAKARI BANK NIYAMITH",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "270",
+    "Bank/PPI Name": "SHRI CHHANI NAGRIK SAHKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "271",
+    "Bank/PPI Name": "Shri Chhatrapati Rajarshi Shahu Urban Co-Op. Bank Ltd. Beed",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "272",
+    "Bank/PPI Name": "SHRI JANATA SAHAKARI BANK LTD.HALOL",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "273",
+    "Bank/PPI Name": "SHRI MAHALAXMI Co-opERATIVE BANK LTD KOLHAPUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "274",
+    "Bank/PPI Name": "Shri Mahila Sewa Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "275",
+    "Bank/PPI Name": "Shri Rajkot District Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "276",
+    "Bank/PPI Name": "Shri Swami Samarth Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "277",
+    "Bank/PPI Name": "Shri Veershaiv Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "278",
+    "Bank/PPI Name": "Shri Yashwant Sahakari Bank Maryadit Kuditre",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "279",
+    "Bank/PPI Name": "Shrikrishna Co-operative Bank Ltd Umrer",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "280",
+    "Bank/PPI Name": "Sindhudurg District Central Co. Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "281",
+    "Bank/PPI Name": "SIVAGANGAI DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "282",
+    "Bank/PPI Name": "Smriti Nagrik Sahakari Bank Maryadit Mandsaur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "283",
+    "Bank/PPI Name": "SPICE MONEY LIMITED",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "284",
+    "Bank/PPI Name": "SREE CHARAN SOUHARDHA CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "285",
+    "Bank/PPI Name": "SREENIDHI SOUHARDA SAHAKARI BANK NIYAMITHA",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "286",
+    "Bank/PPI Name": "Sri Rama Co-Operative Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "287",
+    "Bank/PPI Name": "Sri Seetharaghava souharda Sahakara Bank Niyamitha",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "288",
+    "Bank/PPI Name": "Sri Sudha Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "289",
+    "Bank/PPI Name": "Sri Vasavamba Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "290",
+    "Bank/PPI Name": "Standard Chartered Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "291",
+    "Bank/PPI Name": "State Bank of India",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "292",
+    "Bank/PPI Name": "Sterling Urban Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "293",
+    "Bank/PPI Name": "SUCO Souharda Sahakari Bank-IMPS",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "294",
+    "Bank/PPI Name": "Sudha Co-Operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "295",
+    "Bank/PPI Name": "Sunderlal Sawji Urban Co-Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "296",
+    "Bank/PPI Name": "Surat National Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "297",
+    "Bank/PPI Name": "SURYODAY SMALL FINANCE BANK LIMITED",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "298",
+    "Bank/PPI Name": "Suvarnayug Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "299",
+    "Bank/PPI Name": "Tamil Nadu Grama Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "300",
+    "Bank/PPI Name": "Tamilnad Mercantile Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "301",
+    "Bank/PPI Name": "TELANGANA GRAMEENA BANK",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "302",
+    "Bank/PPI Name": "TELANGANA STATE Co-opERATIVE APEX BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "303",
+    "Bank/PPI Name": "Textile Traders Co-operative Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "304",
+    "Bank/PPI Name": "Thane Bharat Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "305",
+    "Bank/PPI Name": "Thane Janata Sahakari Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "306",
+    "Bank/PPI Name": "THANJAVUR DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "307",
+    "Bank/PPI Name": "The A.P. Mahesh Co-operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "308",
+    "Bank/PPI Name": "THE ABHINAV SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "309",
+    "Bank/PPI Name": "The Adarsh Co-operative Urban Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "310",
+    "Bank/PPI Name": "The Adilabad District Co-Op Central Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "311",
+    "Bank/PPI Name": "The Agrasen Co-Operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "312",
+    "Bank/PPI Name": "The Agrasen Nagari Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "313",
+    "Bank/PPI Name": "The Ahmedabad Mercantile Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "314",
+    "Bank/PPI Name": "THE AHMEDNAGAR DISTRICT CENTRAL Co-op BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "315",
+    "Bank/PPI Name": "The Ajara Urban Co op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "316",
+    "Bank/PPI Name": "The Akola District Central Co-oP.Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "317",
+    "Bank/PPI Name": "THE AKOLA JANATA COMMERCIAL Co-opERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "318",
+    "Bank/PPI Name": "THE AKOLA URBAN CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "319",
+    "Bank/PPI Name": "THE AMRAVATI ZILLA PARISHAD SHIKSHAK SAHAKARI BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "320",
+    "Bank/PPI Name": "The Anand Mercantile Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "321",
+    "Bank/PPI Name": "THE ANDHRA PRADESH STATE Co-opERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "322",
+    "Bank/PPI Name": "THE AP RAJARAJESWARI MAHILA CO OP URBAN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "323",
+    "Bank/PPI Name": "The Ashta Peoples Co-op Bank Ltd Ashta",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "324",
+    "Bank/PPI Name": "THE BABASAHEB DESHMUKH SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "325",
+    "Bank/PPI Name": "The Banaskantha District Central Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "326",
+    "Bank/PPI Name": "The Banaskantha Mercantile Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "327",
+    "Bank/PPI Name": "The Baramati Sahakari Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "328",
+    "Bank/PPI Name": "The Bardoli Nagrik Sahakari bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "329",
+    "Bank/PPI Name": "THE BARODA CENTRAL Co-op BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "330",
+    "Bank/PPI Name": "The Baroda City Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "331",
+    "Bank/PPI Name": "THE Bavla Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "332",
+    "Bank/PPI Name": "THE BELLARY DIST Co-opERATIVE CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "333",
+    "Bank/PPI Name": "The Bhagyalakshmi Mahila Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "334",
+    "Bank/PPI Name": "The Bhagyodaya Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "335",
+    "Bank/PPI Name": "THE BHARAT CO OPERATIVE BANK MUMBAI LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "336",
+    "Bank/PPI Name": "The Bharuch District Central Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "337",
+    "Bank/PPI Name": "THE BHUJ COMMERCIAL CO OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "338",
+    "Bank/PPI Name": "The Bicholim Urban Co-operative Bank LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "339",
+    "Bank/PPI Name": "The Burdwan Central Co op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "340",
+    "Bank/PPI Name": "The Business Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "341",
+    "Bank/PPI Name": "The Chandwad Merchants Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "342",
+    "Bank/PPI Name": "The Chembur Nagarik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "343",
+    "Bank/PPI Name": "The Chennai Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "344",
+    "Bank/PPI Name": "THE CHIPLUN URBAN Co-opERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "345",
+    "Bank/PPI Name": "The Coimbatore District Central Co-op Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "346",
+    "Bank/PPI Name": "The Commercial Co operative Bank Ltd Kolhapur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "347",
+    "Bank/PPI Name": "The Commercial Co-operative Bank Ltd, Jamnagar",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "348",
+    "Bank/PPI Name": "The Co-op Bank of Mehsana Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "349",
+    "Bank/PPI Name": "THE CO-OPERATIVE BANK OF RAJKOT LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "350",
+    "Bank/PPI Name": "The Cosmos Co-Operative Bank Ltd",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "351",
+    "Bank/PPI Name": "THE DAHOD MERCANTILE CO-OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "352",
+    "Bank/PPI Name": "The Dahod Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "353",
+    "Bank/PPI Name": "The Davangere Harihar Urban Sahakara Bank Niyamitha",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "354",
+    "Bank/PPI Name": "The Dhanbad Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "355",
+    "Bank/PPI Name": "The District Central Co op Bank Ltd Khammam",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "356",
+    "Bank/PPI Name": "The District Co-Operative Central Bank Ltd.Medak",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "357",
+    "Bank/PPI Name": "The Eenadu Co-oP.Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "358",
+    "Bank/PPI Name": "The Erode District Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "359",
+    "Bank/PPI Name": "The Financial Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "360",
+    "Bank/PPI Name": "The Gadchiroli District Central Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "361",
+    "Bank/PPI Name": "The Gandevi Peoples Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "362",
+    "Bank/PPI Name": "THE GANDHIDHAM CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "363",
+    "Bank/PPI Name": "The Gandhinagar Nagarik Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "364",
+    "Bank/PPI Name": "The Gandhinagar Urban Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "365",
+    "Bank/PPI Name": "The Gayatri Co-operative Urban Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "366",
+    "Bank/PPI Name": "The Godhra Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "367",
+    "Bank/PPI Name": "The Greater Bombay Co-operative Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "368",
+    "Bank/PPI Name": "The Gujarat State Co-op Bank Ltd",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "369",
+    "Bank/PPI Name": "THE GUNTUR Co-opERATIVE URBAN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "370",
+    "Bank/PPI Name": "The Haryana State Co-operative Apex Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "371",
+    "Bank/PPI Name": "THE HASSAN DISTRICT CO-OPERATIVE CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "372",
+    "Bank/PPI Name": "The Hasti Co-op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "373",
+    "Bank/PPI Name": "The Himachal Pradesh State Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "374",
+    "Bank/PPI Name": "The Idar Nagrik Sahakari Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "375",
+    "Bank/PPI Name": "THE JALGAON PEOPLES CO.OP.BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "376",
+    "Bank/PPI Name": "The Jamkhandi Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "377",
+    "Bank/PPI Name": "The Jammu & Kashmir Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "378",
+    "Bank/PPI Name": "The Jampeta Co operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "379",
+    "Bank/PPI Name": "The Janata Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "380",
+    "Bank/PPI Name": "The Junagadh Commercial Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "381",
+    "Bank/PPI Name": "The Junagadh Jilla Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "382",
+    "Bank/PPI Name": "The Kaira District Central Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "383",
+    "Bank/PPI Name": "THE KAKATIYA CO-OPERATIVE URBAN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "384",
+    "Bank/PPI Name": "The Kakinada Co-operative Town Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "385",
+    "Bank/PPI Name": "The Kalupur Commercial Co-Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "386",
+    "Bank/PPI Name": "THE KANGRA CENTRAL CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "387",
+    "Bank/PPI Name": "THE KARIMNAGAR DISTRICT CO OPERATIVE CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "388",
+    "Bank/PPI Name": "The Karnataka State Co-operative Apex Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "389",
+    "Bank/PPI Name": "The Karnavati Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "390",
+    "Bank/PPI Name": "The Kerala State Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "391",
+    "Bank/PPI Name": "The Khamgaon Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "392",
+    "Bank/PPI Name": "The Khattri Co-operative Urban Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "393",
+    "Bank/PPI Name": "THE KODAGU DISTRICT CO-OP CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "394",
+    "Bank/PPI Name": "The Kodinar Taluka Co-operative Banking Union Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "395",
+    "Bank/PPI Name": "The Kodungallur Town Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "396",
+    "Bank/PPI Name": "The Kolhapur Urban Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "397",
+    "Bank/PPI Name": "THE KOPARGAON PEOPLES CO-OP.BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "398",
+    "Bank/PPI Name": "The Kottakkal Co-operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "399",
+    "Bank/PPI Name": "The Kranthi Co-Operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "400",
+    "Bank/PPI Name": "The Kukarwada Nagarik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "401",
+    "Bank/PPI Name": "The Kumbakonam Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "402",
+    "Bank/PPI Name": "The Latur Urban Co-op Bank Ltd Latur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "403",
+    "Bank/PPI Name": "The Lunawada peoples Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "404",
+    "Bank/PPI Name": "The Maharashtra Mantralaya and Allied offices Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "405",
+    "Bank/PPI Name": "THE MAHARASHTRA STATE Co-opERATIVE BANK LIMITED",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "406",
+    "Bank/PPI Name": "The Mahaveer Co operative Bank LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "407",
+    "Bank/PPI Name": "THE MAKARPURA INDUSTRIAL ESTATE Co-op BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "408",
+    "Bank/PPI Name": "THE MALAD SAHAKARI BANK LIMITED",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "409",
+    "Bank/PPI Name": "The Mandvi Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "410",
+    "Bank/PPI Name": "THE MEGHALAYA Co-opERATIVE APEX BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "411",
+    "Bank/PPI Name": "The Mehsana Nagarik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "412",
+    "Bank/PPI Name": "THE MERCHANTS LIBERAL Co-opERATIVE BANK LTD GADAG",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "413",
+    "Bank/PPI Name": "The Merchants Souharda Sahakara Bank Ni.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "414",
+    "Bank/PPI Name": "THE MIZORAM Co-opERATIVE APEX BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "415",
+    "Bank/PPI Name": "The Modasa Nagarik Sahakari Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "416",
+    "Bank/PPI Name": "The Municipal Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "417",
+    "Bank/PPI Name": "THE Muslim Co-operative Bank Ltd Pune",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "418",
+    "Bank/PPI Name": "The Nainital Bank Ltd",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "419",
+    "Bank/PPI Name": "THE NALGONDA DIST CO-OP CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "420",
+    "Bank/PPI Name": "The Nanded Merchants Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "421",
+    "Bank/PPI Name": "The Nandura Urban Co-op Bank Ltd. Nandura",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "422",
+    "Bank/PPI Name": "THE NARODA NAGRIK CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "423",
+    "Bank/PPI Name": "The Nasik Merchants Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "424",
+    "Bank/PPI Name": "THE NATIONAL CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "425",
+    "Bank/PPI Name": "The Naval Dockyard Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "426",
+    "Bank/PPI Name": "The Navnirman Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "427",
+    "Bank/PPI Name": "THE NAWANAGAR CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "428",
+    "Bank/PPI Name": "The New Urban Co-operative Bank Ltd Rampur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "429",
+    "Bank/PPI Name": "The Panchmahal District Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "430",
+    "Bank/PPI Name": "The Panipat Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "431",
+    "Bank/PPI Name": "The Pimpalgaon Merchants Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "432",
+    "Bank/PPI Name": "The Pochampally Co-operative Urban bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "433",
+    "Bank/PPI Name": "The Pratap Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "434",
+    "Bank/PPI Name": "THE RAIGAD DISTRICT CO OPERATIVE BANK LTD ALIBAG",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "435",
+    "Bank/PPI Name": "The Railway Employees Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "436",
+    "Bank/PPI Name": "THE RAIPUR URBAN MERCANTILE CO OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "437",
+    "Bank/PPI Name": "THE RAJASTHAN STATE CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "438",
+    "Bank/PPI Name": "The Rajkot Commercial Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "439",
+    "Bank/PPI Name": "The Ranuj Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "440",
+    "Bank/PPI Name": "The S.S.K. Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "441",
+    "Bank/PPI Name": "The Sabarkantha Dist. Cent. Co.OP. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "442",
+    "Bank/PPI Name": "The Sangamner Merchants Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "443",
+    "Bank/PPI Name": "The Sarvodaya Nagarik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "444",
+    "Bank/PPI Name": "THE SARVODAYA SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "445",
+    "Bank/PPI Name": "The Satara District Central Co-Op. Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "446",
+    "Bank/PPI Name": "The Satara Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "447",
+    "Bank/PPI Name": "The Saurashtra Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "448",
+    "Bank/PPI Name": "The Shahada Peoples Co-op Bank LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "449",
+    "Bank/PPI Name": "SVC Cooperative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "450",
+    "Bank/PPI Name": "The Sirsi Urban Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "451",
+    "Bank/PPI Name": "The South Indian Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "452",
+    "Bank/PPI Name": "The Sultans Battery Co-operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "453",
+    "Bank/PPI Name": "The Surat District Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "454",
+    "Bank/PPI Name": "The Surat Mercantile Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "455",
+    "Bank/PPI Name": "THE SURAT PEOPLES Co-op BANK LTD",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "456",
+    "Bank/PPI Name": "The SUTEX Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "457",
+    "Bank/PPI Name": "THE TAMIL NADU STATE APEX CO OPERATIVE BANK LTD",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "458",
+    "Bank/PPI Name": "The Thane Dist Central Co op. Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "459",
+    "Bank/PPI Name": "The Tiruvannamalai District central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "460",
+    "Bank/PPI Name": "THE UDAIPUR MAHILA URBAN Co-op BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "461",
+    "Bank/PPI Name": "The Udaipur Urban Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "462",
+    "Bank/PPI Name": "The Udupi Co Operative Town Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "463",
+    "Bank/PPI Name": "THE UMRETH URBAN CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "464",
+    "Bank/PPI Name": "THE UNION CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "465",
+    "Bank/PPI Name": "THE URBAN Co-op BANK LTD DHARANGAON",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "466",
+    "Bank/PPI Name": "The Urban Co-op Bank Ltd No 1758 Perinthalmanna",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "467",
+    "Bank/PPI Name": "THE UTTARSANDA PEOPLES Co-op BANK LTD UTTARSANDA",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "468",
+    "Bank/PPI Name": "The Vaish Co operative New Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "469",
+    "Bank/PPI Name": "The Vallabh Vidyanagar Commercial Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "470",
+    "Bank/PPI Name": "The Varachha Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "471",
+    "Bank/PPI Name": "The Veraval peoples Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "472",
+    "Bank/PPI Name": "THE VIJAY Co-opERATIVE BANK LTD, Ahmedabad",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "473",
+    "Bank/PPI Name": "The Visakhapatnam Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "474",
+    "Bank/PPI Name": "The Vishweshwar Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "475",
+    "Bank/PPI Name": "The Warangal District Co-operative Central Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "476",
+    "Bank/PPI Name": "THE ZOROASTRIAN CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "477",
+    "Bank/PPI Name": "TheTiruchirappalli District Central Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "478",
+    "Bank/PPI Name": "THOOTHUKUDI DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "479",
+    "Bank/PPI Name": "TIRUNELVELI DISTRICT CENTRAL Co-opERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "480",
+    "Bank/PPI Name": "Tirupati Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "481",
+    "Bank/PPI Name": "Transcorp International Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "482",
+    "Bank/PPI Name": "TRANSERV LIMITED",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "483",
+    "Bank/PPI Name": "Tri O Tech Solutions Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "484",
+    "Bank/PPI Name": "TRIPURA GRAMIN BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "485",
+    "Bank/PPI Name": "TRIPURA STATE CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "486",
+    "Bank/PPI Name": "Tumkur Grain Merchants Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "487",
+    "Bank/PPI Name": "UCO Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "488",
+    "Bank/PPI Name": "UDAIPUR MAHILA SAMRUDHI URBAN Co-op BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "489",
+    "Bank/PPI Name": "UJJIVAN SMALL FINANCE BANK LIMITED",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "490",
+    "Bank/PPI Name": "UMA CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "491",
+    "Bank/PPI Name": "Union Bank Of India",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "492",
+    "Bank/PPI Name": "Unity Small Finance Bank Limited",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "493",
+    "Bank/PPI Name": "UNJHA NAGARIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "494",
+    "Bank/PPI Name": "URBAN CO OPERATIVA BANK LTD SIDDHARTHNAGAR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "495",
+    "Bank/PPI Name": "URBAN Co-opERATIVE BANK LTD BAREILLY",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "496",
+    "Bank/PPI Name": "UTKARSH SMALL FINANCE BANK LIMITED",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "497",
+    "Bank/PPI Name": "Uttar Pradesh Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "498",
+    "Bank/PPI Name": "Uttarakhand Gramin Bank - IMPS",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "499",
+    "Bank/PPI Name": "Vaishya Nagari Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "500",
+    "Bank/PPI Name": "Vaishya Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "501",
+    "Bank/PPI Name": "Valmiki Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "502",
+    "Bank/PPI Name": "VALSAD DISTRICT CENTRAL CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "503",
+    "Bank/PPI Name": "VARDHAMAN MAHILA CO OPERATIVE URBAN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "504",
+    "Bank/PPI Name": "Vasai Janata Sahakari bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "505",
+    "Bank/PPI Name": "VASAI VIKAS SAHAKARI BANK LTD",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "506",
+    "Bank/PPI Name": "Vasundhara Mahila Nagari Sahakari Bank. Ltd Ambejogai",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "507",
+    "Bank/PPI Name": "Veerashaiva Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "508",
+    "Bank/PPI Name": "VELLORE DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "509",
+    "Bank/PPI Name": "Vidarbha Merchants Urban Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "510",
+    "Bank/PPI Name": "VIJAY COMMERCIAL CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "511",
+    "Bank/PPI Name": "Vikas Souharda Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "512",
+    "Bank/PPI Name": "VIKRAMADITYA NAGRIK SAHAKARI BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "513",
+    "Bank/PPI Name": "VILLUPURAM DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "514",
+    "Bank/PPI Name": "VIRUDHUNAGAR DISTRICT CENTRAL Co-opERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "515",
+    "Bank/PPI Name": "VYAVSAYIK SAHKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "516",
+    "Bank/PPI Name": "Warangal Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "517",
+    "Bank/PPI Name": "YES BANK LIMITED YBS",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "518",
+    "Bank/PPI Name": "Zila Sahakari Bank Ltd Lakhimpur Kheri",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "519",
+    "Bank/PPI Name": "SANMITRA MAHILA NAGARI SAHAKARI BANK MARYADIT CHANDRAPUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "520",
+    "Bank/PPI Name": "The Veraval Mercantile Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "521",
+    "Bank/PPI Name": "The Chandigarh State Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "522",
+    "Bank/PPI Name": "Ratnagiri District Central Co operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "523",
+    "Bank/PPI Name": "The Raichur District Central Co-op Bank Ltd Raichur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "524",
+    "Bank/PPI Name": "Sri Gokarnanath Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "525",
+    "Bank/PPI Name": "Hadagali Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "526",
+    "Bank/PPI Name": "SARDAR SINGH NAGRIK SAHKARI BANK MARYADIT TIKAMGARH",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "527",
+    "Bank/PPI Name": "The Sarvodaya Sahakari Bank Ltd., Modasa",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "528",
+    "Bank/PPI Name": "The Gandhi Gunj Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "529",
+    "Bank/PPI Name": "ILKAL CO-OPERATIVE BANK LTD ILKAL",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "530",
+    "Bank/PPI Name": "Dr. Annasaheb Chougule Urban Co-Op. Bank Ltd.,Peth Vadgaon",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "531",
+    "Bank/PPI Name": "ICICI Pockets (PPI)",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "532",
+    "Bank/PPI Name": "IDFC First Bank Ltd (PPI)",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "533",
+    "Bank/PPI Name": "Balitikuri Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "534",
+    "Bank/PPI Name": "Wana Nagarik Sahakari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "535",
+    "Bank/PPI Name": "Lokvikas Nagari Sahkari Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "536",
+    "Bank/PPI Name": "The Gandhidham Mercantile Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "537",
+    "Bank/PPI Name": "Contai Co-operative Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "538",
+    "Bank/PPI Name": "Shri Rukmini Sahakari Bank Ltd, Shrigonda",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "539",
+    "Bank/PPI Name": "Chaitanya Mahila Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "540",
+    "Bank/PPI Name": "Sonbhadra Nagar Sahkari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "541",
+    "Bank/PPI Name": "Rapipay Fintech Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "542",
+    "Bank/PPI Name": "Unimoni Financial Services Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "543",
+    "Bank/PPI Name": "THE NASIKROAD DEOLALI VYAPARI SAHAKARI BANK LTD.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "544",
+    "Bank/PPI Name": "Shri D. T. Patil Co-opertive Bank Ltd, Chikodi",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "545",
+    "Bank/PPI Name": "Priyadarshani Urban Co Op Bank Ltd Kallam",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "546",
+    "Bank/PPI Name": "Khardah Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "547",
+    "Bank/PPI Name": "Lakhimpur Urban Cooperative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "548",
+    "Bank/PPI Name": "Umiya Urban Co-Operative Bank Maryadit Nagpur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "549",
+    "Bank/PPI Name": "The Shoranur Co Operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "550",
+    "Bank/PPI Name": "Vilas Co-operative Bank Ltd., Latur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "551",
+    "Bank/PPI Name": "Jankalyan Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "552",
+    "Bank/PPI Name": "PayU Payments Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "553",
+    "Bank/PPI Name": "SHREE BALAJI URBAN CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "554",
+    "Bank/PPI Name": "Shri Gajanan Maharaj Urban Co-Op Bank Ltd Bhokardan",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "555",
+    "Bank/PPI Name": "Dr. Appasaheb Urf Sa. Re. Patil Jaysingpur Udgaon Sahakari Bank Ltd Jaysingpur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "556",
+    "Bank/PPI Name": "The Pioneer Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "557",
+    "Bank/PPI Name": "The Mehsana District Central Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "558",
+    "Bank/PPI Name": "The Shillong Cooperative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "559",
+    "Bank/PPI Name": "Mahalakshmi Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "560",
+    "Bank/PPI Name": "The Ambika Mahila Sahakari Bank Ltd. Ahmednagar",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "561",
+    "Bank/PPI Name": "Vyaparik Audhyogik Sahakari Bank ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "562",
+    "Bank/PPI Name": "The Davangere Urban co op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "563",
+    "Bank/PPI Name": "The Mumbai Mahanagarpalika Shikshan Vibhag Sahakari Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "564",
+    "Bank/PPI Name": "The Nadiad Peoples Co Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "565",
+    "Bank/PPI Name": "The Goa Urban Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "566",
+    "Bank/PPI Name": "The Chikhli urban Co-op Bank Ltd., chikhli",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "567",
+    "Bank/PPI Name": "Siddheshwar Urban Co-Operative Bank Mydt. Sillod",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "568",
+    "Bank/PPI Name": "Shriram Urban Co-Operative Bank Ltd., Nagpur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "569",
+    "Bank/PPI Name": "Bhavani Urban Co-operative Bank Ltd Georai",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "570",
+    "Bank/PPI Name": "The Bhuj Mercantile Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "571",
+    "Bank/PPI Name": "DEVELOPMENT COOPERATIVE BANK LTD.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "572",
+    "Bank/PPI Name": "The Godhra City Co-operative Bank Ltd. Godhra",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "573",
+    "Bank/PPI Name": "The Quilon Co-Operative Urban Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "574",
+    "Bank/PPI Name": "Vijayapura DCC Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "575",
+    "Bank/PPI Name": "SRI GANAPATHI URBAN CO OPERATIVE BANK LTD., SAGAR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "576",
+    "Bank/PPI Name": "The Washim Urban Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "577",
+    "Bank/PPI Name": "SHRI DURGADEVI MAHILA SAHAKARI BANK NIYAMITH",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "578",
+    "Bank/PPI Name": "Agroha Co\u2013Operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "579",
+    "Bank/PPI Name": "The Panchsheel Mercantile Co-Op. Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "580",
+    "Bank/PPI Name": "The Chittoor District Co-op Central Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "581",
+    "Bank/PPI Name": "THE BANGALORE CITY CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "582",
+    "Bank/PPI Name": "Nyayamitra Sahakari Bank Niyamita",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "583",
+    "Bank/PPI Name": "Bellad Bagewadi Urban Souharada Sahakari Bank NYT",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "584",
+    "Bank/PPI Name": "Nandurbar Merchants Co-operative Bank Ltd.,Nandurbar",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "585",
+    "Bank/PPI Name": "Bhausaheb Sahakari Bank Ltd, Udgir",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "586",
+    "Bank/PPI Name": "Bhausaheb Birajdar Urban Co-Operative Bank Ltd., Omerga",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "587",
+    "Bank/PPI Name": "EBIX PAYMENT SERVICES PRIVATE LIMITED",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "588",
+    "Bank/PPI Name": "LATUR District Central Co-operative BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "589",
+    "Bank/PPI Name": "Bramhapuri Urban Co-Operative Bank LTD.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "590",
+    "Bank/PPI Name": "(Bangiya Gramin Vikash Bank) West Bengal Gramin Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "591",
+    "Bank/PPI Name": "Astha Mahila Nagrik Sahkari Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "592",
+    "Bank/PPI Name": "Balance Hero India Pvt Ltd",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "593",
+    "Bank/PPI Name": "The Annasaheb Savant Co-operative Urban Bank Mahad Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "594",
+    "Bank/PPI Name": "Slice Small Finance Bank",
+    "Details": "PSP & Issuer"
+  },
+  {
+    "Sr. No.": "595",
+    "Bank/PPI Name": "510 ARMY BASE WORKSHOP CREDIT CO OPERATIVE PRIMARY BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "596",
+    "Bank/PPI Name": "The Muvattupuzha Urban Co-operative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "597",
+    "Bank/PPI Name": "Basoda Nagrik Sahakari Bank Mydt Ganjbasoda",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "598",
+    "Bank/PPI Name": "The Sarangpur Co Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "599",
+    "Bank/PPI Name": "The Santrampur Urban Co-Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "600",
+    "Bank/PPI Name": "Prathamik Shikshak Sahakari Bank Ltd., Satara",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "601",
+    "Bank/PPI Name": "Teachers Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "602",
+    "Bank/PPI Name": "The Rander Peoples Coop Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "603",
+    "Bank/PPI Name": "Omprakash Deora Peoples Co operative Bank Ltd, Hingoli",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "604",
+    "Bank/PPI Name": "Shri Laxmikrupa Urban Co - Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "605",
+    "Bank/PPI Name": "The Punjab State Cooperative Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "606",
+    "Bank/PPI Name": "Ramrajya Sahakari Bank Ltd, Pune",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "607",
+    "Bank/PPI Name": "Mumbai District Central Co-op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "608",
+    "Bank/PPI Name": "The Chitnavispura Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "609",
+    "Bank/PPI Name": "The Ankola Urban Co-Operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "610",
+    "Bank/PPI Name": "Yeshwant Nagari Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "611",
+    "Bank/PPI Name": "The Shirpur Peoples Co-Op Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "612",
+    "Bank/PPI Name": "Mahesh Urban Co-Operative Bank Ltd.,Ahmedpur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "613",
+    "Bank/PPI Name": "Vyapari Sahakari Bank Maryadit,Solapur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "614",
+    "Bank/PPI Name": "Sankheda Nagrik Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "615",
+    "Bank/PPI Name": "Merchants Co operative Bank Ltd Tiptur",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "616",
+    "Bank/PPI Name": "Paul Merchants Finance Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "617",
+    "Bank/PPI Name": "Krishna Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "618",
+    "Bank/PPI Name": "Gautam Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "619",
+    "Bank/PPI Name": "Obopay Mobile Technology India Pvt Ltd",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "620",
+    "Bank/PPI Name": "KOILKUNTLA CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "621",
+    "Bank/PPI Name": "THE KARAD URBAN CO OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "622",
+    "Bank/PPI Name": "DURGAPUR STEEL PEOPLES COOP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "623",
+    "Bank/PPI Name": "The Azad Co-Operative Bank Ltd Gadag",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "624",
+    "Bank/PPI Name": "Lala Urban Co-Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "625",
+    "Bank/PPI Name": "The West Bengal State Co-Operative Bank (WBSCB LTD)",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "626",
+    "Bank/PPI Name": "Shree Thyagaraja Co-operative Bank Limited",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "627",
+    "Bank/PPI Name": "Shri Shiveshwar Nagari Sahakari Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "628",
+    "Bank/PPI Name": "Nidhi Co Operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "629",
+    "Bank/PPI Name": "Hyderabad District Coop Central Bank ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "630",
+    "Bank/PPI Name": "Tirumala Co-Operative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "631",
+    "Bank/PPI Name": "Sahakarmaharshi Bhausaheb Thorat Amrutvahini Sahakari Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "632",
+    "Bank/PPI Name": "Phone Pe",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "633",
+    "Bank/PPI Name": "Yes Bank PPI",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "634",
+    "Bank/PPI Name": "THE MUDALAGI CO OP BANK LTD MUDALAGI",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "635",
+    "Bank/PPI Name": "NAV JEEVAN CO-OPERATIVE BANK LIMITED",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "636",
+    "Bank/PPI Name": "Nileshwar Cooperative Urban bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "637",
+    "Bank/PPI Name": "SHRI MAHAVIR URBAN CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "638",
+    "Bank/PPI Name": "Shinhan Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "639",
+    "Bank/PPI Name": "Hindon Mercantile Ltd",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "640",
+    "Bank/PPI Name": "North East Small Finance Bank (PPI)",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "641",
+    "Bank/PPI Name": "Intergral Urban Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "642",
+    "Bank/PPI Name": "Standard Urban Co-operative Bank Lts",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "643",
+    "Bank/PPI Name": "The Ottapalam Cooperative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "644",
+    "Bank/PPI Name": "Tamluk Ghatal Central Cooperative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "645",
+    "Bank/PPI Name": "The Accountant General's Office Employees' Co-operative Bank Ltd.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "646",
+    "Bank/PPI Name": "Kangra Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "647",
+    "Bank/PPI Name": "The GRAIN MERCHANTS CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "648",
+    "Bank/PPI Name": "BALUSSERI CO-OPERATIVE URBAN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "649",
+    "Bank/PPI Name": "THE PRIME CO OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "650",
+    "Bank/PPI Name": "SOLAPUR SIDDHESHWAR SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "651",
+    "Bank/PPI Name": "BHINGAR URBAN COOPERATIVE BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "652",
+    "Bank/PPI Name": "THE VANI MERCHANTS CO OP BANK",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "653",
+    "Bank/PPI Name": "THE PAYYANUR CO OPERATIVE TOWN BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "654",
+    "Bank/PPI Name": "SHRI KANYAKA NAGARI SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "655",
+    "Bank/PPI Name": "THE RAYAT SEVAK CO-OP BANK LTD., SATARA",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "656",
+    "Bank/PPI Name": "MUGBERIA CENTRAL COOPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "657",
+    "Bank/PPI Name": "SHREE MAHAYOGI LAKSHMAMMA CO-OP. BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "658",
+    "Bank/PPI Name": "Smart payments solutions Pvt Ltd",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "659",
+    "Bank/PPI Name": "MobilePe Fintech Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "660",
+    "Bank/PPI Name": "Transaction Analysts (India) Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "661",
+    "Bank/PPI Name": "THE KRISHNA DISTRICT COOPERATIVE CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "662",
+    "Bank/PPI Name": "THE RAJAJINAGAR CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "663",
+    "Bank/PPI Name": "LAXMI SAHAKARI BANK NIYAMIT, GULEDGUDD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "664",
+    "Bank/PPI Name": "THE COASTAL URBAN CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "665",
+    "Bank/PPI Name": "Jila Sahakari Kendriya Bank Maryadit Vidisha",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "666",
+    "Bank/PPI Name": "Dreampurse",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "667",
+    "Bank/PPI Name": "THE TIRUPATI CO OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "668",
+    "Bank/PPI Name": "The Mattancherry Sarvajanik Co-operative Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "669",
+    "Bank/PPI Name": "PADMAVATHI COOPERATIVE URBAN BANK LIMITED",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "670",
+    "Bank/PPI Name": "Yadrav Co-Operative Bank Ltd, Yadrav",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "671",
+    "Bank/PPI Name": "THE BENGALURU DISTRICT CENTRAL COOPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "672",
+    "Bank/PPI Name": "JILASAHAKARI KENDRIYA BANK MARYADIT JAGDALPUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "673",
+    "Bank/PPI Name": "HOOGHLY DISTRICT CENTRAL COOPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "674",
+    "Bank/PPI Name": "SHRI SHIVAYOGI MURUGHENDRA SWAMI URBAN CO-OPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "675",
+    "Bank/PPI Name": "HDFC Bank PPI",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "676",
+    "Bank/PPI Name": "VIDYASAGAR CENTRAL COOPERATIVE BANK LTD., MIDNAPORE",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "677",
+    "Bank/PPI Name": "THE MYSORE AND CHAMARAJANAGAR DISTRICT CO OPERATIVE CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "678",
+    "Bank/PPI Name": "THE KANARA DCC BANK LTD SIRSI",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "679",
+    "Bank/PPI Name": "SIKKIM STATE CO-OPERATIVE BANK LTD.",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "680",
+    "Bank/PPI Name": "Maharana Pratap Cooperative Urban Bank Ltd",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "681",
+    "Bank/PPI Name": "THE SARDARGUNJ MERCANTILE COOPERATIVE BANK LTD PATAN",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "682",
+    "Bank/PPI Name": "THE CHIKMAGALUR DISTRICT CO OPERATIVE CENTRAL BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "683",
+    "Bank/PPI Name": "AMICA Payment Services Private Limited",
+    "Details": "PSP & PPI Issuer"
+  },
+  {
+    "Sr. No.": "684",
+    "Bank/PPI Name": "PRAGATI SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "685",
+    "Bank/PPI Name": "Bharati Sahakari Bank Ltd Pune",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "686",
+    "Bank/PPI Name": "MALDA DISTRICT CENTRAL COOPERATIVE BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "687",
+    "Bank/PPI Name": "THE SOUTH CANARA DISTRICT CO-OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "688",
+    "Bank/PPI Name": "THE DISTRICT COOPERATIVE CENTRAL BANK LTD ELURU",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "689",
+    "Bank/PPI Name": "Odisha Grameen Bank",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "690",
+    "Bank/PPI Name": "COL RD NIKAM SAINIK SAHAKARI BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "691",
+    "Bank/PPI Name": "THE CHOPDA PEOPLES CO OP BANK LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "692",
+    "Bank/PPI Name": "SRI POTTI SRIRAMULU NELLORE DCCB LTD",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "693",
+    "Bank/PPI Name": "PANDHARPUR MERCHANTS CO-OP BANK LTD PANDHARPUR",
+    "Details": "Issuer"
+  },
+  {
+    "Sr. No.": "694",
+    "Bank/PPI Name": "I Money Pay Private Limited",
+    "Details": "PSP & PPI Issuer"
+  }
+]

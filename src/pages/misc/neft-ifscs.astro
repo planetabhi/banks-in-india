@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import neftIfscs from '../../datasets/rbi/neft-ifscs.json';
+---
+
+<Layout title="NEFT IFSCs | Misc | Banks in India">
+	<main id="main-content">
+		<header>
+			<h1 class="italic">NEFT Enabled IFSC Codes</h1>
+		</header>
+		
+		<section aria-label="NEFT IFSCs List">
+            <h2>[Branches]</h2>
+			<ul>
+                {neftIfscs.map((item) => (
+                    <li>
+                        [NEFT] <code>{item.IFSC}</code> - <strong>{item.BANK}</strong> ({item.BRANCH})
+                    </li>
+                ))}
+			</ul>
+		</section>
+
+	</main>
+</Layout>
+
+<style>
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</style>

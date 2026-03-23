@@ -1,0 +1,25 @@
+---
+import Layout from '../layouts/Layout.astro';
+import RawTable from '../components/RawTable.astro';
+import bsrData from '../datasets/rbi/bsr-codes.json';
+
+// Extracting a sensible subset of columns to avoid horizontal overflow
+// Since the user loaded an IFSC map into the BSR placeholder, we map it generically for now
+const cleanBsr = bsrData.slice(0, 500).map(d => ({
+  "Bank Element": d["BANK"],
+  "Branch Locator": d["BRANCH"],
+  "Regional District": d["CITY2"],
+  "Primary Routing": d["IFSC"]
+}));
+---
+<Layout title="BSR Routing Directory">
+  <main id="main-content">
+    <header>
+      <h1>Basic Statistical Return (BSR) & Tax Routing</h1>
+      <p>Branch-level indexing utilized for official corporate taxation (TDS/TCS) processing pipelines. Demonstrating the first 500 records to maintain layout fluidity.</p>
+    </header>
+    <section>
+      <RawTable data={cleanBsr} />
+    </section>
+  </main>
+</Layout>

@@ -1,12 +1,12 @@
 {
   "name": "banks-in-india",
-  "version": "0.3.1",
+  "version": "0.3.2",
   "description": "Websites & icons for all active Indian banks.",
   "type": "module",
   "scripts": {
     "dev": "astro dev",
     "start": "astro dev",
-    "build": "astro check && astro build",
+    "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
@@ -29,10 +29,10 @@
   },
   "homepage": "https://banksin.in/",
   "dependencies": {
-    "@astrojs/check": "^0.9.6",
-    "@astrojs/netlify": "^6.6.4",
+    "@astrojs/check": "^0.9.8",
+    "@astrojs/netlify": "^7.0.4",
     "@new-ui/foundations": "^0.3.4",
-    "astro": "^5.16.15",
+    "astro": "^6.0.8",
     "typescript": "^5.9.3"
   }
 }

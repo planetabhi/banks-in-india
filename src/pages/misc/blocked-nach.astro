@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import blockedNach from '../../datasets/npci/blocked-banks.json';
+---
+
+<Layout title="Blocked Banks on NACH | Misc | Banks in India">
+	<main id="main-content">
+		<header>
+			<h1 class="italic">Blocked Banks on NACH</h1>
+		</header>
+		
+		<section aria-label="Blocked Banks Tracker">
+            <h2>[Blocked Entities]</h2>
+			<ul>
+                {blockedNach.map((item) => (
+                    <li>
+                        [Blocked] <strong>{item['Bank Name']}</strong> - IFSC: <code>{item['IFSC']}</code> (IIN: {item['IIN']})
+                    </li>
+                ))}
+			</ul>
+		</section>
+
+	</main>
+</Layout>
+
+<style>
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</style>

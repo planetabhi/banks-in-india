@@ -1,0 +1,17 @@
+[
+  {
+    "name": "Paytm Payments Bank",
+    "restriction": "Restricted from onboarding new customers and accepting fresh deposits.",
+    "date": "Feb 2024"
+  },
+  {
+    "name": "Shirpur Merchants' Co-operative Bank",
+    "restriction": "Directions under Section 35A - Cap on withdrawals.",
+    "date": "April 2024"
+  },
+  {
+    "name": "National Co-operative Bank Ltd",
+    "restriction": "License cancelled by RBI.",
+    "date": "May 2024"
+  }
+]

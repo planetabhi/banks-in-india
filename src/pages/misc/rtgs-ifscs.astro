@@ -1,0 +1,32 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import rtgsIfscs from '../../datasets/rbi/rtgs-ifscs.json';
+---
+
+<Layout title="RTGS IFSCs | Misc | Banks in India">
+	<main id="main-content">
+		<header>
+			<h1 class="italic">RTGS Enabled IFSC Codes</h1>
+		</header>
+		
+		<section aria-label="RTGS IFSCs List">
+            <h2>[Branches]</h2>
+			<ul>
+                {rtgsIfscs.map((item) => (
+                    <li>
+                        [RTGS] <code>{item.Code}</code> - <strong>{item['Bank Name']}</strong> ({item['No. of RTGS enabled branches']} Branches)
+                    </li>
+                ))}
+			</ul>
+		</section>
+
+	</main>
+</Layout>
+
+<style>
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</style>

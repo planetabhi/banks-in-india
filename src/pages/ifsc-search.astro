@@ -1,0 +1,102 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="IFSC Code Search | Banks in India">
+	<main id="main-content">
+		<header>
+			<h1 class="italic">IFSC Code Search</h1>
+		</header>
+		
+		<section aria-label="Search Form">
+            <h2>[Search]</h2>
+            <form id="ifsc-form" autocomplete="off">
+                <ul>
+                    <li>
+                        <label for="ifsc-input">[Query]</label> <input type="text" id="ifsc-input" name="ifsc" placeholder="e.g. HDFC0000001" required pattern="^[A-Z]{4}0[A-Z0-9]{6}$" title="Enter a valid 11-character IFSC code" />
+                    </li>
+                    <li>
+                        [Action] <button type="submit">Search</button>
+                    </li>
+                </ul>
+            </form>
+        </section>
+
+        <section aria-label="Search Results">
+            <ul id="loading" hidden>
+                <li>[Status] Searching...</li>
+            </ul>
+            
+            <ul id="error-message" hidden>
+            </ul>
+            
+            <ul id="result-card" hidden>
+                <li>[Bank] <span id="res-bank"></span></li>
+                <li>[Branch] <span id="res-branch"></span></li>
+                <li>[Address] <span id="res-address"></span></li>
+                <li>[Location] <span id="res-city"></span>, <span id="res-state"></span></li>
+                <li>[MICR] <span id="res-micr"></span></li>
+                <li>[Supported] <span id="res-supported"></span></li>
+            </ul>
+		</section>
+
+	</main>
+</Layout>
+
+<script>
+    const form = document.getElementById('ifsc-form') as HTMLFormElement;
+    const input = document.getElementById('ifsc-input') as HTMLInputElement;
+    const loading = document.getElementById('loading')!;
+    const errorMessage = document.getElementById('error-message')!;
+    const resultCard = document.getElementById('result-card')!;
+
+    form.addEventListener('submit', async (e) => {
+        e.preventDefault();
+        const ifsc = input.value.trim().toUpperCase();
+        
+        loading.hidden = false;
+        errorMessage.hidden = true;
+        resultCard.hidden = true;
+
+        try {
+            const response = await fetch(`https://ifsc.razorpay.com/${ifsc}`);
+            if (!response.ok) {
+                if (response.status === 404) {
+                    throw new Error("IFSC code not found.");
+                }
+                throw new Error("An error occurred while fetching data.");
+            }
+            
+            const data = await response.json();
+            
+            document.getElementById('res-bank')!.textContent = data.BANK;
+            document.getElementById('res-branch')!.textContent = data.BRANCH;
+            document.getElementById('res-address')!.textContent = data.ADDRESS;
+            document.getElementById('res-city')!.textContent = data.CITY;
+            document.getElementById('res-state')!.textContent = data.STATE;
+            document.getElementById('res-micr')!.textContent = data.MICR || 'N/A';
+            
+            const supported = [];
+            if (data.NEFT) supported.push('NEFT');
+            if (data.RTGS) supported.push('RTGS');
+            if (data.IMPS) supported.push('IMPS');
+            if (data.UPI) supported.push('UPI');
+            document.getElementById('res-supported')!.textContent = supported.join(', ') || 'None';
+
+            resultCard.hidden = false;
+        } catch (err) {
+            errorMessage.innerHTML = `<li>[Error] ${(err as Error).message}</li>`;
+            errorMessage.hidden = false;
+        } finally {
+            loading.hidden = true;
+        }
+    });
+</script>
+
+<style>
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+</style>
