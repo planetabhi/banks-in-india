@@ -52,7 +52,7 @@ body {
 }
 
 .sidebar {
-  width: 14rem;
+  width: 15rem;
   flex-shrink: 0;
   position: sticky;
   top: 0;
