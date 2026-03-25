@@ -2,7 +2,16 @@
 import Layout from '../layouts/Layout.astro';
 import banksDataJSON from '../datasets/core/banksData.json';
 
-const iconMap = banksDataJSON.banks.flatMap((group: any) => group.content).reduce((acc: any, bank: any) => {
+const uniqueBanks = Array.from(
+    banksDataJSON.banks.flatMap((group: any) => group.content).reduce((map: any, bank: any) => {
+        if (!map.has(bank.ifsc)) {
+            map.set(bank.ifsc, bank);
+        }
+        return map;
+    }, new Map()).values()
+);
+
+const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
     acc[bank.ifsc] = bank.icon;
     return acc;
 }, {});
@@ -69,11 +78,13 @@ const iconMap = banksDataJSON.banks.flatMap((group: any) => group.content).reduc
     const recentSearchesContainer = document.getElementById('recent-searches')!;
 
     let currentData: any = null;
+    let fetchController: AbortController | null = null;
 
     function renderRecent() {
-        let recent = [];
+        let recent: string[] = [];
         try {
-            recent = JSON.parse(localStorage.getItem('recent_ifsc') || '[]');
+            const parsed = JSON.parse(localStorage.getItem('recent_ifsc') || '[]');
+            recent = Array.isArray(parsed) ? parsed.filter((item: any) => typeof item === 'string') : [];
         } catch(e) { /* ignore corrupted history */ }
         
         if (recent.length === 0) {
@@ -81,24 +92,39 @@ const iconMap = banksDataJSON.banks.flatMap((group: any) => group.content).reduc
             return;
         }
         
-        recentSearchesContainer.innerHTML = '<li><span>[Recent]</span> ' + recent.map((item: string) => 
-            `<a href="?q=${encodeURIComponent(item)}" class="recent-link">${item}</a>`
-        ).join(', ') + '</li>';
-        recentSearchesContainer.hidden = false;
-
-        document.querySelectorAll('.recent-link').forEach(link => {
-            link.addEventListener('click', (e) => {
+        recentSearchesContainer.textContent = '';
+        const li = document.createElement('li');
+        const span = document.createElement('span');
+        span.textContent = '[Recent] ';
+        li.appendChild(span);
+        
+        recent.forEach((item, index) => {
+            const a = document.createElement('a');
+            a.setAttribute('href', `?q=${encodeURIComponent(item)}`);
+            a.className = 'recent-link';
+            a.textContent = item;
+            a.addEventListener('click', (e) => {
                 e.preventDefault();
-                const q = (e.target as HTMLAnchorElement).textContent!;
-                input.value = q;
-                searchIFSC(q);
+                input.value = item;
+                searchIFSC(item);
             });
+            li.appendChild(a);
+            
+            if (index < recent.length - 1) {
+                li.appendChild(document.createTextNode(', '));
+            }
         });
+        
+        recentSearchesContainer.appendChild(li);
+        recentSearchesContainer.hidden = false;
     }
 
     function saveRecent(ifsc: string) {
         try {
-            let recent = JSON.parse(localStorage.getItem('recent_ifsc') || '[]');
+            let recent: string[] = [];
+            const parsed = JSON.parse(localStorage.getItem('recent_ifsc') || '[]');
+            recent = Array.isArray(parsed) ? parsed.filter((item: any) => typeof item === 'string') : [];
+            
             // Add to front, remove duplicates, keep top 5
             recent = [ifsc, ...recent.filter((i: string) => i !== ifsc)].slice(0, 5);
             localStorage.setItem('recent_ifsc', JSON.stringify(recent));
@@ -109,6 +135,10 @@ const iconMap = banksDataJSON.banks.flatMap((group: any) => group.content).reduc
     async function searchIFSC(ifsc: string) {
         if (!ifsc.match(/^[A-Z]{4}0[A-Z0-9]{6}$/)) return;
         
+        if (fetchController) fetchController.abort();
+        fetchController = new AbortController();
+        const { signal } = fetchController;
+
         loading.hidden = false;
         errorMessage.hidden = true;
         resultCard.style.display = 'none';
@@ -120,7 +150,7 @@ const iconMap = banksDataJSON.banks.flatMap((group: any) => group.content).reduc
         window.history.replaceState({}, '', url);
 
         try {
-            const response = await fetch(`https://ifsc.razorpay.com/${ifsc}`);
+            const response = await fetch(`https://ifsc.razorpay.com/${ifsc}`, { signal });
             if (!response.ok) {
                 if (response.status === 404) {
                     throw new Error("IFSC code not found. Please double-check it. Remember, the 5th character is always a zero '0'.");
@@ -158,10 +188,13 @@ const iconMap = banksDataJSON.banks.flatMap((group: any) => group.content).reduc
             resultCard.style.display = 'grid';
             saveRecent(ifsc);
         } catch (err) {
+            if ((err as Error).name === 'AbortError') return;
             errorMessage.innerHTML = `<li>[Error] ${(err as Error).message}</li>`;
             errorMessage.hidden = false;
         } finally {
-            loading.hidden = true;
+            if (fetchController?.signal === signal) {
+                loading.hidden = true;
+            }
         }
     }
 
