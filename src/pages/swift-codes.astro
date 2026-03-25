@@ -1,6 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import RawTable from '../components/RawTable.astro';
+import LazyTable from '../components/LazyTable.astro';
 import names from '../datasets/core/names.json';
 
 // Convert the dynamic names schema supplied by user into the SWIFT layout
@@ -10,14 +10,14 @@ const swiftData = Object.entries(names).map(([prefix, bankName]) => ({
   "Base SWIFT ID": `${prefix}INBBXXX`
 }));
 ---
-<Layout title="SWIFT & BIC Code Directory">
+<Layout title="SWIFT & BIC Code Directory" description="Global SWIFT / BIC code routing sequences for inward remittances into Indian banking institutions verified against base IFSC mappings.">
   <main id="main-content">
     <header>
       <h1>SWIFT / BIC Codes Directory</h1>
       <p>Global routing sequences for inward remittances into Indian banking institutions. Verified via base IFSC alignments.</p>
     </header>
     <section>
-      <RawTable data={swiftData} />
+      <LazyTable data={swiftData} />
     </section>
   </main>
 </Layout>

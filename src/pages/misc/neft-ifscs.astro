@@ -1,9 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import neftIfscs from '../../datasets/rbi/neft-ifscs.json';
+import LazyTable from '../../components/LazyTable.astro';
+
+const mappedData = neftIfscs.map((item) => ({
+    "IFSC": item.IFSC || "N/A",
+    "Bank": item.BANK || "N/A",
+    "Branch": item.BRANCH || "N/A"
+}));
 ---
 
-<Layout title="NEFT IFSCs | Misc | Banks in India">
+<Layout title="NEFT IFSCs | Misc | Banks in India" description="A complete listing of National Electronic Funds Transfer (NEFT) enabled financial branches and active IFSC routing codes across India.">
 	<main id="main-content">
 		<header>
 			<h1 class="italic">NEFT Enabled IFSC Codes</h1>
@@ -11,13 +18,7 @@ import neftIfscs from '../../datasets/rbi/neft-ifscs.json';
 		
 		<section aria-label="NEFT IFSCs List">
             <h2>[Branches]</h2>
-			<ul>
-                {neftIfscs.map((item) => (
-                    <li>
-                        [NEFT] <code>{item.IFSC}</code> - <strong>{item.BANK}</strong> ({item.BRANCH})
-                    </li>
-                ))}
-			</ul>
+			<LazyTable data={mappedData} />
 		</section>
 
 	</main>

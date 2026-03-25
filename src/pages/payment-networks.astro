@@ -10,7 +10,7 @@ const cleanUpi = upiData.map(d => ({"Bank / PPI": d["Bank/PPI Name"], "Rollout P
 const cleanFastag = fastagData.map(d => ({"Toll Member": d["Member Banks"], "Issuer": d["Issuer"], "Acquirer": d["Acquirer"]}));
 const cleanAeps = aepsData.map(d => ({"AePS Bank": d["Bank Name"], "ONUS Flow": d["ONUS"], "Tokenization": d["Tokenization"]}));
 ---
-<Layout title="Payment Network Live Members">
+<Layout title="Payment Network Live Members" description="Live tracking matrix of Indian institutions directly participating natively in public payment structures like UPI, NETC FASTag, and AePS.">
   <main id="main-content">
     <header>
       <h1>Payment Networks Readiness</h1>

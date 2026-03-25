@@ -1,9 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import blockedNach from '../../datasets/npci/blocked-banks.json';
+import RawTable from '../../components/RawTable.astro';
+
+const mappedData = blockedNach.map((item) => ({
+    "IFSC": item['IFSC'],
+    "Bank Name": item['Bank Name'],
+    "IIN": item['IIN'] || "N/A"
+}));
 ---
 
-<Layout title="Blocked Banks on NACH | Misc | Banks in India">
+<Layout title="Blocked Banks on NACH | Misc | Banks in India" description="Live tracking directory of blacklisted or blocked institutions on the National Automated Clearing House (NACH) system.">
 	<main id="main-content">
 		<header>
 			<h1 class="italic">Blocked Banks on NACH</h1>
@@ -11,13 +18,7 @@ import blockedNach from '../../datasets/npci/blocked-banks.json';
 		
 		<section aria-label="Blocked Banks Tracker">
             <h2>[Blocked Entities]</h2>
-			<ul>
-                {blockedNach.map((item) => (
-                    <li>
-                        [Blocked] <strong>{item['Bank Name']}</strong> - IFSC: <code>{item['IFSC']}</code> (IIN: {item['IIN']})
-                    </li>
-                ))}
-			</ul>
+			<RawTable data={mappedData} />
 		</section>
 
 	</main>
