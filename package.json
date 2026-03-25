@@ -34,6 +34,6 @@
     "@astrojs/netlify": "^7.0.4",
     "@new-ui/foundations": "^0.3.4",
     "astro": "^6.0.8",
-    "typescript": "^6.0.2"
+    "typescript": "^5.9.3"
   }
 }
