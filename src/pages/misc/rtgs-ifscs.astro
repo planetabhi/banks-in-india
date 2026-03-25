@@ -1,9 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import rtgsIfscs from '../../datasets/rbi/rtgs-ifscs.json';
+import RawTable from '../../components/RawTable.astro';
+
+const mappedData = rtgsIfscs.map((item) => ({
+    "IFSC": item.Code || "N/A",
+    "Bank Name": item['Bank Name'] || "N/A",
+    "Branches": item['No. of RTGS enabled branches'] || "N/A"
+}));
 ---
 
-<Layout title="RTGS IFSCs | Misc | Banks in India">
+<Layout title="RTGS IFSCs | Misc | Banks in India" description="A complete listing of Real Time Gross Settlement (RTGS) enabled branches and active IFSC routing networks across India.">
 	<main id="main-content">
 		<header>
 			<h1 class="italic">RTGS Enabled IFSC Codes</h1>
@@ -11,13 +18,7 @@ import rtgsIfscs from '../../datasets/rbi/rtgs-ifscs.json';
 		
 		<section aria-label="RTGS IFSCs List">
             <h2>[Branches]</h2>
-			<ul>
-                {rtgsIfscs.map((item) => (
-                    <li>
-                        [RTGS] <code>{item.Code}</code> - <strong>{item['Bank Name']}</strong> ({item['No. of RTGS enabled branches']} Branches)
-                    </li>
-                ))}
-			</ul>
+			<RawTable data={mappedData} />
 		</section>
 
 	</main>

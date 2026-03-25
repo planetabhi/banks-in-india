@@ -1,0 +1,101 @@
+---
+interface Props<T extends Record<string, string | number>> {
+	data: T[];
+}
+
+const { data } = Astro.props;
+const headers = data.length > 0 ? Object.keys(data[0]) : [];
+const tableId = `lazy-table-${Math.random().toString(36).substring(2, 9)}`;
+
+// Massively optimize payload size by stripping repetitive keys for 100k+ records
+const optimizedData = data.map((item: any) => headers.map(h => item[h]));
+const safeJson = JSON.stringify(optimizedData).replace(/</g, '\\u003c');
+---
+
+<lazy-table data-id={tableId} data-headers={JSON.stringify(headers).replace(/</g, '\\u003c')}>
+  <table id={tableId}>
+    <thead>
+      <tr>
+        {headers.map(header => (
+          <th scope="col">{header}</th>
+        ))}
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
+  <div id={`${tableId}-sentinel`} style="height: 1px; width: 100%;"></div>
+  <script type="application/json" id={`${tableId}-data`} set:html={safeJson}></script>
+</lazy-table>
+
+<script>
+  class LazyTable extends HTMLElement {
+    connectedCallback() {
+      const tableId = this.dataset.id;
+      if (!tableId || !this.dataset.headers) return;
+      
+      const headers = JSON.parse(this.dataset.headers);
+      const table = this.querySelector(`#${tableId}`);
+      if (!table) return;
+      
+      const tbody = table.querySelector('tbody');
+      const sentinel = this.querySelector(`#${tableId}-sentinel`);
+      const dataScript = this.querySelector(`#${tableId}-data`);
+      
+      if (!tbody || !sentinel || !dataScript) return;
+
+      let items = [];
+      try {
+        items = JSON.parse(dataScript.textContent || '[]');
+      } catch (e) {
+        console.error('Failed to parse table data', e);
+        return;
+      }
+
+      const CHUNK_SIZE = 50;
+      let currentIndex = 0;
+
+      const renderChunk = () => {
+        const fragment = document.createDocumentFragment();
+        const end = Math.min(currentIndex + CHUNK_SIZE, items.length);
+        
+        for (let i = currentIndex; i < end; i++) {
+          const row = items[i];
+          const tr = document.createElement('tr');
+          headers.forEach((_: string, index: number) => {
+            const td = document.createElement('td');
+            // Decode back from the optimized array format
+            const val = row[index];
+            td.textContent = val !== undefined && val !== null ? String(val) : '';
+            tr.appendChild(td);
+          });
+          fragment.appendChild(tr);
+        }
+        
+        tbody.appendChild(fragment);
+        currentIndex = end;
+
+        if (currentIndex >= items.length) {
+          observer.disconnect();
+          sentinel.remove();
+        }
+      };
+
+      const observer = new IntersectionObserver((entries) => {
+        if (entries[0].isIntersecting) {
+          renderChunk();
+        }
+      }, { rootMargin: '400px' });
+
+      observer.observe(sentinel);
+      
+      // Initial render
+      renderChunk();
+    }
+  }
+
+  // Define custom element if not already defined
+  if (!customElements.get('lazy-table')) {
+    customElements.define('lazy-table', LazyTable);
+  }
+</script>

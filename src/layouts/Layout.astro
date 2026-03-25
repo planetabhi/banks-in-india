@@ -3,9 +3,16 @@ import '../styles/global.css';
 
 interface Props {
 	title: string;
+	description?: string;
 }
 
-const { title } = Astro.props;
+const { 
+	title, 
+	description = "Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites. Includes public sector, private sector, small finance, payment banks, regional rural banks, and foreign banks." 
+} = Astro.props;
+
+// Build canonical URL path dynamically using Astro.url
+const canonicalURL = new URL(Astro.url.pathname, 'https://banksin.in/');
 ---
 
 <!doctype html>
@@ -17,24 +24,24 @@ const { title } = Astro.props;
 		<!-- Primary Meta Tags -->
 		<title>{title}</title>
 		<meta name="title" content={title} />
-		<meta name="description" content="Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites. Includes public sector, private sector, small finance, payment banks, regional rural banks, and foreign banks." />
+		<meta name="description" content={description} />
 		<meta name="keywords" content="indian banks, ifsc codes, bank directory, banking india, rbi banks, private banks, public sector banks, payment banks, small finance banks, regional rural banks, foreign banks, neft, rtgs, npci" />
 		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="canonical" href="https://banksin.in/" />
+		<link rel="canonical" href={canonicalURL} />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://banksin.in/" />
-		<meta property="og:title" content="Banks in India - Complete Directory with IFSC Codes" />
-		<meta property="og:description" content="Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites. Includes 150+ banks across all categories." />
+		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:title" content={title} />
+		<meta property="og:description" content={description} />
 		<meta property="og:image" content="https://banksin.in/og-image.png" />
 		
 		<!-- Twitter -->
 		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content="https://banksin.in/" />
-		<meta property="twitter:title" content="Banks in India - Complete Directory with IFSC Codes" />
-		<meta property="twitter:description" content="Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites." />
+		<meta property="twitter:url" content={canonicalURL} />
+		<meta property="twitter:title" content={title} />
+		<meta property="twitter:description" content={description} />
 		<meta property="twitter:image" content="https://banksin.in/og-image.png" />
 		<meta name="twitter:creator" content="@planetabhi" />
 		
@@ -57,13 +64,12 @@ const { title } = Astro.props;
 		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 		
 		<!-- Structured Data -->
-		<script type="application/ld+json" is:inline>
-		{
+		<script type="application/ld+json" set:html={JSON.stringify({
 		  "@context": "https://schema.org",
-		  "@type": "WebSite",
-		  "name": "Banks in India",
-		  "url": "https://banksin.in/",
-		  "description": "Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites.",
+		  "@type": Astro.url.pathname === "/" ? "WebSite" : "WebPage",
+		  "name": title,
+		  "url": canonicalURL,
+		  "description": description,
 		  "author": {
 		    "@type": "Person",
 		    "name": "Abhimanyu Rana",
@@ -74,8 +80,7 @@ const { title } = Astro.props;
 		    "name": "Banks in India",
 		    "url": "https://banksin.in/"
 		  }
-		}
-		</script>
+		})}></script>
 	</head>
 	<body>
 		<a href="#main-content" class="skip-link">Skip to main content</a>
@@ -83,15 +88,34 @@ const { title } = Astro.props;
 			<aside class="sidebar" id="main-nav">
 				<nav aria-label="Main Navigation">
 					<ul>
-						<li><a href="/">Banks in India</a></li>
-						<li><a href="/ifsc-search">IFSC Search</a></li>
-						<li><a href="/misc/neft-ifscs">NEFT Branches</a></li>
-						<li><a href="/misc/rtgs-ifscs">RTGS Branches</a></li>
-						<li><a href="/misc/merged-banks">Merged Banks</a></li>
-						<li><a href="/misc/blocked-nach">Blocked Banks</a></li>
-						<li><a href="/swift-codes">SWIFT Directory</a></li>
-						<li><a href="/payment-networks">Payment Networks</a></li>
-						<li><a href="/bsr-codes">BSR Codes</a></li>
+						{[
+							{ label: 'Banks in India', href: '/' },
+							{ label: 'IFSC Search', href: '/ifsc-search' },
+							{ label: 'NEFT Branches', href: '/misc/neft-ifscs' },
+							{ label: 'RTGS Branches', href: '/misc/rtgs-ifscs' },
+							{ label: 'Merged Banks', href: '/misc/merged-banks' },
+							{ label: 'Blocked Banks', href: '/misc/blocked-nach' },
+							{ label: 'SWIFT Directory', href: '/swift-codes' },
+							{ label: 'Payment Networks', href: '/payment-networks' },
+							{ label: 'BSR Codes', href: '/bsr-codes' }
+						].map(item => {
+							// Astro.url.pathname can sometimes be with or without a trailing slash
+							const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
+							const basePath = item.href.replace(/\/$/, '') || '/';
+							const isActive = currentPath === basePath;
+							
+							return (
+								<li>
+									<a 
+										href={item.href} 
+										aria-current={isActive ? 'page' : undefined}
+										style={isActive ? 'color: var(--selected);' : undefined}
+									>
+										{item.label}
+									</a>
+								</li>
+							);
+						})}
 					</ul>
 				</nav>
 				

@@ -1,9 +1,16 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import mergedBanks from '../../datasets/mergers/merged-banks.json';
+import RawTable from '../../components/RawTable.astro';
+
+const mappedData = mergedBanks.map((item) => ({
+    "IFSC": item['IFSC'],
+    "Original Bank": item['Bank Name'],
+    "Target Bank": item['Target Bank Name']
+}));
 ---
 
-<Layout title="Merged Banks Codes | Misc | Banks in India">
+<Layout title="Merged Banks Codes | Misc | Banks in India" description="Lookup the new IFSC and routing numbers for Indian banks that have undergone structural mergers or acquisitions.">
 	<main id="main-content">
 		<header>
 			<h1 class="italic">Merged Banks Codes</h1>
@@ -11,13 +18,7 @@ import mergedBanks from '../../datasets/mergers/merged-banks.json';
 		
 		<section aria-label="Merged Banks Codes">
             <h2>[Replacements]</h2>
-			<ul>
-                {mergedBanks.map((item) => (
-                    <li>
-                        [Merger] <strong>{item['Bank Name']}</strong> ➔ {item['Target Bank Name']} (<code>{item['IFSC']}</code>)
-                    </li>
-                ))}
-			</ul>
+			<RawTable data={mappedData} />
 		</section>
 
 	</main>
