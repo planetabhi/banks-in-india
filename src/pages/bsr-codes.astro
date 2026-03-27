@@ -1,25 +1,24 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import RawTable from '../components/RawTable.astro';
+import LazyTable from '../components/LazyTable.astro';
 import bsrData from '../datasets/rbi/bsr-codes.json';
 
-// Extracting a sensible subset of columns to avoid horizontal overflow
-// Since the user loaded an IFSC map into the BSR placeholder, we map it generically for now
-const cleanBsr = bsrData.slice(0, 500).map(d => ({
-  "Bank Element": d["BANK"],
-  "Branch Locator": d["BRANCH"],
-  "Regional District": d["CITY2"],
-  "Primary Routing": d["IFSC"]
+const cleanBsr = bsrData.map(d => ({
+  "IFSC": d["IFSC"],
+  "Bank": d["BANK"],
+  "Branch": d["BRANCH"],
+  "City": d["CITY1"]
 }));
 ---
-<Layout title="BSR Routing Directory" description="Explore the Basic Statistical Return (BSR) codes matrix mapped out for branch-level tax routing identification used by Indian institutions.">
+<Layout title="BSR Routing Directory | Banks in India" description="Explore the Basic Statistical Return (BSR) codes matrix mapped out for branch-level tax routing identification used by Indian institutions.">
   <main id="main-content">
     <header>
-      <h1>Basic Statistical Return (BSR) & Tax Routing</h1>
-      <p>Branch-level indexing utilized for official corporate taxation (TDS/TCS) processing pipelines. Demonstrating the first 500 records to maintain layout fluidity.</p>
+      <h1 class="italic">BSR & Tax Routing Directory</h1>
+      <p>Branch-level IFSC indexing utilized for official corporate taxation (TDS/TCS) processing pipelines. Showing all {cleanBsr.length.toLocaleString()} records.</p>
     </header>
-    <section>
-      <RawTable data={cleanBsr} />
+    <section aria-label="BSR Codes Directory">
+      <h2>[Directory]</h2>
+      <LazyTable data={cleanBsr} />
     </section>
   </main>
 </Layout>

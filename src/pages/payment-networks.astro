@@ -4,33 +4,51 @@ import RawTable from '../components/RawTable.astro';
 import upiData from '../datasets/npci/upi.json';
 import fastagData from '../datasets/npci/fastag.json';
 import aepsData from '../datasets/npci/aeps.json';
+import impsData from '../datasets/npci/imps.json';
 
-// Clean the data to render only necessary columns safely
 const cleanUpi = upiData.map(d => ({"Bank / PPI": d["Bank/PPI Name"], "Rollout Phase": d["Details"]}));
 const cleanFastag = fastagData.map(d => ({"Toll Member": d["Member Banks"], "Issuer": d["Issuer"], "Acquirer": d["Acquirer"]}));
-const cleanAeps = aepsData.map(d => ({"AePS Bank": d["Bank Name"], "ONUS Flow": d["ONUS"], "Tokenization": d["Tokenization"]}));
+const cleanAeps = aepsData.map(d => ({
+  "AePS Bank": d["Bank Name"],
+  "ONUS": d["ONUS"],
+  "Off Us Acquirer": d["Off Us - Acquirer"],
+  "Off Us Issuer": d["Off Us - Issuer"],
+  "BHIM Aadhaar": d["BHIM Aadhaar Pay"],
+  "Tokenization": d["Tokenization"]
+}));
+const cleanImps = impsData.map(d => ({
+  "Bank": d["Bank Name"],
+  "P2P (Mobile + MMID)": d["Using Mobile No. & MMID (P2P)"],
+  "P2A (Account + IFSC)": d["Using Account No. & IFS Code (P2A)"]
+}));
 ---
-<Layout title="Payment Network Live Members" description="Live tracking matrix of Indian institutions directly participating natively in public payment structures like UPI, NETC FASTag, and AePS.">
+<Layout title="Payment Network Live Members | Banks in India" description="Live tracking matrix of Indian institutions directly participating natively in public payment structures like UPI, IMPS, NETC FASTag, and AePS.">
   <main id="main-content">
     <header>
-      <h1>Payment Networks Readiness</h1>
-      <p>A live tracking matrix of institutions directly participating and natively supporting public Indian payment rails (UPI, FASTag, AePS) as verified by NPCI.</p>
+      <h1 class="italic">Payment Networks Readiness</h1>
+      <p>A live tracking matrix of institutions directly participating and natively supporting public Indian payment rails as verified by NPCI.</p>
     </header>
     
-    <section>
-      <h2>Unified Payments Interface (UPI)</h2>
+    <section aria-label="UPI Members">
+      <h2>[UPI] Unified Payments Interface</h2>
       <p>Banks and Prepaid Payment Instruments authorized to issue and acquire on the UPI rail.</p>
       <RawTable data={cleanUpi} />
     </section>
 
-    <section style="margin-top: var(--spacing-08);">
-      <h2>NETC FASTag Members</h2>
+    <section aria-label="IMPS Members">
+      <h2>[IMPS] Immediate Payment Service</h2>
+      <p>Banks live on IMPS for person-to-person and person-to-account transfers.</p>
+      <RawTable data={cleanImps} />
+    </section>
+
+    <section aria-label="FASTag Members">
+      <h2>[FASTag] NETC Members</h2>
       <p>Banks authorized to natively issue vehicle transponders or acquire toll plazas.</p>
       <RawTable data={cleanFastag} />
     </section>
 
-    <section style="margin-top: var(--spacing-08);">
-      <h2>AePS Hardware Members</h2>
+    <section aria-label="AePS Members">
+      <h2>[AePS] Aadhaar Enabled Payment System</h2>
       <p>Institutions capable of processing biometric-hardware based Aadhaar verification loops.</p>
       <RawTable data={cleanAeps} />
     </section>

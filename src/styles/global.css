@@ -158,27 +158,20 @@ section {
 /* Table Styles */
 table {
   border-collapse: collapse;
-  width: 100%;
-  table-layout: fixed;
+  table-layout: auto;
 }
 
 td,
 th {
   text-align: start;
-  display: inline-block;
-  margin-right: 8px;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  max-width: 24rem;
+  padding-right: 8px;
 }
 
-@media (max-width: 639px) {
-  td,
-  th {
-    max-width: 14rem;
-  }
-}
+
+
 
 th {
   background-color: var(--background);

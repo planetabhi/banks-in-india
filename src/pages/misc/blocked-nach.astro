@@ -1,12 +1,19 @@
 ---
 import Layout from '../../layouts/Layout.astro';
-import blockedNach from '../../datasets/npci/blocked-banks.json';
+import blockedBanks from '../../datasets/npci/blocked-banks.json';
+import blockedNach from '../../datasets/npci/blocked-nach.json';
 import RawTable from '../../components/RawTable.astro';
 
-const mappedData = blockedNach.map((item) => ({
+const mappedBanks = blockedBanks.map((item) => ({
     "IFSC": item['IFSC'],
     "Bank Name": item['Bank Name'],
     "IIN": item['IIN'] || "N/A"
+}));
+
+const mappedNach = blockedNach.map((item: any) => ({
+    "Institution": item['name'],
+    "Reason": item['reason'],
+    "Blocked From": item['blockedFrom']
 }));
 ---
 
@@ -16,18 +23,17 @@ const mappedData = blockedNach.map((item) => ({
 			<h1 class="italic">Blocked Banks on NACH</h1>
 		</header>
 		
-		<section aria-label="Blocked Banks Tracker">
+		<section aria-label="Regulatory Blocks">
+            <h2>[Regulatory Actions]</h2>
+            <p>High-profile institutions blocked from NACH due to regulatory directives or license cancellations.</p>
+			<RawTable data={mappedNach} />
+		</section>
+
+		<section aria-label="Blocked Entities">
             <h2>[Blocked Entities]</h2>
-			<RawTable data={mappedData} />
+            <p>Full list of {mappedBanks.length} institutions blocked from the NACH clearing system.</p>
+			<RawTable data={mappedBanks} />
 		</section>
 
 	</main>
 </Layout>
-
-<style>
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-</style>
