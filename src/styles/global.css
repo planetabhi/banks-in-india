@@ -158,7 +158,8 @@ section {
 /* Table Styles */
 table {
   border-collapse: collapse;
-  table-layout: auto;
+  width: 100%;
+  table-layout: fixed;
 }
 
 td,
@@ -170,15 +171,27 @@ th {
   padding-right: 8px;
 }
 
-
-
-
 th {
   background-color: var(--background);
 }
 
 tr:nth-child(even) {
   background-color: var(--background);
+}
+
+tr:hover,
+tr:focus-within,
+tr:active {
+  background-color: var(--background-selected);
+}
+
+td:hover {
+  overflow: visible;
+  white-space: normal;
+  word-break: break-word;
+  position: relative;
+  z-index: 1;
+  background: var(--background-selected);
 }
 
 img {
