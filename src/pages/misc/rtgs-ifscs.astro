@@ -4,9 +4,9 @@ import rtgsIfscs from '../../datasets/rbi/rtgs-ifscs.json';
 import RawTable from '../../components/RawTable.astro';
 
 const mappedData = rtgsIfscs.map((item) => ({
-    "IFSC": item.Code || "N/A",
+    "IFSC Prefix": item.Code || "N/A",
     "Bank Name": item['Bank Name'] || "N/A",
-    "Branches": item['No. of RTGS enabled branches'] || "N/A"
+    "RTGS Branches": item['No. of RTGS enabled branches'] || "N/A"
 }));
 ---
 
@@ -14,6 +14,7 @@ const mappedData = rtgsIfscs.map((item) => ({
 	<main id="main-content">
 		<header>
 			<h1 class="italic">RTGS Enabled IFSC Codes</h1>
+			<p>{mappedData.length} banks with RTGS-enabled branches across India.</p>
 		</header>
 		
 		<section aria-label="RTGS IFSCs List">
@@ -23,11 +24,3 @@ const mappedData = rtgsIfscs.map((item) => ({
 
 	</main>
 </Layout>
-
-<style>
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-</style>

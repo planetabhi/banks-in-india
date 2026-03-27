@@ -4,9 +4,12 @@ import mergedBanks from '../../datasets/mergers/merged-banks.json';
 import RawTable from '../../components/RawTable.astro';
 
 const mappedData = mergedBanks.map((item: any) => ({
-    "IFSC": item['IFSC'] || "N/A",
     "Original Bank": item['Bank Name'] || "N/A",
-    "Target Bank": item['Target Bank Name'] || "N/A"
+    "Code": item['Bank Code'] || "N/A",
+    "Type": item['Type Of Bank'] || "N/A",
+    "Target Bank": item['Target Bank Name'] || "N/A",
+    "Target Code": item['Target Bank Code'] || "N/A",
+    "IFSC": item['IFSC'] || "N/A"
 }));
 ---
 
@@ -14,6 +17,7 @@ const mappedData = mergedBanks.map((item: any) => ({
 	<main id="main-content">
 		<header>
 			<h1 class="italic">Merged Banks Codes</h1>
+			<p>IFSC routing replacements for {mappedData.length} Indian banks that have undergone structural mergers or acquisitions.</p>
 		</header>
 		
 		<section aria-label="Merged Banks Codes">
@@ -23,11 +27,3 @@ const mappedData = mergedBanks.map((item: any) => ({
 
 	</main>
 </Layout>
-
-<style>
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-</style>

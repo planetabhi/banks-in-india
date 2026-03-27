@@ -6,7 +6,8 @@ import LazyTable from '../../components/LazyTable.astro';
 const mappedData = neftIfscs.map((item) => ({
     "IFSC": item.IFSC || "N/A",
     "Bank": item.BANK || "N/A",
-    "Branch": item.BRANCH || "N/A"
+    "Branch": item.BRANCH || "N/A",
+    "City": item.CITY1 || "N/A"
 }));
 ---
 
@@ -14,6 +15,7 @@ const mappedData = neftIfscs.map((item) => ({
 	<main id="main-content">
 		<header>
 			<h1 class="italic">NEFT Enabled IFSC Codes</h1>
+			<p>All {mappedData.length.toLocaleString()} NEFT-enabled branches across India.</p>
 		</header>
 		
 		<section aria-label="NEFT IFSCs List">
@@ -23,11 +25,3 @@ const mappedData = neftIfscs.map((item) => ({
 
 	</main>
 </Layout>
-
-<style>
-ol, ul {
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-</style>
