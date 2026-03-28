@@ -150,8 +150,13 @@ body {
 
 .layout-wrapper {
   display: grid;
-  grid-template-columns: 20% 50% 30%;
+  grid-template-columns: minmax(0, 20%) minmax(0, 1fr);
   min-height: 100vh;
+}
+
+/* Home: nav + main + IFSC column */
+.layout-wrapper--with-rhs {
+  grid-template-columns: minmax(0, 20%) minmax(0, 50%) minmax(0, 30%);
 }
 
 .sidebar {

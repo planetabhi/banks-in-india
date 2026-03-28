@@ -1,0 +1,5 @@
+# https://banksin.in
+User-agent: *
+Allow: /
+
+Sitemap: https://banksin.in/sitemap.xml
