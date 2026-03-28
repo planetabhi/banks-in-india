@@ -1,0 +1,613 @@
+---
+import banksDataJSON from '../datasets/core/banksData.json';
+
+const uniqueBanks = Array.from(
+    banksDataJSON.banks.flatMap((group: any) => group.content).reduce((map: any, bank: any) => {
+        if (!map.has(bank.ifsc)) {
+            map.set(bank.ifsc, bank);
+        }
+        return map;
+    }, new Map()).values()
+);
+
+const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
+    acc[bank.ifsc] = bank.icon;
+    return acc;
+}, {});
+---
+
+<div class="ifsc-search">
+    <section class="ifsc-search__panel" aria-labelledby="ifsc-search-heading">
+        <h2 id="ifsc-search-heading" class="ifsc-search__heading">IFSC lookup</h2>
+        <form id="ifsc-form" class="ifsc-search__form" autocomplete="off">
+            <div class="ifsc-search__field">
+                <label class="ifsc-search__label" for="ifsc-input">Code</label>
+                <input
+                    class="ifsc-search__input"
+                    type="text"
+                    id="ifsc-input"
+                    name="ifsc"
+                    placeholder="HDFC0000001"
+                    required
+                    pattern="^[A-Z]{4}0[A-Z0-9]{6}$"
+                    title="Enter a valid 11-character IFSC code"
+                    inputmode="text"
+                    spellcheck="false"
+                />
+            </div>
+            <div class="ifsc-search__actions">
+                <button type="submit" class="ifsc-search__submit">Search</button>
+            </div>
+        </form>
+        <div id="recent-wrap" class="ifsc-search__recent" hidden>
+            <span class="ifsc-search__recent-label" id="recent-label">Recent</span>
+            <ul id="recent-searches" class="ifsc-search__chips" aria-labelledby="recent-label"></ul>
+        </div>
+    </section>
+
+    <section class="ifsc-search__panel ifsc-search__panel--out" id="ifsc-results-panel" aria-label="Search results" hidden>
+        <p id="loading" class="ifsc-search__status" hidden>Searching…</p>
+        <div id="error-message" class="ifsc-search__error" role="alert" hidden></div>
+
+        <script id="icon-map" type="application/json" set:html={JSON.stringify(iconMap)}></script>
+
+        <dl id="result-card" class="ifsc-search__dl" hidden>
+            <div class="ifsc-search__row">
+                <dt class="ifsc-search__dt">Bank</dt>
+                <dd class="ifsc-search__dd ifsc-search__dd--bank">
+                    <img id="res-icon" class="ifsc-search__logo" src="" alt="" width="24" height="24" hidden />
+                    <span id="res-bank"></span>
+                </dd>
+            </div>
+            <div class="ifsc-search__row">
+                <dt class="ifsc-search__dt">Branch</dt>
+                <dd class="ifsc-search__dd" id="res-branch"></dd>
+            </div>
+            <div class="ifsc-search__row">
+                <dt class="ifsc-search__dt">Address</dt>
+                <dd class="ifsc-search__dd" id="res-address"></dd>
+            </div>
+            <div class="ifsc-search__row">
+                <dt class="ifsc-search__dt">Location</dt>
+                <dd class="ifsc-search__dd">
+                    <span id="res-city"></span><span class="ifsc-search__sep">, </span><span id="res-state"></span>
+                </dd>
+            </div>
+            <div class="ifsc-search__row">
+                <dt class="ifsc-search__dt">MICR</dt>
+                <dd class="ifsc-search__dd" id="res-micr"></dd>
+            </div>
+            <div class="ifsc-search__row">
+                <dt class="ifsc-search__dt">Networks</dt>
+                <dd class="ifsc-search__dd" id="res-supported"></dd>
+            </div>
+            <div class="ifsc-search__row ifsc-search__row--final">
+                <dt class="ifsc-search__dt">Copy</dt>
+                <dd class="ifsc-search__dd ifsc-search__dd--action">
+                    <button type="button" id="copy-btn" class="ifsc-search__copy">Copy details</button>
+                </dd>
+            </div>
+        </dl>
+    </section>
+</div>
+
+<script>
+    const form = document.getElementById('ifsc-form') as HTMLFormElement | null;
+    const input = document.getElementById('ifsc-input') as HTMLInputElement | null;
+    const loading = document.getElementById('loading');
+    const errorMessage = document.getElementById('error-message');
+    const resultCard = document.getElementById('result-card');
+    const resultsPanel = document.getElementById('ifsc-results-panel');
+    const copyBtn = document.getElementById('copy-btn') as HTMLButtonElement | null;
+    const recentWrap = document.getElementById('recent-wrap');
+    const locationSep = document.querySelector('.ifsc-search__sep') as HTMLElement | null;
+    const recentSearchesContainer = document.getElementById('recent-searches');
+    const resIcon = document.getElementById('res-icon') as HTMLImageElement | null;
+
+    let currentData: any = null;
+    let fetchController: AbortController | null = null;
+    let iconMapCache: Record<string, string> | null = null;
+
+    function getIconMap(): Record<string, string> {
+        if (iconMapCache) return iconMapCache;
+        try {
+            iconMapCache = JSON.parse(document.getElementById('icon-map')?.textContent || '{}') as Record<string, string>;
+        } catch {
+            iconMapCache = {};
+        }
+        return iconMapCache;
+    }
+
+    function renderRecent() {
+        if (!recentSearchesContainer || !recentWrap) return;
+        let recent: string[] = [];
+        try {
+            const parsed = JSON.parse(localStorage.getItem('recent_ifsc') || '[]');
+            recent = Array.isArray(parsed) ? parsed.filter((item: any) => typeof item === 'string') : [];
+        } catch (e) {
+            /* ignore corrupted history */
+        }
+
+        recentSearchesContainer.textContent = '';
+        if (recent.length === 0) {
+            recentWrap.hidden = true;
+            return;
+        }
+
+        recent.forEach((item) => {
+            const a = document.createElement('a');
+            a.setAttribute('href', `?q=${encodeURIComponent(item)}`);
+            a.className = 'ifsc-search__chip';
+            a.textContent = item;
+            a.addEventListener('click', (e) => {
+                e.preventDefault();
+                if (input) input.value = item;
+                searchIFSC(item);
+            });
+            const li = document.createElement('li');
+            li.appendChild(a);
+            recentSearchesContainer.appendChild(li);
+        });
+
+        recentWrap.hidden = false;
+    }
+
+    function saveRecent(ifsc: string) {
+        try {
+            let recent: string[] = [];
+            const parsed = JSON.parse(localStorage.getItem('recent_ifsc') || '[]');
+            recent = Array.isArray(parsed) ? parsed.filter((item: any) => typeof item === 'string') : [];
+            recent = [ifsc, ...recent.filter((i: string) => i !== ifsc)].slice(0, 5);
+            localStorage.setItem('recent_ifsc', JSON.stringify(recent));
+        } catch (e) {
+            /* privacy mode limits localStorage */
+        }
+        renderRecent();
+    }
+
+    async function searchIFSC(ifsc: string) {
+        if (
+            !form ||
+            !input ||
+            !loading ||
+            !errorMessage ||
+            !resultCard ||
+            !resultsPanel ||
+            !resIcon
+        ) {
+            return;
+        }
+        if (!ifsc.match(/^[A-Z]{4}0[A-Z0-9]{6}$/)) return;
+
+        if (fetchController) fetchController.abort();
+        fetchController = new AbortController();
+        const { signal } = fetchController;
+
+        resultsPanel.hidden = false;
+        loading.hidden = false;
+        errorMessage.hidden = true;
+        errorMessage.textContent = '';
+        resultCard.hidden = true;
+        currentData = null;
+        if (locationSep) locationSep.hidden = false;
+
+        const url = new URL(window.location.href);
+        url.searchParams.set('q', ifsc);
+        window.history.replaceState({}, '', url);
+
+        try {
+            const response = await fetch(`https://ifsc.razorpay.com/${ifsc}`, { signal });
+            if (!response.ok) {
+                if (response.status === 404) {
+                    throw new Error(
+                        "IFSC not found. Check the code — the 5th character is always zero (0)."
+                    );
+                }
+                throw new Error('Something went wrong while fetching this branch.');
+            }
+
+            const data = await response.json();
+            currentData = data;
+
+            document.getElementById('res-bank')!.textContent = data.BANK;
+
+            const iconMapData = getIconMap();
+            const ifscPrefix = ifsc.substring(0, 4).toUpperCase();
+            if (iconMapData[ifscPrefix]) {
+                resIcon.src = iconMapData[ifscPrefix];
+                resIcon.alt = `${data.BANK} logo`;
+                resIcon.hidden = false;
+            } else {
+                resIcon.hidden = true;
+                resIcon.removeAttribute('src');
+                resIcon.alt = '';
+            }
+
+            document.getElementById('res-branch')!.textContent = data.BRANCH;
+            document.getElementById('res-address')!.textContent = data.ADDRESS;
+            const city = data.CITY || '';
+            const state = data.STATE || '';
+            document.getElementById('res-city')!.textContent = city;
+            document.getElementById('res-state')!.textContent = state;
+            if (locationSep) locationSep.hidden = !(city && state);
+            document.getElementById('res-micr')!.textContent = data.MICR || 'N/A';
+
+            const supported = [];
+            if (data.NEFT) supported.push('NEFT');
+            if (data.RTGS) supported.push('RTGS');
+            if (data.IMPS) supported.push('IMPS');
+            if (data.UPI) supported.push('UPI');
+            document.getElementById('res-supported')!.textContent = supported.join(', ') || 'None';
+
+            resultCard.hidden = false;
+            saveRecent(ifsc);
+        } catch (err) {
+            if ((err as Error).name === 'AbortError') return;
+            errorMessage.textContent = (err as Error).message;
+            errorMessage.hidden = false;
+        } finally {
+            if (fetchController?.signal === signal && loading) {
+                loading.hidden = true;
+            }
+        }
+    }
+
+    form?.addEventListener('submit', (e) => {
+        e.preventDefault();
+        if (!input) return;
+        searchIFSC(input.value.trim().toUpperCase());
+    });
+
+    input?.addEventListener('input', () => {
+        if (!input) return;
+        let val = input.value.toUpperCase();
+        if (val.length >= 5) {
+            val = val.substring(0, 4) + '0' + val.substring(5);
+        }
+        val = val.replace(/[^A-Z0-9]/g, '');
+        input.value = val;
+
+        if (val.match(/^[A-Z]{4}0[A-Z0-9]{6}$/)) {
+            searchIFSC(val);
+        }
+    });
+
+    copyBtn?.addEventListener('click', () => {
+        if (!currentData || !copyBtn) return;
+        const textToCopy = `Bank: ${currentData.BANK}\nBranch: ${currentData.BRANCH}\nIFSC: ${currentData.IFSC}\nAddress: ${currentData.ADDRESS}\nLocation: ${currentData.CITY}, ${currentData.STATE}`;
+
+        navigator.clipboard.writeText(textToCopy).then(
+            () => {
+                const originalText = copyBtn.textContent;
+                copyBtn.textContent = 'Copied';
+                setTimeout(() => {
+                    copyBtn.textContent = originalText;
+                }, 2000);
+            },
+            () => {
+                /* clipboard denied or unavailable (non-secure context, permissions) */
+            }
+        );
+    });
+
+    document.addEventListener('DOMContentLoaded', () => {
+        const params = new URLSearchParams(window.location.search);
+        const q = params.get('q');
+        if (q && input) {
+            const u = q.toUpperCase();
+            input.value = u;
+            if (u.match(/^[A-Z]{4}0[A-Z0-9]{6}$/)) {
+                searchIFSC(u);
+            }
+        }
+        renderRecent();
+    });
+</script>
+
+<style>
+    .ifsc-search {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        min-width: 0;
+    }
+
+    .ifsc-search__panel {
+        margin: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .ifsc-search > .ifsc-search__panel:first-child {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        border-bottom: 1px dotted var(--border-inked);
+    }
+
+    .ifsc-search__panel--out {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        margin-top: 0;
+        padding: 0;
+        border: none;
+    }
+
+    .ifsc-search__heading {
+        margin: 0;
+        padding: 0;
+        font-family: var(--italic);
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-secondary-alt);
+    }
+
+    .ifsc-search__form {
+        display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        margin: 0;
+        padding: 0;
+    }
+
+    .ifsc-search__field {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: var(--gap);
+        margin: 0;
+        padding: 0;
+    }
+
+    .ifsc-search__label {
+        margin: 0;
+        padding: 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-secondary-alt);
+    }
+
+    .ifsc-search__input {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-inked);
+        background: var(--background);
+        border: 1px dotted var(--border-inked);
+        border-radius: 0;
+        outline: none;
+    }
+
+    .ifsc-search__input::placeholder {
+        color: var(--content-secondary-alt);
+        opacity: 0.85;
+    }
+
+    .ifsc-search__input:focus-visible {
+        border-color: var(--accent);
+        box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .ifsc-search__actions {
+        display: flex;
+        justify-content: flex-start;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ifsc-search__submit {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-inked);
+        background: var(--background);
+        border: 1px dotted var(--border-inked);
+        cursor: pointer;
+    }
+
+    .ifsc-search__submit:hover {
+        background: var(--background-selected);
+        border-color: var(--content-secondary-alt);
+    }
+
+    .ifsc-search__submit:focus-visible {
+        outline: none;
+        border-color: var(--accent);
+        box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .ifsc-search__recent {
+        margin: 0;
+        padding: 0;
+        display: none;
+        flex-direction: column;
+        gap: var(--gap);
+        min-width: 0;
+        border-top: 1px dotted var(--border-inked);
+        padding-top: var(--gap);
+    }
+
+    .ifsc-search__recent:not([hidden]) {
+        display: flex;
+    }
+
+    .ifsc-search__recent-label {
+        margin: 0;
+        padding: 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-secondary-alt);
+    }
+
+    .ifsc-search__chips {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--gap);
+        list-style: none;
+        margin: 0;
+        padding: 0;
+    }
+
+    .ifsc-search__chips li {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ifsc-search__chip {
+        display: inline-block;
+        margin: 0;
+        padding: 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        text-decoration: none;
+        color: var(--accent);
+        border: none;
+        border-bottom: 1px dotted var(--border-inked);
+        background: transparent;
+    }
+
+    .ifsc-search__chip:hover,
+    .ifsc-search__chip:focus-visible {
+        color: var(--selected);
+        background: var(--background-selected);
+    }
+
+    .ifsc-search__status {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-secondary-alt);
+    }
+
+    .ifsc-search__error {
+        margin: 0;
+        padding: 0;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-inked);
+        border: none;
+        border-bottom: 1px dotted var(--border-inked);
+        background: transparent;
+    }
+
+    .ifsc-search__dl {
+        margin: 0;
+        padding: 0;
+        align-items: baseline;
+        display: none;
+    }
+
+    .ifsc-search__dl:not([hidden]) {
+        display: grid;
+        grid-template-columns: minmax(4.5rem, 32%) minmax(0, 1fr);
+        column-gap: var(--gap);
+        row-gap: var(--gap);
+    }
+
+    .ifsc-search__row {
+        display: contents;
+    }
+
+    .ifsc-search__dt {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        font-weight: normal;
+        color: var(--content-secondary-alt);
+        text-align: start;
+        align-self: start;
+        border-bottom: 1px dotted var(--border-inked);
+    }
+
+    .ifsc-search__dd {
+        margin: 0;
+        padding: 0;
+        min-width: 0;
+        font: inherit;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--content-inked);
+        word-break: break-word;
+        border-bottom: 1px dotted var(--border-inked);
+    }
+
+    .ifsc-search__row--final .ifsc-search__dt,
+    .ifsc-search__row--final .ifsc-search__dd {
+        border-bottom: none;
+    }
+
+    .ifsc-search__dd--bank {
+        display: flex;
+        align-items: center;
+        gap: var(--gap);
+    }
+
+    .ifsc-search__logo {
+        flex-shrink: 0;
+        width: 1.5rem;
+        height: 1.5rem;
+        max-width: none;
+        object-fit: contain;
+    }
+
+    .ifsc-search__sep {
+        color: inherit;
+    }
+
+    .ifsc-search__dd--action {
+        margin: 0;
+        padding: 0;
+    }
+
+    .ifsc-search__copy {
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-size: var(--desktop-body);
+        line-height: var(--lh-desktop-body);
+        color: var(--accent);
+        text-decoration: underline;
+        text-decoration-thickness: 0.063rem;
+        text-underline-offset: 0.125rem;
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .ifsc-search__copy:hover {
+        color: var(--selected);
+    }
+
+    .ifsc-search__copy:focus-visible {
+        outline: none;
+        box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    @media (max-width: 360px) {
+        .ifsc-search__heading,
+        .ifsc-search__label,
+        .ifsc-search__input,
+        .ifsc-search__submit,
+        .ifsc-search__recent-label,
+        .ifsc-search__chip,
+        .ifsc-search__status,
+        .ifsc-search__error,
+        .ifsc-search__dt,
+        .ifsc-search__dd,
+        .ifsc-search__copy {
+            font-size: var(--mobile-body-sm);
+            line-height: var(--mobile-body-sm);
+        }
+    }
+</style>

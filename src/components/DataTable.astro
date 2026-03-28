@@ -9,33 +9,85 @@ const { data } = Astro.props;
 
 ---
 
-<table>
-  <thead>
-    <tr>
-      <th scope="col">IFSC</th>
-      <th scope="col"><span class="sr-only">Bank Logo</span></th>
-      <th scope="col">Bank Name</th>
-    </tr>
-  </thead>
-  <tbody>
-    {data.map((row) => (
+<div class="table-container">
+  <table class="bank-table">
+    <colgroup>
+      <col class="col-ifsc" />
+      <col class="col-logo" />
+      <col class="col-name" />
+    </colgroup>
+    <thead>
       <tr>
-        <td>{row.ifsc}</td>
-        <td>
-          <img src={row.icon} alt={`${row.name} bank logo`} loading="lazy" width="24" height="24" />
-        </td>
-        <td>
-          <a href={row.website} target="_blank" rel="noopener noreferrer" title={row.name}>{row.name}</a>
-        </td>
+        <th scope="col">IFSC</th>
+        <th scope="col"><span class="sr-only">Bank Logo</span></th>
+        <th scope="col">Bank Name</th>
       </tr>
-    ))}
-  </tbody>
-</table>
+    </thead>
+    <tbody>
+      {data.map((row) => (
+        <tr>
+          <td>{row.ifsc}</td>
+          <td class="cell-logo">
+            <img src={row.icon} alt={`${row.name} bank logo`} loading="lazy" width="24" height="24" />
+          </td>
+          <td class="cell-name">
+            <a href={row.website} target="_blank" rel="noopener noreferrer" title={row.name}>{row.name}</a>
+          </td>
+        </tr>
+      ))}
+    </tbody>
+  </table>
+</div>
 
 <style>
-table {
-  table-layout: auto;
-  width: auto;
-}
+  .bank-table {
+    width: 100%;
+    table-layout: fixed;
+  }
+
+  .bank-table col.col-ifsc {
+    width: 6rem;
+  }
+
+  .bank-table col.col-logo {
+    width: 2.75rem;
+  }
+
+  .bank-table col.col-name {
+    width: auto;
+  }
+
+  .bank-table .cell-logo {
+    width: 2.75rem;
+    min-width: 2.75rem;
+    max-width: 2.75rem;
+    box-sizing: border-box;
+    text-align: center;
+    vertical-align: middle;
+    overflow: visible;
+    white-space: normal;
+  }
+
+  .bank-table .cell-logo img {
+    display: block;
+    margin-inline: auto;
+    width: 1.5rem;
+    height: 1.5rem;
+    max-width: none;
+    object-fit: contain;
+  }
+
+  .bank-table .cell-name {
+    min-width: 0;
+  }
+
+  .bank-table .cell-name a {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: inherit;
+    line-height: inherit;
+  }
 </style>
 
