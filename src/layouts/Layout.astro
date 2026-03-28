@@ -135,6 +135,11 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://banksin.in/');
 			<div class="content-wrapper">
 				<slot />
 			</div>
+			{Astro.slots.has('sidebar-right') && (
+				<aside class="sidebar-right">
+					<slot name="sidebar-right" />
+				</aside>
+			)}
 		</div>
 	</body>
 </html>

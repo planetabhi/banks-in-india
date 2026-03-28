@@ -12,21 +12,23 @@ const optimizedData = data.map((item: any) => headers.map(h => item[h]));
 const safeJson = JSON.stringify(optimizedData).replace(/</g, '\\u003c');
 ---
 
-<lazy-table data-id={tableId} data-headers={JSON.stringify(headers).replace(/</g, '\\u003c')}>
-  <table id={tableId}>
-    <thead>
-      <tr>
-        {headers.map(header => (
-          <th scope="col">{header}</th>
-        ))}
-      </tr>
-    </thead>
-    <tbody>
-    </tbody>
-  </table>
-  <div id={`${tableId}-sentinel`} style="height: 1px; width: 100%;"></div>
-  <script type="application/json" id={`${tableId}-data`} set:html={safeJson}></script>
-</lazy-table>
+<div class="table-container">
+  <lazy-table data-id={tableId} data-headers={JSON.stringify(headers).replace(/</g, '\\u003c')}>
+    <table class="listing-table" id={tableId}>
+      <thead>
+        <tr>
+          {headers.map((header) => (
+            <th scope="col">{header}</th>
+          ))}
+        </tr>
+      </thead>
+      <tbody>
+      </tbody>
+    </table>
+    <div id={`${tableId}-sentinel`} style="height: 1px; width: 100%;"></div>
+    <script type="application/json" id={`${tableId}-data`} set:html={safeJson}></script>
+  </lazy-table>
+</div>
 
 <script>
   class LazyTable extends HTMLElement {
@@ -34,8 +36,16 @@ const safeJson = JSON.stringify(optimizedData).replace(/</g, '\\u003c');
       const tableId = this.dataset.id;
       if (!tableId || !this.dataset.headers) return;
       
-      const headers = JSON.parse(this.dataset.headers);
-      const table = this.querySelector(`#${tableId}`);
+      let headers: string[] = [];
+      try {
+        headers = JSON.parse(this.dataset.headers);
+      } catch {
+        console.error('Invalid table headers JSON');
+        return;
+      }
+      if (!Array.isArray(headers)) return;
+
+      const table = document.getElementById(tableId);
       if (!table) return;
       
       const tbody = table.querySelector('tbody');

@@ -21,6 +21,109 @@
   --italic: "Mono-Italic";
   --accent: var(--pink5);
   --selected: var(--pink7);
+  --gap: 0.5rem;
+  /* Terminal-ish hovers: stepped easing + short duration */
+  --console-dur: 75ms;
+  --console-steps: steps(4, jump-end);
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  @keyframes console-flicker {
+    0% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+    22% {
+      opacity: 0.88;
+      filter: brightness(1.12);
+    }
+    45% {
+      opacity: 1;
+      filter: brightness(0.96);
+    }
+    68% {
+      opacity: 0.93;
+      filter: brightness(1.06);
+    }
+    100% {
+      opacity: 1;
+      filter: brightness(1);
+    }
+  }
+
+  a,
+  button:not(:disabled),
+  .sidebar li,
+  .skip-link {
+    transition:
+      background-color var(--console-dur) var(--console-steps),
+      color var(--console-dur) var(--console-steps),
+      border-color var(--console-dur) var(--console-steps);
+  }
+
+  .table-container tbody tr {
+    transition: background-color var(--console-dur) var(--console-steps);
+  }
+
+  .table-container td {
+    transition: background-color var(--console-dur) var(--console-steps);
+  }
+
+  /* Flicker on interactive chrome (cheap targets only — not whole table paint) */
+  a:hover,
+  a:active,
+  a:focus-visible,
+  .sidebar li:hover,
+  .sidebar li:focus-within,
+  .skip-link:hover,
+  .skip-link:focus,
+  .skip-link:focus-visible {
+    animation: console-flicker 0.2s var(--console-steps) 1;
+  }
+
+  button:not(:disabled):hover,
+  button:not(:disabled):active {
+    animation: console-flicker 0.2s var(--console-steps) 1;
+  }
+
+  /* Avoid stacking flicker on nav: row already animates via li:hover */
+  .sidebar li a:hover,
+  .sidebar li a:focus-visible {
+    animation: none;
+  }
+
+  .ifsc-search__submit,
+  .ifsc-search__chip,
+  .ifsc-search__copy {
+    transition:
+      background-color var(--console-dur) var(--console-steps),
+      color var(--console-dur) var(--console-steps),
+      border-color var(--console-dur) var(--console-steps);
+  }
+
+  .ifsc-search__submit:hover,
+  .ifsc-search__submit:active,
+  .ifsc-search__submit:focus-visible,
+  .ifsc-search__chip:hover,
+  .ifsc-search__chip:focus-visible,
+  .ifsc-search__copy:hover,
+  .ifsc-search__copy:active,
+  .ifsc-search__copy:focus-visible {
+    animation: console-flicker 0.2s var(--console-steps) 1;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  a,
+  button:not(:disabled),
+  .sidebar li,
+  .table-container tbody tr,
+  .table-container td,
+  .ifsc-search__submit,
+  .ifsc-search__chip,
+  .ifsc-search__copy {
+    transition: background-color 0.01s ease, color 0.01s ease, border-color 0.01s ease;
+  }
 }
 
 a:not([class]) {
@@ -46,67 +149,97 @@ body {
 }
 
 .layout-wrapper {
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  grid-template-columns: 20% 50% 30%;
   min-height: 100vh;
 }
 
 .sidebar {
-  width: 15rem;
-  flex-shrink: 0;
+  width: 100%;
+  min-width: 0;
   position: sticky;
   top: 0;
   height: 100vh;
   overflow-y: auto;
-  padding: 1.42vw;
+  padding: var(--gap);
   box-sizing: border-box;
   border-right: 1px dotted var(--border-inked);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: var(--spacing-04);
+  gap: var(--gap);
 }
 
 .sidebar ul {
   display: flex;
-  flex-wrap: wrap;
-  gap: 0 1rem;
+  flex-direction: column;
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
+.sidebar li {
+  width: 100%;
+}
+
+.sidebar li a {
+  display: block;
+  width: 100%;
+}
+
+.sidebar li:hover,
+.sidebar li:focus-within {
+  background-color: var(--background-selected);
+}
+
 .content-wrapper {
-  flex-grow: 1;
-  max-width: 100%;
+  min-width: 0;
 }
 
-main { 
-  margin: 1.42vw;
+main {
+  margin: var(--gap);
 }
 
-@media (max-width: 768px) {
+main > header {
+  border-bottom: 1px dotted var(--border-inked);
+}
+
+@media (max-width: 1024px) {
   .layout-wrapper {
-    flex-direction: column;
+    grid-template-columns: 1fr;
   }
   
-  .sidebar {
-    width: 100%;
+  .sidebar, .sidebar-right {
     height: auto;
     position: static;
     border-right: none;
+    border-left: none;
     border-bottom: 1px dotted var(--border-inked);
   }
-  
-  .sidebar ul {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0 1rem;
-    list-style: none;
-    margin: 0;
-    padding: 0;
+
+  .sidebar { order: 1; }
+  .content-wrapper { order: 2; }
+  .sidebar-right { 
+    order: 3; 
+    border-bottom: none;
   }
 }
+
+.sidebar-right {
+  width: 100%;
+  min-width: 0;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow-y: auto;
+  padding: var(--gap);
+  box-sizing: border-box;
+  border-left: 1px dotted var(--border-inked);
+  display: flex;
+  flex-direction: column;
+}
+
+
 
 a, a * {
   cursor: pointer;
@@ -119,9 +252,9 @@ a {
   text-underline-offset: 0.125rem;
 }
 
-li span{
+li span {
   color: var(--content-secondary-alt);
-  margin-right: var(--spacing-05);
+  margin-right: var(--gap);
 }
 
 a:hover, a:active {
@@ -145,7 +278,7 @@ h2 {
 
 section {
   border-bottom: 1px dotted var(--border-inked);
-  padding: var(--spacing-04) 0;
+  padding: var(--gap) 0;
 }
 
 @media (max-width: 360px) {
@@ -155,6 +288,17 @@ section {
   }
 }
 
+.table-container {
+  max-width: 100%;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+lazy-table {
+  display: block;
+  width: 100%;
+}
+
 /* Table Styles */
 table {
   border-collapse: collapse;
@@ -162,13 +306,34 @@ table {
   table-layout: fixed;
 }
 
+table.listing-table {
+  table-layout: auto;
+}
+
+.table-container thead th {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  border-bottom: 1px dotted var(--border-inked);
+}
+
+.table-container tbody tr {
+  border-bottom: 1px dotted var(--border-inked);
+}
+
+.table-container th:not(:last-child),
+.table-container td:not(:last-child) {
+  padding-inline-end: var(--gap);
+}
+
 td,
 th {
   text-align: start;
+  vertical-align: middle;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
-  padding-right: 8px;
+  padding: 0;
 }
 
 th {
@@ -208,7 +373,7 @@ img:not([src]) {
 }
 
 footer {
-  gap: .5rem;
+  gap: var(--gap);
   display: flex;
   flex-direction: column;
 }
