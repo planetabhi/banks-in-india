@@ -11,8 +11,65 @@ const {
 	description = "Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites. Includes public sector, private sector, small finance, payment banks, regional rural banks, and foreign banks." 
 } = Astro.props;
 
-// Build canonical URL path dynamically using Astro.url
-const canonicalURL = new URL(Astro.url.pathname, 'https://banksin.in/');
+/* One URL per path: ignore querystrings (e.g. ?q=) for canonical to avoid duplicate indexing. */
+const pathNorm = Astro.url.pathname.replace(/\/$/, '') || '/';
+const canonicalHref =
+	pathNorm === '/' ? 'https://banksin.in/' : `https://banksin.in${pathNorm}`;
+
+const isHome = pathNorm === '/';
+
+const structuredData = isHome
+	? {
+			'@context': 'https://schema.org',
+			'@type': 'WebSite',
+			name: 'Banks in India',
+			url: 'https://banksin.in/',
+			description,
+			inLanguage: 'en-IN',
+			author: {
+				'@type': 'Person',
+				name: 'Abhimanyu Rana',
+				url: 'https://planetabhi.com/',
+			},
+			publisher: {
+				'@type': 'Organization',
+				name: 'Banks in India',
+				url: 'https://banksin.in/',
+			},
+			potentialAction: {
+				'@type': 'SearchAction',
+				target: {
+					'@type': 'EntryPoint',
+					urlTemplate: 'https://banksin.in/ifsc-search?q={search_term_string}',
+				},
+				'query-input': 'required name=search_term_string',
+			},
+	  }
+	: {
+			'@context': 'https://schema.org',
+			'@type': 'WebPage',
+			name: title,
+			url: canonicalHref,
+			description,
+			inLanguage: 'en-IN',
+			isPartOf: {
+				'@type': 'WebSite',
+				name: 'Banks in India',
+				url: 'https://banksin.in/',
+			},
+			author: {
+				'@type': 'Person',
+				name: 'Abhimanyu Rana',
+				url: 'https://planetabhi.com/',
+			},
+			publisher: {
+				'@type': 'Organization',
+				name: 'Banks in India',
+				url: 'https://banksin.in/',
+			},
+	  };
+
+const hasRightSidebar = Astro.slots.has('sidebar-right');
 ---
 
 <!doctype html>
@@ -28,21 +85,23 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://banksin.in/');
 		<meta name="keywords" content="indian banks, ifsc codes, bank directory, banking india, rbi banks, private banks, public sector banks, payment banks, small finance banks, regional rural banks, foreign banks, neft, rtgs, npci" />
 		<meta name="robots" content="index, follow" />
 		<meta name="generator" content={Astro.generator} />
-		<link rel="canonical" href={canonicalURL} />
+		<link rel="canonical" href={canonicalHref} />
 		
 		<!-- Open Graph / Facebook -->
 		<meta property="og:type" content="website" />
-		<meta property="og:url" content={canonicalURL} />
+		<meta property="og:url" content={canonicalHref} />
 		<meta property="og:title" content={title} />
 		<meta property="og:description" content={description} />
+		<meta property="og:site_name" content="Banks in India" />
+		<meta property="og:locale" content="en_IN" />
 		<meta property="og:image" content="https://banksin.in/og-image.png" />
 		
 		<!-- Twitter -->
-		<meta property="twitter:card" content="summary_large_image" />
-		<meta property="twitter:url" content={canonicalURL} />
-		<meta property="twitter:title" content={title} />
-		<meta property="twitter:description" content={description} />
-		<meta property="twitter:image" content="https://banksin.in/og-image.png" />
+		<meta name="twitter:card" content="summary_large_image" />
+		<meta name="twitter:url" content={canonicalHref} />
+		<meta name="twitter:title" content={title} />
+		<meta name="twitter:description" content={description} />
+		<meta name="twitter:image" content="https://banksin.in/og-image.png" />
 		<meta name="twitter:creator" content="@planetabhi" />
 		
 		<!-- Favicons -->
@@ -64,27 +123,11 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://banksin.in/');
 		<link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin />
 		
 		<!-- Structured Data -->
-		<script type="application/ld+json" set:html={JSON.stringify({
-		  "@context": "https://schema.org",
-		  "@type": Astro.url.pathname === "/" ? "WebSite" : "WebPage",
-		  "name": title,
-		  "url": canonicalURL,
-		  "description": description,
-		  "author": {
-		    "@type": "Person",
-		    "name": "Abhimanyu Rana",
-		    "url": "https://planetabhi.com/"
-		  },
-		  "publisher": {
-		    "@type": "Organization",
-		    "name": "Banks in India",
-		    "url": "https://banksin.in/"
-		  }
-		})}></script>
+		<script type="application/ld+json" set:html={JSON.stringify(structuredData)}></script>
 	</head>
 	<body>
 		<a href="#main-content" class="skip-link">Skip to main content</a>
-		<div class="layout-wrapper">
+		<div class:list={['layout-wrapper', { 'layout-wrapper--with-rhs': hasRightSidebar }]}>
 			<aside class="sidebar" id="main-nav">
 				<nav aria-label="Main Navigation">
 					<ul>
@@ -135,7 +178,7 @@ const canonicalURL = new URL(Astro.url.pathname, 'https://banksin.in/');
 			<div class="content-wrapper">
 				<slot />
 			</div>
-			{Astro.slots.has('sidebar-right') && (
+			{hasRightSidebar && (
 				<aside class="sidebar-right">
 					<slot name="sidebar-right" />
 				</aside>

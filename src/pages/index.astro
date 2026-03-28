@@ -8,7 +8,10 @@ import banksData from '../datasets/core/banksData.json';
 const { banks } = banksData as BanksData;
 ---
 
-<Layout title="Banks in India">
+<Layout
+	title="Banks in India"
+	description="Directory of Indian banks with IFSC prefixes, logos, and websites: public sector, private, small finance, payment, RRBs, and foreign banks. npm package banks-in-india."
+>
 	<IFSCSearch slot="sidebar-right" />
 	<main id="main-content">
 		<header>
