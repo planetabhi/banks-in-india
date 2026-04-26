@@ -200,7 +200,7 @@
           "name": "North East Small Finance Bank Ltd.",
           "ifsc": "NESF",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_nesfb.png",
-          "website": "https://slice.bank.in//"
+          "website": "https://slice.bank.in/"
         },
         {
           "name": "Jana Small Finance Bank Ltd.",
@@ -434,7 +434,7 @@
           "name": "Kerala Gramin Bank",
           "ifsc": "KLGB",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_keralagbank.png",
-          "website": "https://karnatakagb.bank.in/"
+          "website": "https://kgb.bank.in/"
         },
         {
           "name": "Madhya Pradesh Gramin Bank",
