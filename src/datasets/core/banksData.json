@@ -200,7 +200,7 @@
           "name": "North East Small Finance Bank Ltd.",
           "ifsc": "NESF",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/small_finance_banks/bi_nesfb.png",
-          "website": "https://nesfb.com/"
+          "website": "https://slice.bank.in//"
         },
         {
           "name": "Jana Small Finance Bank Ltd.",
@@ -243,12 +243,6 @@
           "ifsc": "FINO",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_finobank.png",
           "website": "https://fino.bank.in/"
-        },
-        {
-          "name": "Paytm Payments Bank Ltd.",
-          "ifsc": "PYTM",
-          "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/payments_banks/bi_paytmbank.png",
-          "website": "https://www.paytm.bank.in/"
         },
         {
           "name": "Jio Payments Bank Ltd.",
@@ -401,196 +395,190 @@
           "website": "https://aprb.bank.in/"
         },
         {
-          "name": "Dakshin Bihar Gramin Bank",
-          "ifsc": "MBGX",
-          "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_dbgb.png",
-          "website": "http://www.dbgb.in/"
-        },
-        {
           "name": "Ellaquai Dehati Bank",
           "ifsc": "EDBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_edb.png",
-          "website": "https://www.edb.org.in/"
+          "website": "https://www.jkgrameen.bank.in/"
         },
         {
           "name": "Himachal Pradesh Gramin Bank",
           "ifsc": "HMBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_hpgb.png",
-          "website": "http://www.hpgb.in/"
+          "website": "https://www.hpgb.bank.in/"
         },
         {
           "name": "J&K Grameen Bank",
           "ifsc": "XJKG",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_jkgb.png",
-          "website": "http://www.jkgb.in/"
+          "website": "https://www.jkgrameen.bank.in/"
         },
         {
           "name": "Jharkhand Rajya Gramin Bank",
           "ifsc": "VGBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_jrgb.png",
-          "website": "http://jrgbank.in/"
+          "website": "https://jrgbank.bank.in/"
         },
         {
           "name": "Karnataka Gramin Bank",
           "ifsc": "PKGB",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_karnatakagraminbank.png",
-          "website": "http://www.karnatakagraminbank.com/"
+          "website": "https://karnatakagb.bank.in/"
         },
         {
           "name": "Karnataka Vikas Gramin Bank",
           "ifsc": "KVGB",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_kvgbank.png",
-          "website": "http://www.kvgbank.com/"
+          "website": "https://karnatakagb.bank.in/"
         },
         {
           "name": "Kerala Gramin Bank",
           "ifsc": "KLGB",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_keralagbank.png",
-          "website": "http://www.keralagbank.com/"
+          "website": "https://karnatakagb.bank.in/"
         },
         {
           "name": "Madhya Pradesh Gramin Bank",
           "ifsc": "CMPX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mpgb.png",
-          "website": "https://mpgb.co.in/"
+          "website": "https://mpgb.bank.in/"
         },
         {
           "name": "Madhyanchal Gramin Bank",
           "ifsc": "MADX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mgbank.png",
-          "website": "http://www.mgbank.co.in/"
+          "website": "https://mpgb.bank.in/"
         },
         {
           "name": "Maharashtra Gramin Bank",
           "ifsc": "MAHG",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mahagramin.png",
-          "website": "https://www.mahagramin.in/"
+          "website": "https://www.mahagramin.bank.in/"
         },
         {
           "name": "Manipur Rural Bank",
           "ifsc": "MRBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_manipurruralbank.png",
-          "website": "http://www.manipurruralbank.com/"
+          "website": "https://manipurrural.bank.in/"
         },
         {
           "name": "Meghalaya Rural Bank",
           "ifsc": "MERX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_meghalayaruralbank.png",
-          "website": "http://www.meghalayaruralbank.co.in/"
+          "website": "https://meghalayaruralbank.bank.in/"
         },
         {
           "name": "Mizoram Rural Bank",
           "ifsc": "MZRX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_mizoramruralbank.png",
-          "website": "https://www.mizoramruralbank.in/"
+          "website": "https://mrb.bank.in/"
         },
         {
           "name": "Nagaland Rural Bank",
           "ifsc": "NAGX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_nagalandruralbank.png",
-          "website": "http://www.nagalandruralbank.com/"
+          "website": "https://www.nrb.bank.in/"
         },
         {
           "name": "Odisha Gramya Bank",
           "ifsc": "ODGB",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_odishabank.png",
-          "website": "http://www.odishabank.in/"
+          "website": "https://odishabank.bank.in/"
         },
         {
           "name": "Paschim Banga Gramin Bank",
           "ifsc": "PASX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_pbgbank.png",
-          "website": "http://www.pbgbank.com/"
+          "website": "https://www.wbgb.bank.in/"
         },
         {
           "name": "Prathama U.P. Gramin Bank",
           "ifsc": "SUBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_prathamaupbank.png",
-          "website": "http://www.prathamaupbank.com/"
+          "website": "https://upgb.bank.in/"
         },
         {
           "name": "Puduvai Bharathiar Grama Bank",
           "ifsc": "PBGX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_puduvaibharathiargramabank.png",
-          "website": "http://www.puduvaibharathiargramabank.in/"
+          "website": "https://pygb.bank.in/"
         },
         {
           "name": "Punjab Gramin Bank",
           "ifsc": "PUGX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_pgb.png",
-          "website": "http://www.pgb.org.in/"
+          "website": "https://pgb.bank.in/"
         },
         {
           "name": "Rajasthan Marudhara Gramin Bank",
           "ifsc": "RMGB",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_rmgb.png",
-          "website": "http://www.rmgb.in/"
+          "website": "https://rgb.bank.in/"
         },
         {
           "name": "Saptagiri Grameena Bank",
           "ifsc": "SPBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_saptagirigrameenabank.png",
-          "website": "http://www.saptagirigrameenabank.in/"
+          "website": "https://apgb.bank.in/"
         },
         {
           "name": "Sarva Haryana Gramin Bank",
           "ifsc": "HGBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_shgb.png",
-          "website": "https://shgb.co.in/"
+          "website": "https://hgb.bank.in/"
         },
         {
           "name": "Saurashtra Gramin Bank",
           "ifsc": "SGBA",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_sgbrrb.png",
-          "website": "https://sgbrrb.org/"
+          "website": "https://www.ggb.bank.in/"
         },
         {
           "name": "Tamil Nadu Grama Bank",
           "ifsc": "IDIB",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_tamilnadugramabank.png",
-          "website": "http://www.tamilnadugramabank.com/"
+          "website": "https://tngb.bank.in/"
         },
         {
           "name": "Telangana Grameena Bank",
           "ifsc": "DGBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_tgbhyd.png",
-          "website": "http://www.tgbhyd.in/"
+          "website": "https://tgb.bank.in/"
         },
         {
           "name": "Tripura Gramin Bank",
           "ifsc": "TGBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_tripuragraminbank.png",
-          "website": "http://www.tripuragraminbank.org/"
+          "website": "https://tripuragramin.bank.in/"
         },
         {
           "name": "Uttar Bihar Gramin Bank",
           "ifsc": "UBGX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_ubgb.png",
-          "website": "http://www.ubgb.in/"
+          "website": "https://bgb.bank.in/"
         },
         {
           "name": "Utkal Grameen Bank",
           "ifsc": "UGBX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_utkalgrameenbank.png",
-          "website": "http://www.utkalgrameenbank.co.in/"
+          "website": "https://odishabank.bank.in/"
         },
         {
           "name": "Uttarbanga Kshetriya Gramin Bank",
           "ifsc": "UKGX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_ubkgb.png",
-          "website": "http://www.ubkgb.org/"
+          "website": "https://www.wbgb.bank.in/"
         },
         {
           "name": "Vidharbha Konkan Gramin Bank",
           "ifsc": "BKID",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_vkgb.png",
-          "website": "http://www.vkgb.co.in/"
+          "website": "https://www.mahagramin.bank.in/"
         },
         {
           "name": "Uttarakhand Gramin Bank",
           "ifsc": "UTGX",
           "icon": "https://cdn.jsdelivr.net/npm/banks-in-india@0.3.1/icons/regional_rural_banks/bi_uttarakhandgraminbank.png",
-          "website": "http://www.uttarakhandgraminbank.com/"
+          "website": "https://ukgb.bank.in/"
         }
       ]
     },
