@@ -1,7 +1,7 @@
 {
   "name": "banks-in-india",
   "version": "0.3.2",
-  "description": "Websites & icons for all active Indian banks.",
+  "description": "All verified Indian banking institutions, mapping active IFSCs, SWIFT routing networks, BSR directories, and NPCI live payment rails.",
   "type": "module",
   "scripts": {
     "build": "astro build",
@@ -26,6 +26,10 @@
     "url": "https://github.com/planetabhi/banks-in-india/issues"
   },
   "homepage": "https://banksin.in/",
+  "files": [
+    "src/datasets/",
+    "icons/"
+  ],
   "dependencies": {
     "@astrojs/netlify": "^7.0.8",
     "@new-ui/foundations": "^0.3.5",
