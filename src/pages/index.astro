@@ -18,13 +18,6 @@ const { banks } = banksData as BanksData;
 			<h1 class="italic">Banks in India</h1>
 		</header>
 		
-		<section aria-label="Quick Actions">
-			<ul>
-			   <li><code>npm i banks-in-india</code></li>
-			   <li><a href="https://methodblack.gumroad.com/l/banks-in-india" target="_blank" rel="noopener noreferrer">Figma icon library, $5</a></li>
-			</ul>
-		</section>
-		
 		{banks.map((section) => (
 		  <BankSection 
 			title={section.title} 
@@ -32,9 +25,13 @@ const { banks } = banksData as BanksData;
 			content={section.content} 
 		  />
 		))}
-		
 
-		
+		<section aria-label="Quick Actions">
+			<ul>
+			   <li><code>npm i banks-in-india</code></li>
+			   <li><a href="https://methodblack.gumroad.com/l/banks-in-india" target="_blank" rel="noopener noreferrer">Figma icon library, ~₹480</a></li>
+			</ul>
+		</section>
 	</main>
 </Layout>
 

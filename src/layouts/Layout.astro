@@ -152,7 +152,6 @@ const hasRightSidebar = Astro.slots.has('sidebar-right');
 									<a 
 										href={item.href} 
 										aria-current={isActive ? 'page' : undefined}
-										style={isActive ? 'color: var(--selected);' : undefined}
 									>
 										{item.label}
 									</a>
@@ -184,6 +183,29 @@ const hasRightSidebar = Astro.slots.has('sidebar-right');
 				</aside>
 			)}
 		</div>
+		<script>
+			// Fire the number pop-in reveal for any static digit groups
+			// rendered on the page (see DigitGroup.astro / .t-digit-group).
+			document.querySelectorAll('.t-digit-group').forEach((group) => {
+				requestAnimationFrame(() => group.classList.add('is-animating'));
+			});
+
+			// Global click-to-copy for IFSC/code cells (.copy-code) rendered
+			// across the bank, listing and lazy tables.
+			document.addEventListener('click', (e) => {
+				const btn = (e.target as HTMLElement)?.closest('.copy-code') as HTMLElement | null;
+				if (!btn) return;
+				const text = btn.dataset.copy || btn.textContent || '';
+				if (!text || !navigator.clipboard) return;
+				navigator.clipboard.writeText(text).then(
+					() => {
+						btn.dataset.copied = 'true';
+						setTimeout(() => btn.removeAttribute('data-copied'), 1200);
+					},
+					() => {}
+				);
+			});
+		</script>
 	</body>
 </html>
 

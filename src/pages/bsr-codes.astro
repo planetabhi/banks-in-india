@@ -1,6 +1,7 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import LazyTable from '../components/LazyTable.astro';
+import DigitGroup from '../components/DigitGroup.astro';
 import bsrData from '../datasets/rbi/bsr-codes.json';
 
 const cleanBsr = bsrData.map(d => ({
@@ -14,7 +15,7 @@ const cleanBsr = bsrData.map(d => ({
   <main id="main-content">
     <header>
       <h1 class="italic">BSR & Tax Routing Directory</h1>
-      <p>Branch-level IFSC indexing utilized for official corporate taxation (TDS/TCS) processing pipelines. Showing all {cleanBsr.length.toLocaleString()} records.</p>
+      <p>Branch-level IFSC indexing utilized for official corporate taxation (TDS/TCS) processing pipelines. Showing all <DigitGroup value={cleanBsr.length.toLocaleString()} /> records.</p>
     </header>
     <section aria-label="BSR Codes Directory">
       <h2>[Directory]</h2>

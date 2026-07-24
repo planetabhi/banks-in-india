@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import neftIfscs from '../../datasets/rbi/neft-ifscs.json';
 import LazyTable from '../../components/LazyTable.astro';
+import DigitGroup from '../../components/DigitGroup.astro';
 
 const mappedData = neftIfscs.map((item) => ({
     "IFSC": item.IFSC || "N/A",
@@ -15,7 +16,7 @@ const mappedData = neftIfscs.map((item) => ({
 	<main id="main-content">
 		<header>
 			<h1 class="italic">NEFT Enabled IFSC Codes</h1>
-			<p>All {mappedData.length.toLocaleString()} NEFT-enabled branches across India.</p>
+			<p>All <DigitGroup value={mappedData.length.toLocaleString()} /> NEFT-enabled branches across India.</p>
 		</header>
 		
 		<section aria-label="NEFT IFSCs List">

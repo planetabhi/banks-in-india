@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import rtgsIfscs from '../../datasets/rbi/rtgs-ifscs.json';
 import RawTable from '../../components/RawTable.astro';
+import DigitGroup from '../../components/DigitGroup.astro';
 
 const mappedData = rtgsIfscs.map((item) => ({
     "IFSC Prefix": item.Code || "N/A",
@@ -14,7 +15,7 @@ const mappedData = rtgsIfscs.map((item) => ({
 	<main id="main-content">
 		<header>
 			<h1 class="italic">RTGS Enabled IFSC Codes</h1>
-			<p>{mappedData.length} banks with RTGS-enabled branches across India.</p>
+			<p><DigitGroup value={mappedData.length} /> banks with RTGS-enabled branches across India.</p>
 		</header>
 		
 		<section aria-label="RTGS IFSCs List">

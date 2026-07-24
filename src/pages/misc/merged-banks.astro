@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import mergedBanks from '../../datasets/mergers/merged-banks.json';
 import RawTable from '../../components/RawTable.astro';
+import DigitGroup from '../../components/DigitGroup.astro';
 
 const mappedData = mergedBanks.map((item: any) => ({
     "Original Bank": item['Bank Name'] || "N/A",
@@ -17,7 +18,7 @@ const mappedData = mergedBanks.map((item: any) => ({
 	<main id="main-content">
 		<header>
 			<h1 class="italic">Merged Banks Codes</h1>
-			<p>IFSC routing replacements for {mappedData.length} Indian banks that have undergone structural mergers or acquisitions.</p>
+			<p>IFSC routing replacements for <DigitGroup value={mappedData.length} /> Indian banks that have undergone structural mergers or acquisitions.</p>
 		</header>
 		
 		<section aria-label="Merged Banks Codes">
