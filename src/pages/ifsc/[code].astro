@@ -14,11 +14,18 @@ const branch = isValidIfsc(code) ? await getBranch(code) : undefined;
 
 if (!branch) {
 	Astro.response.status = 404;
+	// Short cache for misses; don't let a transient 404 stick on the CDN.
+	Astro.response.headers.set('Cache-Control', 'public, max-age=60, s-maxage=300');
+} else {
+	// Branch data is a static snapshot — safe to cache hard at the edge.
+	Astro.response.headers.set('Cache-Control', 'public, max-age=3600, s-maxage=86400, stale-while-revalidate=604800');
 }
 
 const prefix = code.slice(0, 4);
 const meta = branch ? getBankMeta(prefix) : undefined;
-const siblings = branch ? await getSiblings(code, 12) : [];
+// Only group "same city" branches when we actually have a city, otherwise
+// every city-less branch of the bank would falsely match.
+const siblings = branch && branch.city ? await getSiblings(code, 12) : [];
 
 const city = branch ? [branch.city, branch.district].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(', ') : '';
 const phone = branch && branch.contact && branch.contact !== '0' ? branch.contact : '';
@@ -56,7 +63,7 @@ const structuredData = branch
 	: null;
 ---
 
-<Layout title={pageTitle} description={pageDescription}>
+<Layout title={pageTitle} description={pageDescription} noindex={!branch}>
 	<main id="main-content">
 		{branch ? (
 			<>

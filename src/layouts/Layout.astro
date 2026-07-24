@@ -4,10 +4,12 @@ import '../styles/global.css';
 interface Props {
 	title: string;
 	description?: string;
+	noindex?: boolean;
 }
 
 const { 
 	title, 
+	noindex = false,
 	description = "Comprehensive directory of all active Indian banks with IFSC codes, logos, and official websites. Includes public sector, private sector, small finance, payment banks, regional rural banks, and foreign banks." 
 } = Astro.props;
 
@@ -83,7 +85,7 @@ const hasRightSidebar = Astro.slots.has('sidebar-right');
 		<meta name="title" content={title} />
 		<meta name="description" content={description} />
 		<meta name="keywords" content="indian banks, ifsc codes, bank directory, banking india, rbi banks, private banks, public sector banks, payment banks, small finance banks, regional rural banks, foreign banks, neft, rtgs, npci" />
-		<meta name="robots" content="index, follow" />
+		<meta name="robots" content={noindex ? "noindex, follow" : "index, follow"} />
 		<meta name="generator" content={Astro.generator} />
 		<link rel="canonical" href={canonicalHref} />
 		
