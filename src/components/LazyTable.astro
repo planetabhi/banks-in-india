@@ -68,22 +68,40 @@ const safeJson = JSON.stringify(optimizedData).replace(/</g, '\\u003c');
       const renderChunk = () => {
         const fragment = document.createDocumentFragment();
         const end = Math.min(currentIndex + CHUNK_SIZE, items.length);
-        
+        const newRows: HTMLTableRowElement[] = [];
+
         for (let i = currentIndex; i < end; i++) {
           const row = items[i];
           const tr = document.createElement('tr');
-          headers.forEach((_: string, index: number) => {
+          tr.className = 't-row-reveal';
+          headers.forEach((header: string, index: number) => {
             const td = document.createElement('td');
             // Decode back from the optimized array format
             const val = row[index];
-            td.textContent = val !== undefined && val !== null ? String(val) : '';
+            const text = val !== undefined && val !== null ? String(val) : '';
+            if (header.includes('IFSC') && text) {
+              const btn = document.createElement('button');
+              btn.type = 'button';
+              btn.className = 'copy-code';
+              btn.dataset.copy = text;
+              btn.title = 'Copy';
+              btn.textContent = text;
+              td.appendChild(btn);
+            } else {
+              td.textContent = text;
+            }
             tr.appendChild(td);
           });
           fragment.appendChild(tr);
+          newRows.push(tr);
         }
-        
+
         tbody.appendChild(fragment);
         currentIndex = end;
+
+        requestAnimationFrame(() => {
+          newRows.forEach((tr) => tr.classList.add('is-revealed'));
+        });
 
         if (currentIndex >= items.length) {
           observer.disconnect();
@@ -109,3 +127,24 @@ const safeJson = JSON.stringify(optimizedData).replace(/</g, '\\u003c');
     customElements.define('lazy-table', LazyTable);
   }
 </script>
+
+<style>
+  .listing-table tbody tr.t-row-reveal {
+    opacity: 0;
+    filter: blur(var(--reveal-blur));
+    transition:
+      opacity var(--reveal-dur) var(--reveal-ease),
+      filter var(--reveal-dur) var(--reveal-ease);
+  }
+
+  .listing-table tbody tr.t-row-reveal.is-revealed {
+    opacity: 1;
+    filter: blur(0);
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .listing-table tbody tr.t-row-reveal {
+      transition: none !important;
+    }
+  }
+</style>

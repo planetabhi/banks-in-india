@@ -5,6 +5,9 @@ dist
 .DS_Store
 **/.DS_Store
 
+# Raw source spreadsheets
+src/datasets/xls
+
 # Local Netlify folder
 .netlify
 
@@ -15,3 +18,5 @@ dist
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+skills

@@ -20,7 +20,13 @@ const headers = data.length > 0 ? Object.keys(data[0]) : [];
     {data.map((row: {[key: string]: any}) => (
       <tr>
         {headers.map(header => (
-          <td>{row[header]}</td>
+          <td>
+            {header.includes('IFSC') && row[header] ? (
+              <button type="button" class="copy-code" data-copy={String(row[header])} title="Copy">{row[header]}</button>
+            ) : (
+              row[header]
+            )}
+          </td>
         ))}
       </tr>
     ))}

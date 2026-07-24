@@ -22,36 +22,47 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         <form id="ifsc-form" class="ifsc-search__form" autocomplete="off">
             <div class="ifsc-search__field">
                 <label class="ifsc-search__label" for="ifsc-input">Code</label>
-                <input
-                    class="ifsc-search__input"
-                    type="text"
-                    id="ifsc-input"
-                    name="ifsc"
-                    placeholder="HDFC0000001"
-                    required
-                    pattern="^[A-Z]{4}0[A-Z0-9]{6}$"
-                    title="Enter a valid 11-character IFSC code"
-                    inputmode="text"
-                    spellcheck="false"
-                />
+                <div class="ifsc-search__input-wrap">
+                    <input
+                        class="ifsc-search__input"
+                        type="text"
+                        id="ifsc-input"
+                        name="ifsc"
+                        placeholder="HDFC0000001"
+                        required
+                        pattern="^[A-Z]{4}0[A-Z0-9]{6}$"
+                        title="Enter a valid 11-character IFSC code"
+                        inputmode="text"
+                        spellcheck="false"
+                    />
+                    <button
+                        type="button"
+                        id="ifsc-clear"
+                        class="ifsc-search__clear"
+                        aria-label="Clear input"
+                        hidden
+                    >&#215;</button>
+                </div>
             </div>
             <div class="ifsc-search__actions">
                 <button type="submit" class="ifsc-search__submit">Search</button>
             </div>
         </form>
-        <div id="recent-wrap" class="ifsc-search__recent" hidden>
-            <span class="ifsc-search__recent-label" id="recent-label">Recent</span>
-            <ul id="recent-searches" class="ifsc-search__chips" aria-labelledby="recent-label"></ul>
+        <div id="recent-wrap" class="ifsc-search__recent t-resize" hidden>
+            <div class="ifsc-search__recent-inner">
+                <span class="ifsc-search__recent-label" id="recent-label">Recent</span>
+                <ul id="recent-searches" class="ifsc-search__chips" aria-labelledby="recent-label"></ul>
+            </div>
         </div>
     </section>
 
-    <section class="ifsc-search__panel ifsc-search__panel--out" id="ifsc-results-panel" aria-label="Search results" hidden>
-        <p id="loading" class="ifsc-search__status" hidden>Searching…</p>
+    <section class="ifsc-search__panel ifsc-search__panel--out t-panel-slide" id="ifsc-results-panel" aria-label="Search results" hidden>
+        <p id="loading" class="ifsc-search__status t-shimmer" data-text="Searching…" hidden>Searching…</p>
         <div id="error-message" class="ifsc-search__error" role="alert" hidden></div>
 
         <script id="icon-map" type="application/json" set:html={JSON.stringify(iconMap)}></script>
 
-        <dl id="result-card" class="ifsc-search__dl" hidden>
+        <dl id="result-card" class="ifsc-search__dl ifsc-search__dl--reveal" hidden>
             <div class="ifsc-search__row">
                 <dt class="ifsc-search__dt">Bank</dt>
                 <dd class="ifsc-search__dd ifsc-search__dd--bank">
@@ -84,7 +95,7 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
             <div class="ifsc-search__row ifsc-search__row--final">
                 <dt class="ifsc-search__dt">Copy</dt>
                 <dd class="ifsc-search__dd ifsc-search__dd--action">
-                    <button type="button" id="copy-btn" class="ifsc-search__copy">Copy details</button>
+                    <button type="button" id="copy-btn" class="ifsc-search__copy t-text-swap">Copy details</button>
                 </dd>
             </div>
         </dl>
@@ -103,10 +114,68 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
     const locationSep = document.querySelector('.ifsc-search__sep') as HTMLElement | null;
     const recentSearchesContainer = document.getElementById('recent-searches');
     const resIcon = document.getElementById('res-icon') as HTMLImageElement | null;
+    const clearBtn = document.getElementById('ifsc-clear') as HTMLButtonElement | null;
 
     let currentData: any = null;
     let fetchController: AbortController | null = null;
     let iconMapCache: Record<string, string> | null = null;
+
+    function revealResultsPanel() {
+        if (!resultsPanel || resultsPanel.dataset.open === 'true') return;
+        requestAnimationFrame(() => {
+            resultsPanel!.dataset.open = 'true';
+        });
+    }
+
+    function revealResultCard() {
+        if (!resultCard) return;
+        resultCard.hidden = false;
+        requestAnimationFrame(() => {
+            resultCard!.dataset.revealed = 'true';
+        });
+    }
+
+    function resetResultCard() {
+        if (!resultCard) return;
+        resultCard.hidden = true;
+        delete resultCard.dataset.revealed;
+    }
+
+    function showError(message: string) {
+        if (!errorMessage || !input) return;
+        errorMessage.textContent = message;
+        errorMessage.hidden = false;
+        errorMessage.classList.remove('is-error');
+        void errorMessage.offsetWidth;
+        errorMessage.classList.add('is-error');
+
+        input.classList.remove('is-shaking');
+        void input.offsetWidth;
+        input.classList.add('is-shaking');
+    }
+
+    function clearError() {
+        if (!errorMessage || !input) return;
+        errorMessage.classList.remove('is-error');
+        errorMessage.hidden = true;
+        errorMessage.textContent = '';
+        input.classList.remove('is-shaking');
+    }
+
+    function swapButtonText(btn: HTMLButtonElement, next: string) {
+        const dur = parseFloat(
+            getComputedStyle(document.documentElement).getPropertyValue('--text-swap-dur')
+        ) || 150;
+        btn.classList.add('is-exit');
+        setTimeout(() => {
+            btn.textContent = next;
+            btn.classList.remove('is-exit');
+            btn.classList.add('is-enter-start');
+            void btn.offsetHeight;
+            btn.classList.remove('is-enter-start');
+        }, dur);
+        return dur;
+    }
 
     function getIconMap(): Record<string, string> {
         if (iconMapCache) return iconMapCache;
@@ -130,6 +199,7 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
 
         recentSearchesContainer.textContent = '';
         if (recent.length === 0) {
+            recentWrap.style.height = '0px';
             recentWrap.hidden = true;
             return;
         }
@@ -150,6 +220,9 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         });
 
         recentWrap.hidden = false;
+        requestAnimationFrame(() => {
+            if (recentWrap) recentWrap.style.height = `${recentWrap.scrollHeight}px`;
+        });
     }
 
     function saveRecent(ifsc: string) {
@@ -184,10 +257,10 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         const { signal } = fetchController;
 
         resultsPanel.hidden = false;
+        revealResultsPanel();
         loading.hidden = false;
-        errorMessage.hidden = true;
-        errorMessage.textContent = '';
-        resultCard.hidden = true;
+        clearError();
+        resetResultCard();
         currentData = null;
         if (locationSep) locationSep.hidden = false;
 
@@ -239,12 +312,11 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
             if (data.UPI) supported.push('UPI');
             document.getElementById('res-supported')!.textContent = supported.join(', ') || 'None';
 
-            resultCard.hidden = false;
+            revealResultCard();
             saveRecent(ifsc);
         } catch (err) {
             if ((err as Error).name === 'AbortError') return;
-            errorMessage.textContent = (err as Error).message;
-            errorMessage.hidden = false;
+            showError((err as Error).message);
         } finally {
             if (fetchController?.signal === signal && loading) {
                 loading.hidden = true;
@@ -260,16 +332,43 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
 
     input?.addEventListener('input', () => {
         if (!input) return;
+        clearError();
         let val = input.value.toUpperCase();
         if (val.length >= 5) {
             val = val.substring(0, 4) + '0' + val.substring(5);
         }
         val = val.replace(/[^A-Z0-9]/g, '');
         input.value = val;
+        toggleClear();
 
         if (val.match(/^[A-Z]{4}0[A-Z0-9]{6}$/)) {
             searchIFSC(val);
         }
+    });
+
+    function toggleClear() {
+        if (!clearBtn || !input) return;
+        clearBtn.hidden = input.value.length === 0;
+    }
+
+    clearBtn?.addEventListener('click', () => {
+        if (!input) return;
+        input.value = '';
+        clearError();
+        toggleClear();
+        input.focus();
+    });
+
+    // Press "/" anywhere (outside a field) to jump to the IFSC search.
+    document.addEventListener('keydown', (e) => {
+        if (e.key !== '/' || e.ctrlKey || e.metaKey || e.altKey) return;
+        const active = document.activeElement as HTMLElement | null;
+        const tag = active?.tagName;
+        if (tag === 'INPUT' || tag === 'TEXTAREA' || active?.isContentEditable) return;
+        if (!input) return;
+        e.preventDefault();
+        input.focus();
+        input.select();
     });
 
     copyBtn?.addEventListener('click', () => {
@@ -278,11 +377,11 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
 
         navigator.clipboard.writeText(textToCopy).then(
             () => {
-                const originalText = copyBtn.textContent;
-                copyBtn.textContent = 'Copied';
+                const originalText = copyBtn.textContent || 'Copy details';
+                const dur = swapButtonText(copyBtn, 'Copied');
                 setTimeout(() => {
-                    copyBtn.textContent = originalText;
-                }, 2000);
+                    swapButtonText(copyBtn, originalText);
+                }, dur + 2000);
             },
             () => {
                 /* clipboard denied or unavailable (non-secure context, permissions) */
@@ -296,6 +395,7 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         if (q && input) {
             const u = q.toUpperCase();
             input.value = u;
+            toggleClear();
             if (u.match(/^[A-Z]{4}0[A-Z0-9]{6}$/)) {
                 searchIFSC(u);
             }
@@ -334,6 +434,33 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         border: none;
     }
 
+    .t-panel-slide {
+        transform: translateY(var(--panel-translate-y));
+        opacity: 0;
+        filter: blur(var(--panel-blur));
+        transition:
+            transform var(--panel-close-dur) var(--panel-ease),
+            opacity var(--panel-close-dur) var(--panel-ease),
+            filter var(--panel-close-dur) var(--panel-ease);
+        will-change: transform, opacity, filter;
+    }
+
+    .t-panel-slide[data-open="true"] {
+        transform: translateY(0);
+        opacity: 1;
+        filter: blur(0);
+        transition:
+            transform var(--panel-open-dur) var(--panel-ease),
+            opacity var(--panel-open-dur) var(--panel-ease),
+            filter var(--panel-open-dur) var(--panel-ease);
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .t-panel-slide {
+            transition: none !important;
+        }
+    }
+
     .ifsc-search__heading {
         margin: 0;
         padding: 0;
@@ -368,11 +495,19 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         color: var(--content-secondary-alt);
     }
 
+    .ifsc-search__input-wrap {
+        position: relative;
+        display: flex;
+        align-items: center;
+        min-width: 0;
+    }
+
     .ifsc-search__input {
         box-sizing: border-box;
         width: 100%;
         margin: 0;
         padding: 0;
+        padding-inline-end: 1.5rem;
         font: inherit;
         font-size: var(--desktop-body);
         line-height: var(--lh-desktop-body);
@@ -383,6 +518,35 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         outline: none;
     }
 
+    .ifsc-search__clear {
+        position: absolute;
+        inset-inline-end: 0;
+        top: 0;
+        bottom: 0;
+        width: 1.5rem;
+        margin: 0;
+        padding: 0;
+        font: inherit;
+        font-size: var(--desktop-body);
+        line-height: 1;
+        color: var(--content-secondary-alt);
+        background: transparent;
+        border: none;
+        cursor: pointer;
+    }
+
+    .ifsc-search__clear:not([hidden]) {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .ifsc-search__clear:hover,
+    .ifsc-search__clear:focus-visible {
+        outline: none;
+        color: var(--selected);
+    }
+
     .ifsc-search__input::placeholder {
         color: var(--content-secondary-alt);
         opacity: 0.85;
@@ -391,6 +555,25 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
     .ifsc-search__input:focus-visible {
         border-color: var(--accent);
         box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .ifsc-search__input.is-shaking {
+        animation: ifsc-input-shake calc(var(--shake-dur-a) * 2 + var(--shake-dur-b) * 2) linear;
+    }
+
+    @keyframes ifsc-input-shake {
+        0%      { transform: translateX(0); animation-timing-function: var(--shake-ease); }
+        28.57%  { transform: translateX(var(--shake-distance)); animation-timing-function: var(--shake-ease); }
+        57.14%  { transform: translateX(calc(var(--shake-distance) * -1)); animation-timing-function: var(--shake-ease); }
+        78.57%  { transform: translateX(var(--shake-overshoot)); animation-timing-function: var(--shake-ease); }
+        100%    { transform: translateX(0); }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .ifsc-search__input.is-shaking {
+            animation: none !important;
+            transform: none !important;
+        }
     }
 
     .ifsc-search__actions {
@@ -427,15 +610,29 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         margin: 0;
         padding: 0;
         display: none;
-        flex-direction: column;
-        gap: var(--gap);
         min-width: 0;
         border-top: 1px dotted var(--border-inked);
-        padding-top: var(--gap);
     }
 
     .ifsc-search__recent:not([hidden]) {
+        display: block;
+        overflow: hidden;
+        height: 0;
+        transition: height var(--resize-dur) var(--resize-ease);
+        will-change: height;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .ifsc-search__recent:not([hidden]) {
+            transition: none !important;
+        }
+    }
+
+    .ifsc-search__recent-inner {
         display: flex;
+        flex-direction: column;
+        gap: var(--gap);
+        padding-top: var(--gap);
     }
 
     .ifsc-search__recent-label {
@@ -488,6 +685,48 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         color: var(--content-secondary-alt);
     }
 
+    .ifsc-search__status.t-shimmer {
+        position: relative;
+        color: var(--shimmer-base);
+    }
+
+    .ifsc-search__status.t-shimmer:not([hidden]) {
+        display: inline-block;
+    }
+
+    .ifsc-search__status.t-shimmer::before {
+        content: attr(data-text);
+        position: absolute;
+        inset: 0;
+        pointer-events: none;
+        background-image: linear-gradient(
+            90deg,
+            transparent 0%,
+            transparent 40%,
+            var(--shimmer-highlight) 50%,
+            transparent 60%,
+            transparent 100%
+        );
+        background-size: var(--shimmer-band) 100%;
+        background-repeat: no-repeat;
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+        animation: ifsc-shimmer var(--shimmer-dur) var(--shimmer-ease) infinite;
+    }
+
+    @keyframes ifsc-shimmer {
+        0%   { background-position: 100% 0; }
+        100% { background-position: 0% 0; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .ifsc-search__status.t-shimmer::before {
+            animation: none !important;
+        }
+    }
+
     .ifsc-search__error {
         margin: 0;
         padding: 0;
@@ -497,6 +736,18 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         border: none;
         border-bottom: 1px dotted var(--border-inked);
         background: transparent;
+        opacity: 0;
+        transition: opacity var(--revert-dur) var(--ease-out);
+    }
+
+    .ifsc-search__error.is-error {
+        opacity: 1;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .ifsc-search__error {
+            transition: none !important;
+        }
     }
 
     .ifsc-search__dl {
@@ -511,6 +762,45 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         grid-template-columns: minmax(4.5rem, 32%) minmax(0, 1fr);
         column-gap: var(--gap);
         row-gap: var(--gap);
+    }
+
+    .ifsc-search__dl--reveal {
+        --row-delay: 0ms;
+    }
+
+    .ifsc-search__dl--reveal .ifsc-search__dt,
+    .ifsc-search__dl--reveal .ifsc-search__dd {
+        opacity: 0;
+        transform: translateY(var(--stagger-distance));
+        filter: blur(var(--reveal-blur));
+        transition:
+            opacity var(--reveal-dur) var(--reveal-ease),
+            transform var(--reveal-dur) var(--reveal-ease),
+            filter var(--reveal-dur) var(--reveal-ease);
+        transition-delay: var(--row-delay);
+        will-change: transform, opacity, filter;
+    }
+
+    .ifsc-search__dl--reveal[data-revealed="true"] .ifsc-search__dt,
+    .ifsc-search__dl--reveal[data-revealed="true"] .ifsc-search__dd {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
+    .ifsc-search__dl--reveal .ifsc-search__row:nth-of-type(1) { --row-delay: 0ms; }
+    .ifsc-search__dl--reveal .ifsc-search__row:nth-of-type(2) { --row-delay: calc(var(--stagger-stagger) * 1); }
+    .ifsc-search__dl--reveal .ifsc-search__row:nth-of-type(3) { --row-delay: calc(var(--stagger-stagger) * 2); }
+    .ifsc-search__dl--reveal .ifsc-search__row:nth-of-type(4) { --row-delay: calc(var(--stagger-stagger) * 3); }
+    .ifsc-search__dl--reveal .ifsc-search__row:nth-of-type(5) { --row-delay: calc(var(--stagger-stagger) * 4); }
+    .ifsc-search__dl--reveal .ifsc-search__row:nth-of-type(6) { --row-delay: calc(var(--stagger-stagger) * 5); }
+    .ifsc-search__dl--reveal .ifsc-search__row:nth-of-type(7) { --row-delay: calc(var(--stagger-stagger) * 6); }
+
+    @media (prefers-reduced-motion: reduce) {
+        .ifsc-search__dl--reveal .ifsc-search__dt,
+        .ifsc-search__dl--reveal .ifsc-search__dd {
+            transition: none !important;
+        }
     }
 
     .ifsc-search__row {
@@ -592,6 +882,33 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
     .ifsc-search__copy:focus-visible {
         outline: none;
         box-shadow: 0 0 0 1px var(--accent);
+    }
+
+    .ifsc-search__copy.t-text-swap {
+        display: inline-block;
+        transform: translateY(0);
+        filter: blur(0);
+        opacity: 1;
+        will-change: transform, filter, opacity;
+    }
+
+    .ifsc-search__copy.t-text-swap.is-exit {
+        transform: translateY(calc(var(--text-swap-translate-y) * -1));
+        filter: blur(var(--text-swap-blur));
+        opacity: 0;
+    }
+
+    .ifsc-search__copy.t-text-swap.is-enter-start {
+        transform: translateY(var(--text-swap-translate-y));
+        filter: blur(var(--text-swap-blur));
+        opacity: 0;
+        transition: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+        .ifsc-search__copy.t-text-swap {
+            transition: none !important;
+        }
     }
 
     @media (max-width: 360px) {

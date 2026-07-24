@@ -26,7 +26,7 @@ const { data } = Astro.props;
     <tbody>
       {data.map((row) => (
         <tr>
-          <td>{row.ifsc}</td>
+          <td><button type="button" class="copy-code" data-copy={row.ifsc} title="Copy IFSC">{row.ifsc}</button></td>
           <td class="cell-logo">
             <img src={row.icon} alt={`${row.name} bank logo`} loading="lazy" width="24" height="24" />
           </td>

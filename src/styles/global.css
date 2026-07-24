@@ -25,6 +25,43 @@
   /* Terminal-ish hovers: stepped easing + short duration */
   --console-dur: 75ms;
   --console-steps: steps(4, jump-end);
+
+  /* transitions-dev motion tokens (subset in use) */
+  --resize-dur: 300ms;
+  --resize-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --panel-open-dur: 400ms;
+  --panel-close-dur: 350ms;
+  --panel-translate-y: 24px;
+  --panel-blur: 2px;
+  --panel-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --shimmer-dur: 2000ms;
+  --shimmer-base: var(--content-secondary-alt);
+  --shimmer-highlight: var(--content-inked);
+  --shimmer-band: 400%;
+  --shimmer-ease: linear;
+  --reveal-dur: 400ms;
+  --reveal-blur: 2px;
+  --reveal-ease: ease-in-out;
+  --shake-distance: 6px;
+  --shake-overshoot: 4px;
+  --shake-dur-a: 80ms;
+  --shake-dur-b: 60ms;
+  --shake-ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --revert-dur: 280ms;
+  --ease-out: ease-out;
+  --text-swap-dur: 150ms;
+  --text-swap-translate-y: 4px;
+  --text-swap-blur: 2px;
+  --text-swap-ease: ease-in-out;
+  --digit-dur: 500ms;
+  --digit-distance: 8px;
+  --digit-stagger: 70ms;
+  --digit-blur: 2px;
+  --digit-ease: cubic-bezier(0.34, 1.45, 0.64, 1);
+  --digit-dir-x: 0;
+  --digit-dir-y: 1;
+  --stagger-stagger: 40ms;
+  --stagger-distance: 12px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
@@ -98,7 +135,10 @@
     transition:
       background-color var(--console-dur) var(--console-steps),
       color var(--console-dur) var(--console-steps),
-      border-color var(--console-dur) var(--console-steps);
+      border-color var(--console-dur) var(--console-steps),
+      transform var(--text-swap-dur) var(--text-swap-ease),
+      filter var(--text-swap-dur) var(--text-swap-ease),
+      opacity var(--text-swap-dur) var(--text-swap-ease);
   }
 
   .ifsc-search__submit:hover,
@@ -123,6 +163,51 @@
   .ifsc-search__chip,
   .ifsc-search__copy {
     transition: background-color 0.01s ease, color 0.01s ease, border-color 0.01s ease;
+  }
+}
+
+@keyframes t-digit-pop-in {
+  0% {
+    transform: translate(
+      calc(var(--digit-distance) * var(--digit-dir-x)),
+      calc(var(--digit-distance) * var(--digit-dir-y))
+    );
+    opacity: 0;
+    filter: blur(var(--digit-blur));
+  }
+  100% {
+    transform: translate(0, 0);
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+.t-digit-group {
+  display: inline-flex;
+  align-items: baseline;
+  font-variant-numeric: tabular-nums;
+}
+
+.t-digit {
+  display: inline-block;
+  will-change: transform, opacity, filter;
+}
+
+.t-digit-group.is-animating .t-digit {
+  animation: t-digit-pop-in var(--digit-dur) var(--digit-ease) both;
+}
+
+.t-digit-group.is-animating .t-digit[data-stagger="1"] {
+  animation-delay: var(--digit-stagger);
+}
+
+.t-digit-group.is-animating .t-digit[data-stagger="2"] {
+  animation-delay: calc(var(--digit-stagger) * 2);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .t-digit-group .t-digit {
+    animation: none !important;
   }
 }
 
@@ -197,6 +282,15 @@ body {
   background-color: var(--background-selected);
 }
 
+.sidebar li a[aria-current="page"] {
+  color: var(--selected);
+}
+
+.sidebar li a[aria-current="page"]::before {
+  content: "\25B8 ";
+  color: var(--selected);
+}
+
 .content-wrapper {
   min-width: 0;
 }
@@ -264,6 +358,30 @@ li span {
 
 a:hover, a:active {
   color: var(--selected);
+}
+
+/* Click-to-copy IFSC / code cells inside tables. */
+.copy-code {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  cursor: pointer;
+  text-align: start;
+}
+
+.copy-code:hover,
+.copy-code:focus-visible {
+  outline: none;
+  color: var(--selected);
+}
+
+.copy-code[data-copied]::after {
+  content: " \2713";
+  color: var(--accent);
+  text-decoration: none;
 }
 
 h1, h2, code, p, ul, li, code {

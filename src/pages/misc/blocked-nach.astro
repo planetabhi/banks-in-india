@@ -3,6 +3,7 @@ import Layout from '../../layouts/Layout.astro';
 import blockedBanks from '../../datasets/npci/blocked-banks.json';
 import blockedNach from '../../datasets/npci/blocked-nach.json';
 import RawTable from '../../components/RawTable.astro';
+import DigitGroup from '../../components/DigitGroup.astro';
 
 const mappedBanks = blockedBanks.map((item) => ({
     "IFSC": item['IFSC'],
@@ -31,7 +32,7 @@ const mappedNach = blockedNach.map((item: any) => ({
 
 		<section aria-label="Blocked Entities">
             <h2>[Blocked Entities]</h2>
-            <p>Full list of {mappedBanks.length} institutions blocked from the NACH clearing system.</p>
+            <p>Full list of <DigitGroup value={mappedBanks.length} /> institutions blocked from the NACH clearing system.</p>
 			<RawTable data={mappedBanks} />
 		</section>
 
