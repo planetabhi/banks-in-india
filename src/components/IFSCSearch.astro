@@ -92,6 +92,12 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
                 <dt class="ifsc-search__dt">Networks</dt>
                 <dd class="ifsc-search__dd" id="res-supported"></dd>
             </div>
+            <div class="ifsc-search__row">
+                <dt class="ifsc-search__dt">Page</dt>
+                <dd class="ifsc-search__dd">
+                    <a id="res-permalink" class="ifsc-search__permalink" href="#">View branch page</a>
+                </dd>
+            </div>
             <div class="ifsc-search__row ifsc-search__row--final">
                 <dt class="ifsc-search__dt">Copy</dt>
                 <dd class="ifsc-search__dd ifsc-search__dd--action">
@@ -115,6 +121,7 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
     const recentSearchesContainer = document.getElementById('recent-searches');
     const resIcon = document.getElementById('res-icon') as HTMLImageElement | null;
     const clearBtn = document.getElementById('ifsc-clear') as HTMLButtonElement | null;
+    const resPermalink = document.getElementById('res-permalink') as HTMLAnchorElement | null;
 
     let currentData: any = null;
     let fetchController: AbortController | null = null;
@@ -206,7 +213,7 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
 
         recent.forEach((item) => {
             const a = document.createElement('a');
-            a.setAttribute('href', `?q=${encodeURIComponent(item)}`);
+            a.setAttribute('href', `/ifsc/${encodeURIComponent(item)}`);
             a.className = 'ifsc-search__chip';
             a.textContent = item;
             a.addEventListener('click', (e) => {
@@ -312,6 +319,8 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
             if (data.UPI) supported.push('UPI');
             document.getElementById('res-supported')!.textContent = supported.join(', ') || 'None';
 
+            if (resPermalink) resPermalink.href = `/ifsc/${ifsc}`;
+
             revealResultCard();
             saveRecent(ifsc);
         } catch (err) {
@@ -416,6 +425,10 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
         margin: 0;
         padding: 0;
         border: none;
+    }
+
+    .ifsc-search__permalink {
+        color: var(--selected);
     }
 
     .ifsc-search > .ifsc-search__panel:first-child {
