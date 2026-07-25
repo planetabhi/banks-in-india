@@ -1,0 +1,404 @@
+---
+// Right-panel branch explorer: unfurls all branches for a selected IFSC prefix,
+// with in-panel search, network/state filtering, sorting, virtualized scrolling,
+// branch detail and related branches. Fully client-side; data is fetched from the
+// static /data/ifsc/<PREFIX>.json endpoints. Progressive: deep-linkable via ?prefix & ?branch.
+import banksDataJSON from '../datasets/core/banksData.json';
+
+const iconMap: Record<string, string> = {};
+for (const group of (banksDataJSON as any).banks) {
+	for (const bank of group.content) {
+		const p = (bank.ifsc || '').trim().toUpperCase();
+		if (p && !iconMap[p]) iconMap[p] = bank.icon;
+	}
+}
+---
+
+<aside class="bx" aria-label="Branch explorer">
+	<nav class="bx-crumb" id="bx-crumb" aria-label="Breadcrumb" hidden>
+		<a href="/ifsc-datasets" data-bx-home>Datasets</a>
+		<span class="bx-crumb__sep">›</span>
+		<a href="#" id="bx-crumb-prefix" data-bx-toprefix></a>
+		<span class="bx-crumb__sep" id="bx-crumb-sep2" hidden>›</span>
+		<span id="bx-crumb-branch" hidden></span>
+	</nav>
+
+	<!-- Empty / prompt state -->
+	<section class="bx-empty" id="bx-empty">
+		<p>Select a bank to unfurl branches</p>
+	</section>
+
+	<!-- Loading -->
+	<section class="bx-loading" id="bx-skeleton" hidden aria-hidden="true">
+		<p>Loading branches…</p>
+	</section>
+
+	<!-- Error -->
+	<section class="bx-error" id="bx-error" role="alert" hidden></section>
+
+	<!-- List view -->
+	<section class="bx-list-view" id="bx-list-view" hidden>
+		<header class="bx-head">
+			<img id="bx-logo" class="bx-logo" src="" alt="" width="24" height="24" hidden />
+			<h2 class="bx-bank" id="bx-bank"></h2>
+			<p class="bx-count" id="bx-count"></p>
+		</header>
+
+		<div class="bx-controls">
+			<div class="bx-chips" id="bx-nets" role="group" aria-label="Filter by payment network">
+				<button type="button" class="bx-chip" data-net="neft" aria-pressed="true">NEFT</button>
+				<button type="button" class="bx-chip" data-net="rtgs" aria-pressed="true">RTGS</button>
+				<button type="button" class="bx-chip" data-net="imps" aria-pressed="true">IMPS</button>
+				<button type="button" class="bx-chip" data-net="upi" aria-pressed="true">UPI</button>
+			</div>
+			<div class="bx-selects">
+				<label class="bx-select-label">State
+					<select id="bx-state" class="bx-select"><option value="">All states</option></select>
+				</label>
+				<label class="bx-select-label">Sort
+					<select id="bx-sort" class="bx-select">
+						<option value="branch">Branch A–Z</option>
+						<option value="city">City A–Z</option>
+						<option value="ifsc">IFSC</option>
+					</select>
+				</label>
+			</div>
+		</div>
+
+		<div class="bx-scroll" id="bx-scroll" tabindex="0">
+			<ul class="bx-sizer" id="bx-sizer"></ul>
+		</div>
+		<p class="bx-noresults" id="bx-noresults" hidden>No branches match your filters.</p>
+	</section>
+
+	<!-- Detail view -->
+	<section class="bx-detail-view" id="bx-detail-view" hidden>
+		<button type="button" class="bx-back" id="bx-back">← All branches</button>
+		<div class="table-container">
+			<table class="listing-table"><tbody id="bx-detail"></tbody></table>
+		</div>
+		<section id="bx-related-wrap">
+			<h2 id="bx-related-title">Related branches</h2>
+			<div class="table-container">
+				<table class="listing-table"><tbody id="bx-related-list"></tbody></table>
+			</div>
+		</section>
+	</section>
+
+	<script id="bx-icons" type="application/json" set:html={JSON.stringify(iconMap)}></script>
+</aside>
+
+<script>
+	type Branch = {
+		ifsc: string; bank: string; branch: string; address: string; centre: string;
+		district: string; city: string; state: string; contact: string; micr: string;
+		neft: boolean; rtgs: boolean; imps: boolean; upi: boolean; swift: string;
+	};
+
+	const NETS = ['neft', 'rtgs', 'imps', 'upi'] as const;
+	const ROW_H = 28;
+	const OVERSCAN = 6;
+
+	const el = <T extends HTMLElement = HTMLElement>(id: string) => document.getElementById(id) as T | null;
+	const esc = (s: string) =>
+		String(s ?? '').replace(/[&<>"']/g, (c) => (
+			{ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c] as string
+		));
+
+	const iconMap: Record<string, string> = (() => {
+		try { return JSON.parse(el('bx-icons')?.textContent || '{}'); } catch { return {}; }
+	})();
+
+	const crumb = el('bx-crumb');
+	const crumbPrefix = el<HTMLAnchorElement>('bx-crumb-prefix');
+	const crumbSep2 = el('bx-crumb-sep2');
+	const crumbBranch = el('bx-crumb-branch');
+	const emptyEl = el('bx-empty');
+	const skeletonEl = el('bx-skeleton');
+	const errorEl = el('bx-error');
+	const listView = el('bx-list-view');
+	const detailView = el('bx-detail-view');
+	const logo = el<HTMLImageElement>('bx-logo');
+	const bankEl = el('bx-bank');
+	const countEl = el('bx-count');
+	const netsEl = el('bx-nets');
+	const stateEl = el<HTMLSelectElement>('bx-state');
+	const sortEl = el<HTMLSelectElement>('bx-sort');
+	const scrollEl = el('bx-scroll');
+	const sizerEl = el('bx-sizer');
+	const noResultsEl = el('bx-noresults');
+	const detailEl = el('bx-detail');
+	const relatedList = el('bx-related-list');
+	const relatedWrap = el('bx-related-wrap');
+	const backBtn = el('bx-back');
+
+	const cache = new Map<string, Branch[]>();
+	let prefix = '';
+	let bankName = '';
+	let all: Branch[] = [];
+	let view: Branch[] = [];
+	const activeNets = new Set<string>(NETS);
+	let stateFilter = '';
+	let sortKey = 'branch';
+	let rafPending = false;
+
+	type Panel = 'empty' | 'skeleton' | 'error' | 'list' | 'detail';
+	function showPanel(p: Panel) {
+		emptyEl!.hidden = p !== 'empty';
+		skeletonEl!.hidden = p !== 'skeleton';
+		errorEl!.hidden = p !== 'error';
+		listView!.hidden = !(p === 'list');
+		detailView!.hidden = p !== 'detail';
+		crumb!.hidden = p === 'empty';
+	}
+
+	function netText(b: Branch): string {
+		const on = NETS.filter((n) => b[n]).map((n) => n.toUpperCase());
+		return on.join(' · ');
+	}
+
+	function markActiveRow() {
+		document.querySelectorAll('[data-prefix].is-active-prefix').forEach((r) => r.classList.remove('is-active-prefix'));
+		const row = document.querySelector(`[data-prefix="${prefix}"]`);
+		if (row) row.classList.add('is-active-prefix');
+	}
+
+	async function loadPrefix(p: string): Promise<Branch[]> {
+		const key = p.toUpperCase();
+		if (cache.has(key)) return cache.get(key)!;
+		const res = await fetch(`/data/ifsc/${key}.json`);
+		if (!res.ok) throw new Error(`Could not load ${key} (${res.status})`);
+		const data = (await res.json()) as Branch[];
+		cache.set(key, data);
+		return data;
+	}
+
+	function populateStates() {
+		const states = Array.from(new Set(all.map((b) => (b.state || '').trim()).filter(Boolean))).sort();
+		stateEl!.innerHTML =
+			'<option value="">All states</option>' +
+			states.map((s) => `<option value="${esc(s)}">${esc(s)}</option>`).join('');
+	}
+
+	function applyFilters() {
+		view = all.filter((b) => {
+			if (stateFilter && (b.state || '') !== stateFilter) return false;
+			for (const n of activeNets) if (!b[n as keyof Branch]) return false;
+			return true;
+		});
+		const key = sortKey;
+		view.sort((a, b) => {
+			if (key === 'ifsc') return a.ifsc.localeCompare(b.ifsc);
+			if (key === 'city') return (a.city || '').localeCompare(b.city || '') || a.branch.localeCompare(b.branch);
+			return (a.branch || '').localeCompare(b.branch || '');
+		});
+		countEl!.textContent = `${view.length.toLocaleString('en-IN')} of ${all.length.toLocaleString('en-IN')} branches`;
+		noResultsEl!.hidden = view.length > 0;
+		sizerEl!.style.height = `${view.length * ROW_H}px`;
+		scrollEl!.scrollTop = 0;
+		renderVirtual();
+	}
+
+	function renderVirtual() {
+		const scrollTop = scrollEl!.scrollTop;
+		const height = scrollEl!.clientHeight;
+		const start = Math.max(0, Math.floor(scrollTop / ROW_H) - OVERSCAN);
+		const end = Math.min(view.length, Math.ceil((scrollTop + height) / ROW_H) + OVERSCAN);
+		let html = '';
+		for (let i = start; i < end; i++) {
+			const b = view[i];
+			html +=
+				`<li class="bx-row" data-code="${esc(b.ifsc)}" style="transform:translateY(${i * ROW_H}px)">` +
+				`<span class="bx-row__ifsc">${esc(b.ifsc)}</span> ` +
+				`<span class="bx-row__branch">${esc(b.branch)}</span>` +
+				`</li>`;
+		}
+		sizerEl!.innerHTML = html;
+	}
+
+	function rowField(dt: string, dd: string) {
+		if (!dd) return '';
+		return `<tr><th scope="row">${dt}</th><td>${dd}</td></tr>`;
+	}
+	function showDetail(code: string, opts: { push?: boolean } = {}) {
+		const b = all.find((x) => x.ifsc === code.toUpperCase());
+		if (!b) return;
+		const loc = [b.city, b.district, b.state].filter(Boolean).filter((v, i, a) => a.indexOf(v) === i).join(', ');
+		const phone = b.contact && b.contact !== '0' ? b.contact : '';
+		detailEl!.innerHTML =
+			rowField('IFSC', `<button type="button" class="copy-code" data-copy="${esc(b.ifsc)}" title="Copy IFSC">${esc(b.ifsc)}</button>`) +
+			rowField('Bank', esc(b.bank)) +
+			rowField('Branch', esc(b.branch)) +
+			rowField('Address', esc(b.address)) +
+			rowField('Location', esc(loc)) +
+			rowField('MICR', esc(b.micr)) +
+			rowField('Contact', phone ? esc(phone) : '') +
+			rowField('Networks', netText(b) || '—') +
+			rowField('SWIFT', b.swift ? esc(b.swift) : '');
+
+		// Related: same city, then same district.
+		const city = (b.city || '').trim().toUpperCase();
+		const related = all
+			.filter((x) => x.ifsc !== b.ifsc && (x.city || '').trim().toUpperCase() === city && city)
+			.slice(0, 15);
+		relatedWrap!.hidden = related.length === 0;
+		relatedList!.innerHTML = related
+			.map(
+				(r) =>
+					`<tr data-code="${esc(r.ifsc)}"><td>${esc(r.ifsc)}</td><td>${esc(r.branch)}</td></tr>`
+			)
+			.join('');
+
+		crumbBranch!.textContent = b.ifsc;
+		crumbBranch!.hidden = false;
+		crumbSep2!.hidden = false;
+		showPanel('detail');
+		if (opts.push !== false) setUrl(prefix, b.ifsc, true);
+		scrollEl && (detailView!.scrollTop = 0);
+	}
+
+	function showList() {
+		crumbBranch!.hidden = true;
+		crumbSep2!.hidden = true;
+		showPanel('list');
+	}
+
+	async function selectPrefix(p: string, opts: { push?: boolean; branch?: string } = {}) {
+		prefix = p.toUpperCase();
+		markActiveRow();
+		crumbPrefix!.textContent = prefix;
+		crumbBranch!.hidden = true;
+		crumbSep2!.hidden = true;
+		showPanel('skeleton');
+		if (opts.push !== false) setUrl(prefix, opts.branch || null, true);
+		try {
+			all = await loadPrefix(prefix);
+			bankName = all[0]?.bank || prefix;
+			bankEl!.textContent = bankName;
+			if (iconMap[prefix]) { logo!.src = iconMap[prefix]; logo!.alt = `${bankName} logo`; logo!.hidden = false; }
+			else logo!.hidden = true;
+			// reset controls
+			activeNets.clear();
+			NETS.forEach((n) => activeNets.add(n));
+			netsEl!.querySelectorAll('.bx-chip').forEach((c) => c.setAttribute('aria-pressed', 'true'));
+			stateFilter = '';
+			sortKey = 'branch';
+			sortEl!.value = 'branch';
+			populateStates();
+			applyFilters();
+			if (opts.branch) showDetail(opts.branch, { push: false });
+			else showList();
+		} catch (err) {
+			errorEl!.textContent = (err as Error).message || 'Failed to load branches.';
+			showPanel('error');
+		}
+	}
+
+	// ---- URL state ----
+	function setUrl(p: string | null, branch: string | null, push: boolean) {
+		const url = new URL(window.location.href);
+		if (p) url.searchParams.set('prefix', p); else url.searchParams.delete('prefix');
+		if (branch) url.searchParams.set('branch', branch); else url.searchParams.delete('branch');
+		const fn = push ? 'pushState' : 'replaceState';
+		window.history[fn]({ p, branch }, '', url);
+	}
+
+	function syncFromUrl() {
+		const params = new URLSearchParams(window.location.search);
+		const p = (params.get('prefix') || '').toUpperCase();
+		const branch = (params.get('branch') || '').toUpperCase();
+		if (!p) { showPanel('empty'); return; }
+		if (p !== prefix) selectPrefix(p, { push: false, branch: branch || undefined });
+		else if (branch) showDetail(branch, { push: false });
+		else showList();
+	}
+
+	// ---- Events ----
+	netsEl?.addEventListener('click', (e) => {
+		const chip = (e.target as HTMLElement).closest('.bx-chip') as HTMLElement | null;
+		if (!chip) return;
+		const net = chip.dataset.net!;
+		if (activeNets.has(net)) { activeNets.delete(net); chip.setAttribute('aria-pressed', 'false'); }
+		else { activeNets.add(net); chip.setAttribute('aria-pressed', 'true'); }
+		applyFilters();
+	});
+	stateEl?.addEventListener('change', () => { stateFilter = stateEl!.value; applyFilters(); });
+	sortEl?.addEventListener('change', () => { sortKey = sortEl!.value; applyFilters(); });
+	scrollEl?.addEventListener('scroll', () => {
+		if (rafPending) return;
+		rafPending = true;
+		requestAnimationFrame(() => { rafPending = false; renderVirtual(); });
+	});
+	sizerEl?.addEventListener('click', (e) => {
+		const row = (e.target as HTMLElement).closest('.bx-row') as HTMLElement | null;
+		if (row?.dataset.code) showDetail(row.dataset.code);
+	});
+	relatedList?.addEventListener('click', (e) => {
+		const row = (e.target as HTMLElement).closest('tr[data-code]') as HTMLElement | null;
+		if (row?.dataset.code) showDetail(row.dataset.code);
+	});
+	backBtn?.addEventListener('click', () => { setUrl(prefix, null, true); showList(); });
+	crumbPrefix?.addEventListener('click', (e) => { e.preventDefault(); setUrl(prefix, null, true); showList(); });
+
+	// Delegated: clicking a prefix in the center catalog table.
+	document.addEventListener('click', (e) => {
+		const trigger = (e.target as HTMLElement).closest('[data-bx-prefix]') as HTMLElement | null;
+		if (!trigger) return;
+		e.preventDefault();
+		selectPrefix(trigger.dataset.bxPrefix!);
+		document.getElementById('bx-crumb')?.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+	});
+
+	window.addEventListener('popstate', () => syncFromUrl());
+	window.addEventListener('resize', () => { if (!listView!.hidden) renderVirtual(); });
+
+	// Initial deep-link.
+	syncFromUrl();
+</script>
+
+<style is:global>
+	/* Structural only — visuals inherit the site's native design (dotted borders,
+	   mono type, CSS color tokens). No pills, rounded corners or shimmer. */
+	.bx { width: 100%; display: flex; flex-direction: column; gap: var(--gap); min-height: 0; flex: 1; }
+
+	.bx-crumb { padding-bottom: var(--gap); border-bottom: 1px dotted var(--border-inked); color: var(--content-secondary-alt); }
+	.bx-crumb[hidden] { display: none; }
+
+	.bx-empty p, .bx-count, .bx-noresults, .bx-loading p { color: var(--content-secondary-alt); }
+	.bx-error { color: var(--accent); }
+	.bx-loading[hidden] { display: none; }
+
+	.bx-list-view { display: flex; flex-direction: column; gap: var(--gap); min-height: 0; flex: 1; }
+	.bx-list-view[hidden] { display: none; }
+	.bx-bank { margin: 0; }
+	.bx-count { margin: 0; }
+
+	.bx-controls { display: flex; flex-direction: column; gap: var(--gap); }
+
+	.bx-chips { display: flex; flex-wrap: wrap; gap: var(--gap); }
+	.bx-chip { font: inherit; cursor: pointer; background: none; border: 0; padding: 0; color: var(--content-secondary-alt); }
+	.bx-chip:hover { color: var(--selected); }
+	.bx-chip[aria-pressed="true"] { color: var(--selected); }
+	.bx-chip[aria-pressed="true"]::before { content: "\25B8"; color: var(--accent); margin-right: 0.2rem; }
+
+	.bx-selects { display: flex; gap: var(--gap); }
+	.bx-select-label { display: flex; align-items: center; gap: 0.35rem; color: var(--content-secondary-alt); flex: 1; min-width: 0; }
+	.bx-select { font: inherit; color: inherit; background: var(--background); border: 1px dotted var(--border-inked); padding: 0.15rem; flex: 1; min-width: 0; }
+
+	.bx-scroll { position: relative; overflow-y: auto; flex: 1; min-height: 16rem; border-top: 1px dotted var(--border-inked); }
+	.bx-sizer { position: relative; width: 100%; list-style: none; margin: 0; padding: 0; }
+	.bx-row {
+		position: absolute; left: 0; right: 0; height: 28px; box-sizing: border-box; cursor: pointer;
+		white-space: nowrap; overflow: hidden; border-bottom: 1px dotted var(--border-inked);
+	}
+	.bx-row:hover { background: var(--background-selected); }
+	.bx-row__ifsc { color: var(--accent); }
+	.bx-row__branch { color: var(--content-secondary-alt); }
+
+	.bx-detail-view { display: flex; flex-direction: column; gap: var(--gap); }
+	.bx-detail-view[hidden] { display: none; }
+	.bx-back { align-self: start; font: inherit; cursor: pointer; background: none; border: 0; padding: 0; color: var(--accent); }
+	.bx-back:hover { color: var(--selected); }
+	#bx-related-wrap[hidden] { display: none; }
+	#bx-related-list tr { cursor: pointer; }
+</style>

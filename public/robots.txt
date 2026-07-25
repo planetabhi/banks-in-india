@@ -2,4 +2,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://banksin.in/sitemap-index.xml
+Sitemap: https://banksin.in/sitemap.xml

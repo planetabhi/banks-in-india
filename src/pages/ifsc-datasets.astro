@@ -1,0 +1,84 @@
+---
+import Layout from '../layouts/Layout.astro';
+import BranchExplorer from '../components/BranchExplorer.astro';
+import { getIfscDatasets } from '../lib/ifscDatasets';
+
+const datasets = await getIfscDatasets();
+const totalBranches = datasets.reduce((sum, d) => sum + d.count, 0);
+
+const categoryLabel = (slug: string) =>
+	slug
+		.split('_')
+		.map((w) => w.charAt(0).toUpperCase() + w.slice(1))
+		.join(' ');
+---
+
+<Layout
+	title="IFSC Datasets | Banks in India"
+	description="Browse every available IFSC branch dataset, grouped by bank prefix, with branch counts. Click a bank to explore, search, filter and drill into its branches."
+>
+	<BranchExplorer slot="sidebar-right" />
+
+	<main id="main-content">
+		<header>
+			<h1 class="italic">IFSC Datasets</h1>
+			<p>
+				{datasets.length.toLocaleString('en-IN')} bank datasets ·
+				{totalBranches.toLocaleString('en-IN')} branch records.
+			</p>
+		</header>
+
+		<section aria-label="Available IFSC datasets">
+			<h2>[Directory]</h2>
+			<div class="table-container">
+				<table class="bank-table datasets-table">
+					<thead>
+						<tr>
+							<th scope="col">Prefix</th>
+							<th scope="col">Bank</th>
+							<th scope="col">Category</th>
+							<th scope="col">Branches</th>
+						</tr>
+					</thead>
+					<tbody>
+						{datasets.map((d) => (
+							<tr data-prefix={d.prefix}>
+								<td>
+									<a
+										class="datasets-prefix"
+										href={`/ifsc-datasets?prefix=${d.prefix}`}
+										data-bx-prefix={d.prefix}
+										title={`Explore ${d.bank} branches`}
+									>{d.prefix}</a>
+								</td>
+								<td>{d.bank}</td>
+								<td>{categoryLabel(d.category)}</td>
+								<td>{d.count.toLocaleString('en-IN')}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</section>
+	</main>
+</Layout>
+
+<style>
+	.datasets-table tbody tr.is-active-prefix {
+		background: var(--background-selected);
+	}
+	.datasets-table tbody tr.is-active-prefix .datasets-prefix {
+		color: var(--selected);
+	}
+	.datasets-prefix::before {
+		content: "\25B8";
+		color: var(--accent);
+		margin-right: 0.35rem;
+		opacity: 0;
+		transition: opacity 0.15s ease;
+	}
+	.datasets-table tbody tr:hover .datasets-prefix::before,
+	.datasets-table tbody tr.is-active-prefix .datasets-prefix::before {
+		opacity: 1;
+	}
+</style>
