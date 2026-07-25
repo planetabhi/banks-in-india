@@ -31,7 +31,6 @@
     "icons/"
   ],
   "dependencies": {
-    "@astrojs/netlify": "^8.1.2",
     "@new-ui/foundations": "^0.3.6",
     "astro": "^7.1.3"
   },

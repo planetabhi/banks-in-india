@@ -213,7 +213,7 @@ const iconMap = uniqueBanks.reduce((acc: any, bank: any) => {
 
         recent.forEach((item) => {
             const a = document.createElement('a');
-            a.setAttribute('href', `/ifsc/${encodeURIComponent(item)}`);
+            a.setAttribute('href', `/ifsc-search?q=${encodeURIComponent(item)}`);
             a.className = 'ifsc-search__chip';
             a.textContent = item;
             a.addEventListener('click', (e) => {

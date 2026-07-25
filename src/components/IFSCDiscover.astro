@@ -1,0 +1,77 @@
+---
+// Right-panel discoverability aid for the IFSC search page. Fully static: helps a
+// visitor who does NOT already know an IFSC to (a) grasp the dataset's scope,
+// (b) jump straight into a bank's branch explorer, and (c) try a real code.
+import { getIfscDatasets, loadPrefixRecords } from '../lib/ifscDatasets';
+
+const datasets = await getIfscDatasets();
+const totalBranches = datasets.reduce((sum, d) => sum + d.count, 0);
+const topBanks = datasets.slice(0, 12);
+
+// A handful of well-known banks to seed "try a code" with real, valid IFSCs.
+const exemplarPrefixes = ['HDFC', 'SBIN', 'ICIC', 'UTIB', 'PUNB', 'KKBK'].filter((p) =>
+	datasets.some((d) => d.prefix === p)
+);
+const examples: { ifsc: string; branch: string }[] = [];
+for (const p of exemplarPrefixes.slice(0, 5)) {
+	const recs = (await loadPrefixRecords(p)) as Array<{ ifsc?: string; branch?: string }>;
+	const first = recs.find((r) => r.ifsc);
+	if (first?.ifsc) examples.push({ ifsc: first.ifsc, branch: first.branch || '' });
+}
+
+const nf = new Intl.NumberFormat('en-IN');
+---
+<aside aria-label="Discover banks">
+	<section>
+		<p>{nf.format(datasets.length)} banks &middot; {nf.format(totalBranches)} branches indexed.</p>
+	</section>
+
+	<section>
+		<h2>Browse banks</h2>
+		<div class="table-container">
+			<table class="listing-table">
+				<thead>
+					<tr>
+						<th scope="col">Prefix</th>
+						<th scope="col">Bank</th>
+						<th scope="col">Branches</th>
+					</tr>
+				</thead>
+				<tbody>
+					{topBanks.map((d) => (
+						<tr>
+							<td><a href={`/ifsc-datasets?prefix=${d.prefix}`} title={`Explore ${d.bank} branches`}>{d.prefix}</a></td>
+							<td>{d.bank}</td>
+							<td>{nf.format(d.count)}</td>
+						</tr>
+					))}
+				</tbody>
+			</table>
+		</div>
+		<p><a href="/ifsc-datasets">{nf.format(datasets.length)} datasets &rarr;</a></p>
+	</section>
+
+	{examples.length > 0 && (
+		<section>
+			<h2>Try a code</h2>
+			<div class="table-container">
+				<table class="listing-table">
+					<thead>
+						<tr>
+							<th scope="col">Code</th>
+							<th scope="col">Branch</th>
+						</tr>
+					</thead>
+					<tbody>
+						{examples.map((e) => (
+							<tr>
+								<td><a href={`/ifsc-search?q=${e.ifsc}`}>{e.ifsc}</a></td>
+								<td>{e.branch}</td>
+							</tr>
+						))}
+					</tbody>
+				</table>
+			</div>
+		</section>
+	)}
+</aside>

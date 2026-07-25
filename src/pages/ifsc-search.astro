@@ -1,9 +1,12 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import IFSCSearch from '../components/IFSCSearch.astro';
+import IFSCDiscover from '../components/IFSCDiscover.astro';
 ---
 
 <Layout title="IFSC Code Search | Banks in India" description="Quickly search, find, verify, and copy the accurate IFSC, MICR, address, and live network support for any Indian banking branch.">
+	<IFSCDiscover slot="sidebar-right" />
+
 	<main id="main-content">
 		<header>
 			<h1 class="italic">IFSC Code Search</h1>
