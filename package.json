@@ -5,7 +5,8 @@
   "type": "module",
   "scripts": {
     "build": "astro build",
-    "dev": "astro dev"
+    "dev": "astro dev",
+    "deploy": "astro build && wrangler pages deploy dist"
   },
   "repository": {
     "type": "git",
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "@astrojs/check": "^0.9.9",
-    "typescript": "^6.0.3"
+    "typescript": "^6.0.3",
+    "wrangler": "^4.42.0"
   }
 }
